@@ -9,5 +9,11 @@
 $ composer install
 ```
 ```sh
+create .env file in the directory
+```
+```sh
+$ php artisan key:generate
+```
+```sh
 $ php artisan serve
 ```
