@@ -12,6 +12,9 @@ $ composer install
 create .env file in the directory
 ```
 ```sh
+copy content from .env.exemple to .env
+```
+```sh
 $ php artisan key:generate
 ```
 ```sh
