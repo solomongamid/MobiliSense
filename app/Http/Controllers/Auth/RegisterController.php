@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use DB;
 
 class RegisterController extends Controller
 {
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/userHome';
 
     /**
      * Create a new controller instance.
@@ -36,7 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('admin');
     }
 
     /**
@@ -49,6 +50,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:50',
+            'role' => 'required|int|max:1',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X]).*$/|required|string|min:8|
                             confirmed',
@@ -65,8 +67,29 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'role' => $data['role'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function indexUser()
+    {
+        $users = DB::table('users')->orderBy('id', 'DESC')->get()->all();
+        return view('userHome', compact('users'));
+    }
+
+    public function destroy($id){
+        
+        $user = DB::table('users')->where('id', '=', $id);
+
+         if (!is_null($user)) {
+            $user->delete();
+            session()->flash('message', 'Le user a bien été suprimé');
+        }
+         
+
+        return redirect('/userHome');
+         
     }
 }
