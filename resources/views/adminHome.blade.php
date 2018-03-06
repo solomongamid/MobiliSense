@@ -1,23 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.appAdmin')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">ADMIN Dashboard</div>
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                            <div class="introduction">
+                              Les administrateurs : accès complet à toutes les fonctionnalités du site (« back et front office ») L’ajout et la suppression des administrateurs seront effectués par le responsable de l’étude.
+                              Le responsable de l’étude se connectera par un identifiant (email) et un mot de passe personnel.
+                              Les administrateurs se connecteront grâce à un identifiant (email) et un mot de passe commun aux
+                              administrateurs. Le responsable de l’étude est entièrement responsable de la sécurisation des mots de passe.
+                            </div>
+
 @endsection

@@ -8,6 +8,9 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
+                    <ul class="pager">
+                        <li class="previous"><a href="{{ url('userHome') }}">Previous</a></li>
+                      </ul> 
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
@@ -58,6 +61,19 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">User type</label>
+
+                            <div class="col-md-3">
+                                <label for="user" class="radio-inline">Admin</label>
+                                    <input type="radio" class="form-control" name="role" value="1">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="user" class="radio-inline"> User</label>
+                                <input type="radio" checked="checked" class="form-control" name="role" value="0">
                             </div>
                         </div>
 

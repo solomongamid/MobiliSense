@@ -17,7 +17,7 @@ class AdminMidWare
     {
         $user = $request->user();
 
-        if($user && $user->isAdmin == '1') {
+        if($user && $user->role == '1') {
             return $next($request);
         }
         
