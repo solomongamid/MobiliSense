@@ -14,6 +14,9 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
+        <script src="./js/app.js"></script>
+
+
     </head>
     <body>
       <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -78,6 +81,40 @@
         </div>
         <!-- /.container-fluid -->
       </nav>
-      
+
+      <header>
+        <div class="carousel-container">
+            <div class="row">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active" style="background-image: url(./img/placeholder1.jpg)">
+                        </div>
+
+                        <div class="item" style="background-image: url(./img/placeholder2.png)">
+                        </div>
+
+                        <div class="item" style="background-image: url(./img/placeholder3.jpg)">
+                        </div>
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+            </div>
+        </div>
+    </header>
     </body>
 </html>
