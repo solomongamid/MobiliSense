@@ -1,9 +1,11 @@
 .home-container {
   margin-top: 10px;
 }
-.presentation-title {
-  font-size: 40px;
+
+.presentation {
   text-align: center;
-  color: #303542;
-  font-weight: 700;
+}
+
+.presentation h1 {
+  color: #2C3E50;
 }

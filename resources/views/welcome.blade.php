@@ -117,13 +117,49 @@
         </div>
     </header>
 
-    <div class="home-container container-fluid">
-      <div class="block-presentation row">
-        <div class="presentation-title col-xs-12">
-          What is MobiliSense ?
-        </div>
-      </div>
+    <main class="home-container container-fluid">
+      <section class="block-presentation row">
+        <article class="presentation col-xs-12">
+          <h1> What is MobiliSense ? </h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </article>
+      </section>
+    </main>
 
-    </div>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                      <h2>Liens utiles</h2>
+                      <ul class="list-footer">
+                        <li>
+                          <a href="#">Equipe</a>
+                        </li>
+                        <li>
+                          <a href="#">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                      <img class="footer-img" src="./img/placeholderLogo.jpg" alt="footerLogo">
+                    </div>
+                    <div class="footer-col col-md-4">
+                      <h2>Remerciements</h2>
+                      <ul class="thanks-footer">
+                        <li>Raphael RENOIT</li>
+                        <li>Suliman ABDELGADEIR</li>
+                        <li>Qixin YING</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>
