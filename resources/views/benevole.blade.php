@@ -17,57 +17,102 @@
 
     </head>
     <body>
-      <div class="content">
-        <div id="content-left" class="center">
-          <h1>Vague 1</h1>
-          <h3>Jour 1</h3>
-        </div>
-        <div id="content-center">
-          <h1>Date</h1>
-          <h3>Le 09 Mars 2018</h3>
-        </div>
-      </div>
 
-      <div class="content">
-        <div id="content-left">
-          <img class="imgbody" src="{{ asset('img/humanbody.png') }}"/>
-          <a href="#">
-            <img class="circle" src="{{ asset('img/circle-orange.png') }}" />
-            <span>
-              Nom : Capteur 1<br />
-              Couleur : Jaune<br />
-              But : Capter le son
-            </span>
-          </a>
-          <a href="#">
-            <img class="circle2" src="{{ asset('img/circle-orange.png') }}"/>
-            <span>
-              Nom : Capteur 2<br />
-              Couleur : Rouge<br />
-              But : Capter le bruit
-            </span>
-          </a>
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="containerfluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="#page-top">MobiliSense</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll dropdown">
+                        <a href="#portfolio" class="dropbtn">Accueil</a>
+                    </li>
+                    <li class="page-scroll dropdown">
+                      <a href="#portfolio" class="dropbtn">Bilan</a>
+                    </li>
+                    <li class="page-scroll dropdown">
+                      <a href="#portfolio" class="dropbtn">Véritas</a>
+                    </li>
+                </ul>
+
+                <a type="button" class="navbar-btn">
+                  Logout
+                </a>
+            </div>
         </div>
-        <div id="content-center">
-          <img src="{{ asset('img/sun.png') }}" />
+      </nav>
+
+      <main class="mainuserhp">
+
+        <!-- Header -->
+        <div class="row">
+          <div class="col-xs-4 center-left">
+            <h1>Vague 1</h1>
+            <h3 >Jour 1</h3>
+          </div>
+          <div class="col-xs-6">
+            <h1>Date</h1>
+            <h3>Le 09 Mars 2018</h3>
+          </div>
         </div>
-        <div id="content-right">
-          <p>Veritas</p>
+
+        <div class="row">
+          <div class="col-xs-5">
+            <hr>
+            <img height="500px;" src="{{ asset('img/humanbody.png') }}"/>
+            <a href="#">
+              <img class="circle1" src="{{ asset('img/circle.png') }}" />
+              <span>
+                Nom : Capteur 1<br />
+                Couleur : Jaune<br />
+                But : Capter le son
+              </span>
+            </a>
+            <a href="#">
+              <img class="circle2" src="{{ asset('img/circle.png') }}"/>
+              <span>
+                Nom : Capteur 2<br />
+                Couleur : Rouge<br />
+                But : Capter le bruit
+              </span>
+            </a>
+          </div>
+          <div class="col-xs-4">
+            <img class="moon" src="{{ asset('img/sun.png') }}">
+            <ul class="infoepe">
+              <li>Passez votre souris sur un des ronds pour voir le détail d'un des capteurs à porter aujourd'hui</li>
+              <li>N'hésitez pas à cliquez sur le lien en savoir plus pour avoir plus de détails</li>
+              <li>N'oubliez pas de mettre les capteurs demain à charger afin d'être le mieux équipé possible</li>
+              <li>N'hésitez pas à nous contacter pour toute question / soucis technique</li>
+            </ul>
+          </div>
+          <div class="col-xs-2">
+            <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
+            <img class="align-right" src="{{ asset('img/fleche.png') }}" />
+          </div>
         </div>
-      </div>
-      <div class="content">
-        <div id="content-left">
-          <hr>
-          <h3 class="night">A recharger :</h3>
-          <ul class="night">
-            <li>Capteur 3</li>
-            <li>Capteur 5</li>
-            <li>Capteur 6</li>
-          </ul>
+
+        <div class="row">
+          <div class="col-xs-5">
+            <hr>
+            <h3 class="center-left">A recharger :</h3>
+            <ul class="center-left">
+              <li>Capteur 3</li>
+              <li>Capteur 5</li>
+              <li>Capteur 6</li>
+            </ul>
+          </div>
+          <div class="col-xs-4">
+            <img class="moon" src="{{ asset('img/moon.png') }}" />
+          </div>
         </div>
-        <div id="content-right">
-          <img class="moon" src="{{ asset('img/moon.png') }}" />
-        </div>
-      </div>
+      </main>
     </body>
 </html>

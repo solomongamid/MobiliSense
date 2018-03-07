@@ -1,54 +1,30 @@
-#content-left {
-	width: 50%;
-	height: 100%;
-	float: left;
-}
-
-#content-center {
-	width: 20%;
-	height: 100%;
-	float: left;
-}
-
-#content-right {
-	width: 30%;
-	height: 100%;
-	float: left;
-}
-
-body {
+.mainuserhp {
   background: #f2f4f6;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 100px;
 }
 
-.content {
-	clear:both;
-	width: 100%;
-
+h1, h3 {
+	margin-bottom: 0px;
+}
+h3 {
+	margin-top: 0px;
 }
 
-.imgbody {
-  height: 500px;
-}
 
-.circle {
+/* Position en dur des capteurs pour le moment */
+.circle1 {
   position: absolute;
   left: 200px;
-  top: 320px;
+  top: 220px;
 }
 .circle2 {
   position: absolute;
   left: 280px;
-  top: 520px;
+  top: 420px;
 }
 
-.content-left {
-  background-color: red;
-  width: 10px;
-  height: 50px;
-}
-
+/* Pour l'ouverture + mise en forme de l'info bulle */
 a:hover,a:focus{
      background:rgba(0,0,0,.4);
      box-shadow:0 1px 0 rgba(255,255,255,.4);
@@ -57,7 +33,7 @@ a span{
      position:absolute;
      margin-top:80px;
      margin-left:-10px;
-     color:#d67700;
+     color:#18BC9C;
      background:#465256;
      padding:15px;
      border-radius:3px;
@@ -66,38 +42,54 @@ a span{
      transition:all .25s;
      opacity:0;
 }
-
 a:hover span, a:focus span{
      transform:scale(1) rotate(0);
      opacity:1;
 }
+/* Fin infobulle */
 
-header {
-  margin-left: 18%;
-  margin-bottom: 2%;
-}
-
-.night {
-  margin-left: 40%;
-}
-
+/* img de lune et soleil */
 .moon {
-  margin-top: 5%;
+  margin-top: 10%;
 	align: left;
 }
 
+/* Trace une ligne horizontale bleue */
 hr{
-	margin-left: 30%;
+	margin-left: 110px;
+	margin-top: 10px;
+	margin-bottom: 10px;
   width: 50%;
   height: 2px;
-  background-color: #f90;
+  background-color: #18BC9C;
   border: none; /*on supprime le style par défaut*/
 }
 
-.center {
-	margin-left: 200px;
+
+.center-left {
+	margin-left: 180px !important;
+}
+.center-left h3 {
+	margin-left: 20px !important;
 }
 
-.center h3{
-	margin-left: 30px;
+/* Flèche sur V1 pour le moment en dure */
+.timev1 {
+	position: absolute;
+	margin-top: 62px;
+}
+
+.infoepe {
+	margin-top: 50px;
+	text-align: justify;
+  list-style: none;
+}
+
+.infoepe li {
+  text-indent: -.7em;
+}
+
+.infoepe li::before {
+  content: "• ";
+  color: #18BC9C;
 }
