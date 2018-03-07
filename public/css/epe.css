@@ -1,11 +1,17 @@
 #content-left {
-	width: 40%;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#content-center {
+	width: 20%;
 	height: 100%;
 	float: left;
 }
 
 #content-right {
-	width: 60%;
+	width: 30%;
 	height: 100%;
 	float: left;
 }
@@ -17,7 +23,9 @@ body {
 }
 
 .content {
-  clear:both;
+	clear:both;
+	width: 100%;
+
 }
 
 .imgbody {
@@ -64,7 +72,7 @@ a:hover span, a:focus span{
      opacity:1;
 }
 
-.day {
+header {
   margin-left: 18%;
   margin-bottom: 2%;
 }
@@ -75,4 +83,21 @@ a:hover span, a:focus span{
 
 .moon {
   margin-top: 5%;
+	align: left;
+}
+
+hr{
+	margin-left: 30%;
+  width: 50%;
+  height: 2px;
+  background-color: #f90;
+  border: none; /*on supprime le style par défaut*/
+}
+
+.center {
+	margin-left: 200px;
+}
+
+.center h3{
+	margin-left: 30px;
 }

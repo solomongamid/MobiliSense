@@ -17,10 +17,17 @@
 
     </head>
     <body>
-      <div class="day">
-        <h1>Vague 1</h1>
-        <h3>Jour 1</h3>
+      <div class="content">
+        <div id="content-left" class="center">
+          <h1>Vague 1</h1>
+          <h3>Jour 1</h3>
+        </div>
+        <div id="content-center">
+          <h1>Date</h1>
+          <h3>Le 09 Mars 2018</h3>
+        </div>
       </div>
+
       <div class="content">
         <div id="content-left">
           <img class="imgbody" src="{{ asset('img/humanbody.png') }}"/>
@@ -41,12 +48,16 @@
             </span>
           </a>
         </div>
-        <div id="content-right">
+        <div id="content-center">
           <img src="{{ asset('img/sun.png') }}" />
+        </div>
+        <div id="content-right">
+          <p>Veritas</p>
         </div>
       </div>
       <div class="content">
         <div id="content-left">
+          <hr>
           <h3 class="night">A recharger :</h3>
           <ul class="night">
             <li>Capteur 3</li>
