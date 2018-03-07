@@ -1,3 +1,5 @@
+@import "./home.css";
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;

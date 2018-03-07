@@ -116,5 +116,14 @@
             </div>
         </div>
     </header>
+
+    <div class="home-container container-fluid">
+      <div class="block-presentation row">
+        <div class="presentation-title col-xs-12">
+          What is MobiliSense ?
+        </div>
+      </div>
+
+    </div>
     </body>
 </html>
