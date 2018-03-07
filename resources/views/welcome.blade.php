@@ -13,72 +13,117 @@
         <!-- Style -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-        
+
+        <script src="./js/app.js"></script>
+
+
     </head>
     <body>
-
-        <div class="container">
-            <div class="col-sm-8">
-                <a href="#"><h1>MobiliSense</h1></a>
+      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="containerfluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="#page-top">MobiliSense</a>
             </div>
 
-            <div class="col-sm-4" id="app-navbar-collapse">
-                <ul class="login_ul">
-                @if (Route::has('login'))
-                    <div >
-                        @if (Auth::check())
-                            <li><a href="{{ url('/home') }}">Home</a></li>
-                        @else
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                        @endif
-                    </div>
-                @endif
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll dropdown">
+                        <a href="#portfolio" class="dropbtn">Présentation</a>
+                        <div class="dropdown-content">
+                          <a href="#">Contexte et objectifs</a>
+                          <a href="#">Méthodologie</a>
+                          <a href="#">Donnés collectées</a>
+                          <a href="#">Confidentialité</a>
+                          <a href="#">Calendrier</a>
+                          <a href="#">Collaborateurs</a>
+                        </div>
+                    </li>
+                    <li class="page-scroll dropdown">
+                      <a href="#portfolio" class="dropbtn">Actualité</a>
+                      <div class="dropdown-content">
+                        <a href="#">Actualité</a>
+                        <a href="#">Newsletter</a>
+                        <a href="#">Dossier de presse</a>
+                      </div>
+                    </li>
+                    <li class="page-scroll dropdown">
+                      <a href="#portfolio" class="dropbtn">En savoir plus</a>
+                      <div class="dropdown-content">
+                        <a href="#">Pourquoi participer ?</a>
+                        <a href="#">Se connecter</a>
+                        <a href="#">Lettre d'information</a>
+                        <a href="#">En savoir plus...</a>
+                      </div>
+                    </li>
+                    <li class="page-scroll dropdown">
+                      <a href="#portfolio" class="dropbtn">Nos travaux</a>
+                      <div class="dropdown-content">
+                        <a href="#">Publications et communications</a>
+                        <a href="#">Travaux universitaires</a>
+                        <a href="#">Principaux résultats</a>
+                      </div>
+                    </li>
+                    <li class="page-scroll">
+                      <a href="#portfolio" class="dropbtn">Contact</a>
+                    </li>
                 </ul>
-            </div>
-        </div>
-        
-        <div class="main_navbar">
-            <div class="dropdown">
-              <button class="dropbtn">Contexte et objectifs</button>
-              <div class="dropdown-content">
-                <a href="#">Contexte et objectifs</a>
-                <a href="#">Méthodologie</a>
-                <a href="#">Donnés collectées</a>
-                <a href="#">Confidentialité</a>
-                <a href="#">Calendrier</a>
-                <a href="#">Collaborateurs</a>
-              </div>
-            </div> 
-            <div class="dropdown">
-              <button class="dropbtn">Actualité</button>
-              <div class="dropdown-content">
-                <a href="#">Actualité</a>
-                <a href="#">Newsletter</a>
-                <a href="#">Dossier de presse</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Pourquoi participer ?</button>
-              <div class="dropdown-content">
-                <a href="#">Pourquoi participer ?</a>
-                <a href="#">Se connecter</a>
-                <a href="#">Lettre d&#39;information</a>
-                <a href="#">En savoir plus...</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Publications et communications</button>
-              <div class="dropdown-content">
-                <a href="#">Publications et communications</a>
-                <a href="#">Travaux universitaires</a>
-                <a href="#">Principaux résultats</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="dropbtn">Contact</button>
-            </div>
-        </div>
 
-        
+                <a type="button" class="navbar-btn">
+                  Login
+                </a>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+
+      <header>
+        <div class="carousel-container">
+            <div class="row">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active" style="background-image: url(./img/placeholder1.jpg)">
+                        </div>
+
+                        <div class="item" style="background-image: url(./img/placeholder2.png)">
+                        </div>
+
+                        <div class="item" style="background-image: url(./img/placeholder3.jpg)">
+                        </div>
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="home-container container-fluid">
+      <div class="block-presentation row">
+        <div class="presentation-title col-xs-12">
+          What is MobiliSense ?
+        </div>
+      </div>
+
+    </div>
     </body>
 </html>
