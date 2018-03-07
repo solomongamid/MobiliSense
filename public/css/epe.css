@@ -1,0 +1,103 @@
+#content-left {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+#content-center {
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+#content-right {
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+body {
+  background: #f2f4f6;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.content {
+	clear:both;
+	width: 100%;
+
+}
+
+.imgbody {
+  height: 500px;
+}
+
+.circle {
+  position: absolute;
+  left: 200px;
+  top: 320px;
+}
+.circle2 {
+  position: absolute;
+  left: 280px;
+  top: 520px;
+}
+
+.content-left {
+  background-color: red;
+  width: 10px;
+  height: 50px;
+}
+
+a:hover,a:focus{
+     background:rgba(0,0,0,.4);
+     box-shadow:0 1px 0 rgba(255,255,255,.4);
+}
+a span{
+     position:absolute;
+     margin-top:80px;
+     margin-left:-10px;
+     color:#d67700;
+     background:#465256;
+     padding:15px;
+     border-radius:3px;
+     box-shadow:0 0 2px rgba(0,0,0,.5);
+     transform:scale(0) rotate(-12deg);
+     transition:all .25s;
+     opacity:0;
+}
+
+a:hover span, a:focus span{
+     transform:scale(1) rotate(0);
+     opacity:1;
+}
+
+header {
+  margin-left: 18%;
+  margin-bottom: 2%;
+}
+
+.night {
+  margin-left: 40%;
+}
+
+.moon {
+  margin-top: 5%;
+	align: left;
+}
+
+hr{
+	margin-left: 30%;
+  width: 50%;
+  height: 2px;
+  background-color: #f90;
+  border: none; /*on supprime le style par défaut*/
+}
+
+.center {
+	margin-left: 200px;
+}
+
+.center h3{
+	margin-left: 30px;
+}

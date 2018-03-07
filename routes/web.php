@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/benevole', 'BenevoleController@index')->name('benevole');
 Route::get('/adminHome', 'AdminController@index')->name('adminHome');
 Route::get('/newsHome', 'AdminController@indexNews');
 Route::get('/addNews', 'AdminController@newsForm');
