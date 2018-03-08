@@ -11,6 +11,10 @@ class BenevoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct()
+     {
+         $this->middleware('auth')->except('logout');
+     }
     public function index()
     {
         return view('benevole');

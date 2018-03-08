@@ -41,10 +41,16 @@
                       <a href="#portfolio" class="dropbtn">Véritas</a>
                     </li>
                 </ul>
-
-                <a type="button" class="navbar-btn">
-                  Logout
-                </a>
+                @if (Auth::guest())
+                    <a type="button" class="navbar-btn" href="{{ route('login') }}">Login</a>
+                @else
+                    <a type="button" class="navbar-btn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                @endif
             </div>
         </div>
       </nav>
@@ -114,5 +120,36 @@
           </div>
         </div>
       </main>
+      <!-- Footer -->
+      <footer class="text-center">
+          <div class="footer-above">
+              <div class="container">
+                  <div class="row">
+                      <div class="footer-col col-md-4">
+                        <h2>Liens utiles</h2>
+                        <ul class="list-footer">
+                          <li>
+                            <a href="#">Equipe</a>
+                          </li>
+                          <li>
+                            <a href="#">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="footer-col col-md-4">
+                        <img class="footer-img" src="./img/logo_inserm.png" alt="footerLogo">
+                      </div>
+                      <div class="footer-col col-md-4">
+                        <h2>Remerciements</h2>
+                        <ul class="thanks-footer">
+                          <li>Raphael RENOIT</li>
+                          <li>Suliman ABDELGADEIR</li>
+                          <li>Qixin YING</li>
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
     </body>
 </html>

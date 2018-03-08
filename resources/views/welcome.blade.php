@@ -73,9 +73,16 @@
                     </li>
                 </ul>
 
-                <a type="button" class="navbar-btn">
-                  Login
-                </a>
+                @if (Auth::guest())
+                    <a type="button" class="navbar-btn" href="{{ route('login') }}">Login</a>
+                @else
+                    <a type="button" class="navbar-btn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
+                @endif
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -147,7 +154,7 @@
                       </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                      <img class="footer-img" src="./img/placeholderLogo.jpg" alt="footerLogo">
+                      <img class="footer-img" src="./img/logo_inserm.png" alt="footerLogo">
                     </div>
                     <div class="footer-col col-md-4">
                       <h2>Remerciements</h2>

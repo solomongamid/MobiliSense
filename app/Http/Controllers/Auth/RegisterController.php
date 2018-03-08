@@ -80,16 +80,16 @@ class RegisterController extends Controller
     }
 
     public function destroy($id){
-        
+
         $user = DB::table('users')->where('id', '=', $id);
 
          if (!is_null($user)) {
             $user->delete();
             session()->flash('message', 'Le user a bien été suprimé');
         }
-         
+
 
         return redirect('/userHome');
-         
+
     }
 }
