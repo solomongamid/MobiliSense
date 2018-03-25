@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /public/css
+/public/fonts
+/public/js/app.js
 /storage/*.key
 /vendor
 /.idea

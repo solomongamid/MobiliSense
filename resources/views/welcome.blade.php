@@ -20,10 +20,12 @@
     </head>
     <body>
       <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="containerfluid">
+        <div>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="#page-top">MobiliSense</a>
+                <a class="nav-logo" href="#page-top">
+                  <img src="./img/logo-big.png" alt="">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

@@ -1,0 +1,44 @@
+/* Admin nav bar */
+.panel-body{
+    background-color: #F1F1F1;
+}
+
+.introduction{
+    padding: 30px;
+    font-size: 20px;
+}
+
+ul.Information {
+    list-style-type: none; /*for hide the point in the list*/
+    margin: -5.5% 0% -5.5% -5.5%;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(243, 239, 224);
+}
+
+ul.Information li a {
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(34, 163, 159);
+    padding: 50px 0 8px 16px;
+    text-decoration: none;
+}
+ul.Information li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.Information li a:hover:not(.active) {
+    background-color: rgb(193, 197, 196);
+    color: white;
+}
+
+
+
+.item.active{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
