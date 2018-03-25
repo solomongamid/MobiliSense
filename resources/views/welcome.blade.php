@@ -127,12 +127,34 @@
     <main class="home-container container-fluid">
       <section class="block-presentation row">
         <article class="presentation col-xs-12">
-          <h1> What is MobiliSense ? </h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <section>
+            <h1> Qu’est-ce que l’Étude MobiliSense?</h1>
+            <div class="main-text">
+              <p>L’étude MobiliSense porte sur les thèmes de la <b>mobilité</b>, de la <b>santé</b> et de <b>l’environnement</b>.
+              </p>
+
+              <p>
+                L’objectif est <b>d’étudier les effets sur la santé respiratoire et cardiovasculaire de l’exposition à la pollution de l’air et au bruit,
+                liée aux habitudes personnelles de transport.</b>
+              </p>
+              <p>
+                Cette étude s’adresse aux femmes et aux hommes âgés de 32 à 66 ans (au 1er janvier 2018),
+                 résidant  dans les communes du Grand-Paris. Des logements ont été tirés de manière aléatoire à partir des fichiers
+                du Recensement de la Population.
+              </p>
+              <p>
+                MobiliSense a été lancée par l’équipe Nemesis (Neighborhood Environments and Mobility: Effects on Social health InequalitieS)
+                de l’Institut Pierre Louis d'Epidémiologie et de Santé Publique (Inserm UMR-S 1136),
+                suite à l’obtention d’un ERC auprès du Conseil Européen de la Recherche par Basile Chaix, DR2 Inserm.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h1> Qu’est-ce que l’Étude MobiliSense ?</h1>
+
+          </section>
+
         </article>
       </section>
     </main>
