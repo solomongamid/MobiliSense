@@ -9,44 +9,49 @@
       <main class="mainuserhp">
 
         <!-- Header -->
-        <div class="row">
-          <div class="col-xs-2">
+        <div class="row rowbottom">
+          <div class="col-md-4">
           </div>
-          <div class="col-xs-5 center-left">
+          <div class="col-md-6">
             <h1>Vague 1</h1>
-            <h3 >Jour 1</h3>
+            <h3 >Jour 1 : Jeudi 05 avril 2018</h3>
           </div>
-          <div class="col-xs-3">
-            <h1>Date</h1>
-            <h3>Le 09 Mars 2018</h3>
-          </div>
+
         </div>
 
-        <div class="row">
-          <div class="col-xs-2 day">
+        <div class="row rowbottom">
+          <div class="col-md-1 day">
             <img class="moon" src="{{ asset('img/sun.png') }}">
           </div>
-          <div class="col-xs-3">
-            <hr class="hrday">
+          <div class="col-md-3">
             <img height="500px;" src="{{ asset('img/humanbody.png') }}"/>
             <a href="#">
               <img class="circle1" src="{{ asset('img/circle.png') }}" />
               <span>
                 Nom : Capteur 1<br />
                 Couleur : Jaune<br />
-                But : Capter le son
+                But : Pour la nuisance sonore
               </span>
             </a>
             <a href="#">
               <img class="circle2" src="{{ asset('img/circle.png') }}"/>
               <span>
-                Nom : Capteur 2<br />
+                Nom : Capteur 4<br />
                 Couleur : Rouge<br />
-                But : Capter le bruit
+                But : Pollution de l'air
+              </span>
+            </a>
+            <a href="#">
+              <img class="circle3" src="{{ asset('img/circle.png') }}"/>
+              <span>
+                Nom : Capteur 6<br />
+                Couleur : Marron<br />
+                But : Rythme cardiaque
               </span>
             </a>
           </div>
-          <div class="col-xs-5 infoepe">
+          <div class="col-md-6">
+            <hr class="hr">
             <h3>Matin :</h3>
             <p>Réalisez 3 mesures...</p>
             <h3>Journée :</h3>
@@ -59,28 +64,35 @@
             <p>Remplissez votre carnet de déplacement</p>
             <p>Répondez au questionnaire sur l'Iphone</p>
             <h3>Soir :</h3>
-            <p>Réaliser 3 mesures...</p>
+            <p>Réalisez 3 mesures...</p>
           </div>
-          <div class="col-xs-2">
+          <div class="col-md-2">
             <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
             <img class="align-right" src="{{ asset('img/fleche.png') }}" />
           </div>
         </div>
 
         <div class="row night">
-          <div class="col-xs-2 day">
+          <div class="col-md-1 day">
             <img class="moon" src="{{ asset('img/moon.png') }}" />
           </div>
-          <div class="col-xs-5">
-            <hr class="hrnight">
-            <h3 class="center-left">A recharger :</h3>
-            <ul class="center-left">
-              <li>Capteur 3</li>
-              <li>Capteur 5</li>
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-6">
+            <hr class="hr">
+            <h3>Nuit :</h3>
+            <p class="beflist">Rechargez dans n'importe quelle pièce...</p>
+            <ul class="listinfoepe">
+              <li>Capteur 4</li>
               <li>Capteur 6</li>
             </ul>
+            <p class="beflist">Rechargez dans la pièce où vous dormez...</p>
+            <ul class="listinfoepe">
+              <li>Capteur 3</li>
+            </ul>
           </div>
-
+          <div class="col-md-2">
+          </div>
         </div>
       </main>
 @endsection

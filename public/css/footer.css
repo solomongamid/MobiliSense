@@ -6,7 +6,7 @@ footer h3 {
 }
 footer {
   padding-top: 20px;
-  background-color: #2C3E50;
+  background-color: #3f5a75;
 }
 
 
@@ -16,6 +16,10 @@ footer .footer-col {
 
 .footer-col p{
     font-size: 12px;
+}
+
+.row {
+  margin-right: 0px;
 }
 
 .footer-img {

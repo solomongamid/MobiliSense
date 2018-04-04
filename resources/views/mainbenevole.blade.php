@@ -37,7 +37,7 @@
                         <a href="/" class="dropbtn">Accueil</a>
                     </li>
                     <li class="page-scroll dropdown">
-                        <a href="#benevole" class="dropbtn">Mon Espace</a>
+                        <a href="/benevole" class="dropbtn">Mon Espace</a>
                     </li>
                     <li class="page-scroll dropdown">
                       <a href="#bilan" class="dropbtn">Mon Bilan</a>
@@ -65,7 +65,7 @@
     <!-- Footer -->
     <footer class="text-center">
                 <div class="row">
-                    <div class="footer-col col-md-2">
+                    <div class="footer-col col-md-3">
                       <h2>MobiliSense</h2>
                       <p>
                           Inserm IPLESP Unité 1136 - Equipe 8 Nemesis<br>
@@ -80,7 +80,7 @@
                       <img class="footer-img" src="./img/sorbonne.png" alt="footerLogo">
                       <img class="footer-img" src="./img/france.jpg" alt="footerLogo">
                     </div>
-                    <div class="footer-col col-md-2">
+                    <div class="footer-col col-md-3">
                       <h2>Remerciements</h2>
                       <p>
                         Merci à toutes les personnes volontaires qui, par leur participation, contribuent au succès de cette recherche en santé publique.
