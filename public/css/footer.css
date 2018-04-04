@@ -4,37 +4,31 @@ footer {
 footer h3 {
   margin-bottom: 30px;
 }
-footer .footer-above {
+footer {
   padding-top: 20px;
   background-color: #2C3E50;
 }
+
+
 footer .footer-col {
   margin-bottom: 20px;
 }
-footer .footer-below {
-  padding: 25px 0;
-  background-color: #233140;
+
+.footer-col p{
+    font-size: 12px;
 }
 
 .footer-img {
-  width: 300px;
+  height: 100px;
   margin-top: 20px;
 }
 
-.list-footer {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.ml {
+  color:#000;
+  background-color: #e1e2d2;
 }
 
-.list-footer li {
-  margin-top: 5px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.thanks-footer {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.ml p {
+  font-size: 10px;
+  margin: 5px;
 }

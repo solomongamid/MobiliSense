@@ -1,6 +1,5 @@
 .mainuserhp {
   background: #f2f4f6;
-  padding-bottom: 20px;
   padding-top: 100px;
 }
 
@@ -15,12 +14,12 @@ h3 {
 /* Position en dur des capteurs pour le moment */
 .circle1 {
   position: absolute;
-  left: 200px;
+  left: 60px;
   top: 220px;
 }
 .circle2 {
   position: absolute;
-  left: 280px;
+  left: 150px;
   top: 420px;
 }
 
@@ -33,7 +32,7 @@ a span{
      position:absolute;
      margin-top:80px;
      margin-left:-10px;
-     color:#18BC9C;
+     color:#29B224 ;
      background:#465256;
      padding:15px;
      border-radius:3px;
@@ -50,27 +49,43 @@ a:hover span, a:focus span{
 
 /* img de lune et soleil */
 .moon {
-  margin-top: 10%;
-	align: left;
+  margin: 10% 0 0 10%;
+}
+
+.day {
+  text-align: center;
 }
 
 /* Trace une ligne horizontale bleue */
-hr{
-	margin-left: 110px;
+.hrday{
+	margin-left: 30px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-  width: 50%;
+  width: 60%;
   height: 2px;
-  background-color: #18BC9C;
+  background-color: #29B224;
   border: none; /*on supprime le style par défaut*/
 }
 
+.hrnight{
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  width: 45%;
+  height: 2px;
+  background-color: #29B224;
+  border: none; /*on supprime le style par défaut*/
+}
+
+.night {
+  background-color: #e1e2d2;
+}
 
 .center-left {
-	margin-left: 180px !important;
+	margin-left: 50px !important;
 }
 .center-left h3 {
-	margin-left: 20px !important;
+	margin-left: 30px !important;
 }
 
 /* Flèche sur V1 pour le moment en dure */
@@ -78,18 +93,20 @@ hr{
 	position: absolute;
 	margin-top: 62px;
 }
-
 .infoepe {
-	margin-top: 50px;
+  margin-top: 50px;
 	text-align: justify;
+}
+
+.listinfoepe {
   list-style: none;
 }
 
-.infoepe li {
+.listinfoepe li {
   text-indent: -.7em;
 }
 
-.infoepe li::before {
+.listinfoepe li::before {
   content: "• ";
-  color: #18BC9C;
+  color: #29B224 ;
 }
