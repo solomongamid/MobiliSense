@@ -18,10 +18,6 @@ footer .footer-col {
     font-size: 12px;
 }
 
-.row {
-  margin-right: 0px;
-}
-
 .footer-img {
   height: 100px;
   margin-top: 20px;
@@ -29,7 +25,7 @@ footer .footer-col {
 
 .ml {
   color:#000;
-  background-color: #e1e2d2;
+  background-color: #dbdbdb;
 }
 
 .ml p {
