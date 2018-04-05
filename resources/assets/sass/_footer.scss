@@ -1,5 +1,9 @@
 footer {
   color: white;
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 footer h3 {
   margin-bottom: 30px;
@@ -29,7 +33,7 @@ footer .footer-col {
 
 .ml {
   color:#000;
-  background-color: #e1e2d2;
+  background-color: #dbdbdb;
 }
 
 .ml p {

@@ -12,40 +12,41 @@
 
         <!-- Style -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/epe.css') }}" rel="stylesheet">
 
         <script src="./js/app.js"></script>
 
     </head>
     <body>
 
-      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="containerfluid">
+      <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
+        <div>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="#page-top">MobiliSense</a>
+                <a class="nav-logo" href="/">
+                  <img src="./img/logo-big.png" alt="">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="navbar-navigation">
                     <li class="hidden">
-                        <a href="/"></a>
+                        <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll dropdown">
+                    <li class="dropdown presentation">
                         <a href="/" class="dropbtn">Accueil</a>
                     </li>
-                    <li class="page-scroll dropdown">
-                        <a href="/benevole" class="dropbtn">Mon Espace</a>
+                    <li class="dropdown news">
+                      <a href="/benevole" class="dropbtn">Mon espace</a>
                     </li>
-                    <li class="page-scroll dropdown">
-                      <a href="#bilan" class="dropbtn">Mon Bilan</a>
+                    <li class="dropdown infos">
+                      <a href="#portfolio" class="dropbtn">Mon Bilan</a>
                     </li>
-                    <li class="page-scroll dropdown">
-                      <a href="#questionnaire" class="dropbtn">Questionnaire Géo</a>
+                    <li class="dropdown works">
+                      <a href="#portfolio" class="dropbtn">Questionnaire Géo</a>
                     </li>
                 </ul>
+
                 @if (Auth::guest())
                     <a type="button" class="navbar-btn" href="{{ route('login') }}">Login</a>
                 @else
@@ -57,7 +58,9 @@
                     </form>
                 @endif
             </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
       </nav>
 
       @yield('content')

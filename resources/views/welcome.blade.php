@@ -23,7 +23,7 @@
         <div>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <a class="nav-logo" href="#page-top">
+                <a class="nav-logo" href="/">
                   <img src="./img/logo-big.png" alt="">
                 </a>
             </div>
@@ -163,33 +163,32 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
-                      <h2>Liens utiles</h2>
-                      <ul class="list-footer">
-                        <li>
-                          <a href="#">Equipe</a>
-                        </li>
-                        <li>
-                          <a href="#">Contact</a>
-                        </li>
-                      </ul>
+                    <div class="footer-col col-md-3">
+                      <h2>MobiliSense</h2>
+                      <p>
+                          Inserm IPLESP Unité 1136 - Equipe 8 Nemesis<br>
+                          Faculté de médecine - Hôpital St-Antoine<br>
+                          27, rue Chaligny 75012 Paris
+                      </p>
                     </div>
-                    <div class="footer-col col-md-4">
-                      <img class="footer-img" src="./img/logo_inserm.png" alt="footerLogo">
+                    <div class="footer-col col-md-6">
+                      <img class="footer-img" src="./img/iple.png" alt="Institut Pierre Louis">
+                      <img class="footer-img" src="./img/logo_inserm.png" alt="Inserm"><br>
+                      <img class="footer-img" src="./img/erc.jpg" alt="European Research Council">
+                      <img class="footer-img" src="./img/sorbonne.png" alt="footerLogo">
+                      <img class="footer-img" src="./img/france.jpg" alt="footerLogo">
                     </div>
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col col-md-3">
                       <h2>Remerciements</h2>
-                      <ul class="thanks-footer">
-                        <li>Raphael RENOIT</li>
-                        <li>Suliman ABDELGADEIR</li>
-                        <li>Qixin YING</li>
-                      </ul>
+                      <p>
+                        Merci à toutes les personnes volontaires qui, par leur participation, contribuent au succès de cette recherche en santé publique.
+                      </p>
                     </div>
                 </div>
-            </div>
+        <div class="row ml">
+          <p>Mentions légales</p>
+          <p>Merci à R. Renout, Y. Qixin, S. Abul, C. Rabehi qui ont développé ce site</p>
         </div>
     </footer>
     </body>
