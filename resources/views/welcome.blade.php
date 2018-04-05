@@ -19,7 +19,7 @@
 
     </head>
     <body>
-      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+      <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
         <div>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -30,12 +30,12 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="navbar-navigation">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll dropdown">
-                        <a href="#portfolio" class="dropbtn">Présentation</a>
+                    <li class="dropdown presentation">
+                        <a href="#portfolio" class="dropbtn">L'ÉTUDE</a>
                         <div class="dropdown-content">
                           <a href="#">Contexte et objectifs</a>
                           <a href="#">Méthodologie</a>
@@ -45,7 +45,7 @@
                           <a href="#">Collaborateurs</a>
                         </div>
                     </li>
-                    <li class="page-scroll dropdown">
+                    <li class="dropdown news">
                       <a href="#portfolio" class="dropbtn">Actualité</a>
                       <div class="dropdown-content">
                         <a href="#">Actualité</a>
@@ -53,8 +53,8 @@
                         <a href="#">Dossier de presse</a>
                       </div>
                     </li>
-                    <li class="page-scroll dropdown">
-                      <a href="#portfolio" class="dropbtn">En savoir plus</a>
+                    <li class="dropdown infos">
+                      <a href="#portfolio" class="dropbtn">ESPACE VOLONTAIRES</a>
                       <div class="dropdown-content">
                         <a href="#">Pourquoi participer ?</a>
                         <a href="#">Se connecter</a>
@@ -62,15 +62,15 @@
                         <a href="#">En savoir plus...</a>
                       </div>
                     </li>
-                    <li class="page-scroll dropdown">
-                      <a href="#portfolio" class="dropbtn">Nos travaux</a>
+                    <li class="dropdown works">
+                      <a href="#portfolio" class="dropbtn">ESPACE SCIENTIFIQUE</a>
                       <div class="dropdown-content">
                         <a href="#">Publications et communications</a>
                         <a href="#">Travaux universitaires</a>
                         <a href="#">Principaux résultats</a>
                       </div>
                     </li>
-                    <li class="page-scroll">
+                    <li class="dropdown contact">
                       <a href="#portfolio" class="dropbtn">Contact</a>
                     </li>
                 </ul>

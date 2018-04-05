@@ -1,5 +1,6 @@
 .navbar {
   height: 140px;
+  background-color: white;
   .navbar-header {
     .nav-logo {
       position: absolute;
@@ -14,6 +15,22 @@
       }
     }
   }
+
+  .navbar-navigation {
+    height: 100%;
+    padding-right: 370px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  .navbar-collapse.collapse {
+    height: 140px !important;
+    margin-left: 280px;
+  }
 }
 
 
@@ -21,16 +38,28 @@
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
-    display: inline-block;
+    &:before {
+      content:'';
+      position:absolute;
+      width:5px;
+      top:0;
+      left:0;
+      height:100%;
+      transition: 0.5s ease-in-out;
+      z-index:-1;
+    }
+    &:hover:before {
+      width: 100%;
+    }
     &:hover .dropbtn {
-        background-color: #ad9b91;
+      color: white;
     }
     &:hover .dropdown-content {
         display: block;
     }
 
     .dropdown-content {
-        margin-left: 15px;
+        margin-top: 11px;
         display: none;
         position: absolute;
         background-color: #f9f9f9;
@@ -48,10 +77,51 @@
     }
 
     .dropbtn {
-        color: white;
-        padding: 16px;
-        font-size: 14px;
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: bold;
         border: none;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          background-color: transparent;
+        }
+        &:focus {
+          background-color: transparent;
+        }
+        a {
+          text-decoration: none !important;
+        }
     }
 
+}
+
+.dropdown.presentation {
+  &:before {
+    background: #005596;
+  }
+}
+
+.dropdown.news {
+  &:before {
+    background: #C21C75;
+  }
+}
+
+.dropdown.infos {
+  &:before {
+    background: #F27B07;
+  }
+}
+
+.dropdown.works {
+  &:before {
+    background: #009FCE;
+  }
+}
+
+.dropdown.contact {
+  &:before {
+    background: #E44212;
+  }
 }
