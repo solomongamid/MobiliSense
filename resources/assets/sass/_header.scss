@@ -1,0 +1,127 @@
+.navbar {
+  height: 140px;
+  background-color: white;
+  .navbar-header {
+    .nav-logo {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      border: aliceblue 1px solid;
+      border-radius: 6px;
+      box-shadow: 3px 3px 5px 0px #aaa;
+
+      img {
+        height: 180px;
+      }
+    }
+  }
+
+  .navbar-navigation {
+    height: 100%;
+    padding-right: 370px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+
+  .navbar-collapse.collapse {
+    height: 140px !important;
+    margin-left: 280px;
+  }
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    &:before {
+      content:'';
+      position:absolute;
+      width:5px;
+      top:0;
+      left:0;
+      height:100%;
+      transition: 0.5s ease-in-out;
+      z-index:-1;
+    }
+    &:hover:before {
+      width: 100%;
+    }
+    &:hover .dropbtn {
+      color: white;
+    }
+    &:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content {
+        margin-top: 11px;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        a {
+         font-size: 12px;
+         color: black !important;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         &:hover {background-color: #ad9b91}
+       }
+    }
+
+    .dropbtn {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          background-color: transparent;
+        }
+        &:focus {
+          background-color: transparent;
+        }
+        a {
+          text-decoration: none !important;
+        }
+    }
+
+}
+
+.dropdown.presentation {
+  &:before {
+    background: #005596;
+  }
+}
+
+.dropdown.news {
+  &:before {
+    background: #C21C75;
+  }
+}
+
+.dropdown.infos {
+  &:before {
+    background: #F27B07;
+  }
+}
+
+.dropdown.works {
+  &:before {
+    background: #009FCE;
+  }
+}
+
+.dropdown.contact {
+  &:before {
+    background: #E44212;
+  }
+}

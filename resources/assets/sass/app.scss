@@ -5,5 +5,13 @@
 // Variables
 @import "variables";
 
+@import "homePage";
+@import "template";
+@import "header";
+@import "dashboard";
+@import "footer";
+@import "admin";
+
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

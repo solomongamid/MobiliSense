@@ -19,21 +19,23 @@
 
     </head>
     <body>
-      <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="containerfluid">
+      <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
+        <div>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <a class="navbar-brand" href="#page-top">MobiliSense</a>
+                <a class="nav-logo" href="#page-top">
+                  <img src="./img/logo-big.png" alt="">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="navbar-navigation">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll dropdown">
-                        <a href="#portfolio" class="dropbtn">Présentation</a>
+                    <li class="dropdown presentation">
+                        <a href="#portfolio" class="dropbtn">L'ÉTUDE</a>
                         <div class="dropdown-content">
                           <a href="#">Contexte et objectifs</a>
                           <a href="#">Méthodologie</a>
@@ -43,7 +45,7 @@
                           <a href="#">Collaborateurs</a>
                         </div>
                     </li>
-                    <li class="page-scroll dropdown">
+                    <li class="dropdown news">
                       <a href="#portfolio" class="dropbtn">Actualité</a>
                       <div class="dropdown-content">
                         <a href="#">Actualité</a>
@@ -51,8 +53,8 @@
                         <a href="#">Dossier de presse</a>
                       </div>
                     </li>
-                    <li class="page-scroll dropdown">
-                      <a href="#portfolio" class="dropbtn">En savoir plus</a>
+                    <li class="dropdown infos">
+                      <a href="#portfolio" class="dropbtn">ESPACE VOLONTAIRES</a>
                       <div class="dropdown-content">
                         <a href="#">Pourquoi participer ?</a>
                         <a href="#">Se connecter</a>
@@ -60,15 +62,15 @@
                         <a href="#">En savoir plus...</a>
                       </div>
                     </li>
-                    <li class="page-scroll dropdown">
-                      <a href="#portfolio" class="dropbtn">Nos travaux</a>
+                    <li class="dropdown works">
+                      <a href="#portfolio" class="dropbtn">ESPACE SCIENTIFIQUE</a>
                       <div class="dropdown-content">
                         <a href="#">Publications et communications</a>
                         <a href="#">Travaux universitaires</a>
                         <a href="#">Principaux résultats</a>
                       </div>
                     </li>
-                    <li class="page-scroll">
+                    <li class="dropdown contact">
                       <a href="#portfolio" class="dropbtn">Contact</a>
                     </li>
                 </ul>
@@ -127,12 +129,34 @@
     <main class="home-container container-fluid">
       <section class="block-presentation row">
         <article class="presentation col-xs-12">
-          <h1> What is MobiliSense ? </h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <section>
+            <h1> Qu’est-ce que l’Étude MobiliSense?</h1>
+            <div class="main-text">
+              <p>L’étude MobiliSense porte sur les thèmes de la <b>mobilité</b>, de la <b>santé</b> et de <b>l’environnement</b>.
+              </p>
+
+              <p>
+                L’objectif est <b>d’étudier les effets sur la santé respiratoire et cardiovasculaire de l’exposition à la pollution de l’air et au bruit,
+                liée aux habitudes personnelles de transport.</b>
+              </p>
+              <p>
+                Cette étude s’adresse aux femmes et aux hommes âgés de 32 à 66 ans (au 1er janvier 2018),
+                 résidant  dans les communes du Grand-Paris. Des logements ont été tirés de manière aléatoire à partir des fichiers
+                du Recensement de la Population.
+              </p>
+              <p>
+                MobiliSense a été lancée par l’équipe Nemesis (Neighborhood Environments and Mobility: Effects on Social health InequalitieS)
+                de l’Institut Pierre Louis d'Epidémiologie et de Santé Publique (Inserm UMR-S 1136),
+                suite à l’obtention d’un ERC auprès du Conseil Européen de la Recherche par Basile Chaix, DR2 Inserm.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h1> Qu’est-ce que l’Étude MobiliSense ?</h1>
+
+          </section>
+
         </article>
       </section>
     </main>
