@@ -157,7 +157,7 @@ header .intro-text .skills {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 0px 0;
 }
 section h2 {
   margin: 0;
@@ -464,4 +464,19 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+
+.listvert {
+  list-style: none;
+  font-size: 20px;
+}
+
+.listvert li {
+  text-indent: -.7em;
+}
+
+.listvert li::before {
+  content: "• ";
+  font-size: 20px;
+  color: #29B224 ;
 }

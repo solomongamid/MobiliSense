@@ -12,12 +12,13 @@
 
       <!-- Style -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
       <script src="./js/app.js"></script>
 
+
   </head>
   <body>
-
     <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
       <div>
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,37 +34,76 @@
                   <li class="hidden">
                       <a href="#page-top"></a>
                   </li>
-                  <li class="dropdown presentation">
+                  <li class="dropdown accueil">
                       <a href="/" class="dropbtn">Accueil</a>
                   </li>
+                  <li class="dropdown presentation">
+                      <a href="#portfolio" class="dropbtn">L'ÉTUDE</a>
+                      <div class="dropdown-content">
+                        <a href="#">Contexte et objectifs</a>
+                        <a href="#">Méthodologie</a>
+                        <a href="#">Donnés collectées</a>
+                        <a href="#">Confidentialité</a>
+                        <a href="#">Calendrier</a>
+                        <a href="#">Collaborateurs</a>
+                      </div>
+                  </li>
                   <li class="dropdown news">
-                    <a href="/benevole" class="dropbtn">Mon espace</a>
+                    <a href="#portfolio" class="dropbtn">Actualité</a>
+                    <div class="dropdown-content">
+                      <a href="#">Actualité</a>
+                      <a href="#">Newsletter</a>
+                      <a href="#">Dossier de presse</a>
+                    </div>
                   </li>
                   <li class="dropdown infos">
-                    <a href="#portfolio" class="dropbtn">Mon Bilan</a>
+                    <a href="#portfolio" class="dropbtn">ESPACE VOLONTAIRES</a>
+                    <div class="dropdown-content">
+                      <a href="#">Pourquoi participer ?</a>
+                      @if (Auth::guest())
+                          <a href="{{ route('login') }}">Se connecter</a>
+                      @else
+                          <a href="/benevole">
+                            Mon espace
+                          </a>
+                      @endif
+                      <a href="#">Lettre d'information</a>
+                      <a href="#">En savoir plus...</a>
+                    </div>
                   </li>
                   <li class="dropdown works">
-                    <a href="#portfolio" class="dropbtn">Questionnaire Géo</a>
+                    <a href="#portfolio" class="dropbtn">ESPACE SCIENTIFIQUE</a>
+                    <div class="dropdown-content">
+                      <a href="#">Publications et communications</a>
+                      <a href="#">Travaux universitaires</a>
+                      <a href="#">Principaux résultats</a>
+                    </div>
                   </li>
-              </ul>
-
-              @if (Auth::guest())
-                  <a type="button" class="navbar-btn" href="{{ route('login') }}">Login</a>
-              @else
-                  <a type="button" class="navbar-btn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
-                  </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                  </form>
-              @endif
+                  <li class="dropdown contact">
+                    <a href="#portfolio" class="dropbtn">Contact</a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                   <li>
+                    @if (Auth::guest())
+                        <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>
+                    @else
+                        <a type="button" class="navbar-btn login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                          Se déconnecter
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    @endif
+                    </li>
+                </ul>
           </div>
           <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-fluid -->
     </nav>
 
-      @yield('content')
+    @yield('content')
 
     <!-- Footer -->
     <footer class="text-center">

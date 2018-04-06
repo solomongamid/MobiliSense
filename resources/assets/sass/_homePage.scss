@@ -1,5 +1,6 @@
 .presentation h1 {
   color: #2C3E50;
+      font-weight: bold;
 }
 
 .home-container {
@@ -11,9 +12,14 @@
 }
 
 .main-text {
-
+  margin:0 10% 0 10%;
+  text-align: justify;
 }
 
 .carousel-container {
-  margin-top: 100px;
+  margin-top: 140px;
+}
+
+p strong {
+  color: #29B224;
 }

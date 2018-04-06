@@ -56,7 +56,7 @@
             <p>Réalisez 3 mesures...</p>
             <h3>Journée :</h3>
             <p>Portez du lever au coucher...</p>
-            <ul class="listinfoepe">
+            <ul class="listvert">
               <li>Capteur 1</li>
               <li>Capteur 4</li>
               <li>Capteur 6</li>
@@ -82,12 +82,12 @@
             <hr class="hr">
             <h3>Nuit :</h3>
             <p class="beflist">Rechargez dans n'importe quelle pièce...</p>
-            <ul class="listinfoepe">
+            <ul class="listvert">
               <li>Capteur 4</li>
               <li>Capteur 6</li>
             </ul>
             <p class="beflist">Rechargez dans la pièce où vous dormez...</p>
-            <ul class="listinfoepe">
+            <ul class="listvert">
               <li>Capteur 3</li>
             </ul>
           </div>
