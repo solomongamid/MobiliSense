@@ -3,6 +3,7 @@
 .presentation h1 {
   color: #2C3E50;
   font-weight: bold;
+  padding: 10px 0 10px 0;
 }
 
 .home-container {
@@ -24,6 +25,23 @@
 
 p strong {
   color: #29B224;
+}
+
+.statspub {
+  background-color: #FBB900;
+  font-size: 14px;
+  margin: 2% 10% 2% 10%;
+  text-align: justify;
+  color: #000;
+}
+
+.statspub img {
+  float: left;
+  margin: 2% 1% 0 1%;
+}
+
+.statspub p {
+  padding: 1%;
 }
 
 body {
@@ -628,16 +646,17 @@ fieldset[disabled] .btn-success.active {
   background-color: #29B224;
   color: #ffffff;
   border: 0px;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .navbar .login:hover {
-  background-color: #8f8f8f;
+  background-color: #3D3D3D;
 }
 
 .navbar .navbar-right {
   right: -5%;
   left: auto;
+  display: grid;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -794,6 +813,7 @@ fieldset[disabled] .btn-success.active {
   margin-top: 80px;
   margin-left: -10px;
   color: #29B224;
+  font-weight: bold;
   background: #465256;
   padding: 15px;
   border-radius: 3px;

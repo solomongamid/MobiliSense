@@ -47,16 +47,20 @@
                   </li>
               </ul>
 
-              @if (Auth::guest())
-                  <a type="button" class="navbar-btn" href="{{ route('login') }}">Login</a>
-              @else
-                  <a type="button" class="navbar-btn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
-                  </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                  </form>
-              @endif
+              <ul class="nav navbar-nav navbar-right">
+                 <li>
+                  @if (Auth::guest())
+                      <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>
+                  @else
+                      <a type="button" class="navbar-btn login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Se déconnecter
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                  @endif
+                  </li>
+              </ul>
           </div>
           <!-- /.navbar-collapse -->
       </div>

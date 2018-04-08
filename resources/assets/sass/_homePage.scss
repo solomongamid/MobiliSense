@@ -1,6 +1,7 @@
 .presentation h1 {
   color: #2C3E50;
-      font-weight: bold;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
 }
 
 .home-container {
@@ -22,4 +23,21 @@
 
 p strong {
   color: #29B224;
+}
+
+.statspub {
+  background-color: #FBB900;
+  font-size: 14px;
+  margin: 2% 10% 2% 10%;
+  text-align: justify;
+  color: #000;
+}
+
+.statspub img {
+float:left;
+margin: 2% 1% 0 1%;
+}
+
+.statspub p {
+padding: 1%;
 }

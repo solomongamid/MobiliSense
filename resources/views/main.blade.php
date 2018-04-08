@@ -84,6 +84,9 @@
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  <li>
+                     <a type="button" class="navbar-btn login" href="#demenagement">S'inscrire</a>
+                   </li>
                    <li>
                     @if (Auth::guest())
                         <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>

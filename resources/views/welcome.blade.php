@@ -104,6 +104,17 @@
             </div>
           </section>
 
+          <section class="statspub">
+            <img src="./img/statspub.png" alt="Statistique Publique" />
+            <p>Vu l'avis favorable du Conseil national de l'information statistique, cette enquête est reconnue <b>d'intérêt général
+              et de qualité statistique</b> sans avoir de caractère obligatoire. Visa n°2018X705SA du Ministère de l’économie et des finances,
+              valable pour l’année 2018. En application de la loi n° 51-711 du 7 juin 1951 modifiée, les réponses à ce questionnaire sont
+              protégées par le secret statistique et destinées à l’Inserm. La loi n° 78-17 du 6 janvier 1978 modifiée relative à
+              l'informatique, aux fichiers et aux libertés, s'applique aux réponses faites à la présente enquête.
+              Elle garantit aux personnes concernées un droit d'accès, d’opposition et de rectification pour les données les concernant.
+              Ce droit peut être exercé auprès de <a href="mailto:mobilisense@inserm.fr">mobilisense@inserm.fr</a>.
+          </section>
+
         </article>
       </section>
     </main>
