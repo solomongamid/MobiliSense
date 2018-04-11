@@ -2,6 +2,7 @@
   display: block;
   height: 140px;
   background-color: white;
+  border-bottom: 2px solid #29B224 !important;
   .navbar-header {
     .nav-logo {
       position: absolute;
@@ -43,10 +44,27 @@
     background-color: #3D3D3D;
   }
 
+  .englishflag img{
+    width: 20px;
+  }
+
+  .englishflag{
+    margin: 0 30px 0 0;
+    padding: 0;
+  }
+
+  .englishflag:hover, .englishflag:focus{
+    background-color: transparent;
+  }
+
   .navbar-right {
     right:-5%;
     left:auto;
     display: grid;
+  }
+
+  a {
+    color: #636b6f;
   }
 }
 
@@ -88,7 +106,7 @@
          padding: 12px 16px;
          text-decoration: none;
          display: block;
-         &:hover {background-color: #ad9b91}
+         &:hover {background-color: #dbdbdb;}
        }
     }
 

@@ -21,8 +21,37 @@
   margin-top: 140px;
 }
 
-p strong {
-  color: #29B224;
+.carousel {
+  background-color: #fff;
+}
+
+.carousel-control.left, .carousel-control.right{
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  opacity: 0;
+}
+
+.carousel-control.left:focus, .carousel-control.right:focus{
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  opacity: 0;
+}
+
+.carousel-control.left:hover  {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  opacity: 0.5;
+}
+
+.carousel-control.right:hover  {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  opacity: 0.5;
+}
+.carousel {
+  .carousel-indicators .active {
+      background-color: #636b6f;
+  }
+
+  .carousel-indicators li {
+    border: 1px solid #636b6f;
+  }
 }
 
 .statspub {

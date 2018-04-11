@@ -40,13 +40,13 @@
   a span{
        position:absolute;
        margin-top:80px;
-       margin-left:-10px;
+       margin-left:-20px;
        color:#29B224;
        font-weight: bold;
-       background:#465256;
+       background-color: #dbdbdb;
        padding:15px;
        border-radius:3px;
-       box-shadow:0 0 2px rgba(0,0,0,.5);
+       // box-shadow:0 0 2px rgba(0,0,0,.5);
        transform:scale(0) rotate(-12deg);
        transition:all .25s;
        opacity:0;
@@ -79,6 +79,7 @@
 
   .night {
     background-color: #dbdbdb;
+    padding-top: 10px;
   }
 
   /* On agrandit l'espace entre 2 lignes */
@@ -90,4 +91,19 @@
   	position: absolute;
   	margin-top: 62px;
   }
+
+  .imgrow {
+    height: 500px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+    }
+
+    .sensor {
+      text-align: center;
+      strong{
+        font-size: 16px;
+      }
+    }
 }

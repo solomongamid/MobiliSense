@@ -27,26 +27,26 @@
             <img height="500px;" src="{{ asset('img/humanbody.png') }}"/>
             <a href="#">
               <img class="circle1" src="{{ asset('img/circle.png') }}" />
-              <span>
-                Nom : Capteur 1<br />
-                Couleur : Jaune<br />
-                But : Pour la nuisance sonore
+              <span class="sensor">
+                <strong>Capteur 1 :</strong><br />
+                Jaune<br />
+                Nuisance sonore
               </span>
             </a>
             <a href="#">
               <img class="circle2" src="{{ asset('img/circle.png') }}"/>
-              <span>
-                Nom : Capteur 4<br />
-                Couleur : Rouge<br />
-                But : Pollution de l'air
+              <span class="sensor">
+                <strong>Capteur 4 :</strong><br />
+                Rouge<br />
+                Pollution de l'air
               </span>
             </a>
             <a href="#">
               <img class="circle3" src="{{ asset('img/circle.png') }}"/>
-              <span>
-                Nom : Capteur 6<br />
-                Couleur : Marron<br />
-                But : Rythme cardiaque
+              <span class="sensor">
+                <strong>Capteur 6 :</strong><br />
+                Marron<br />
+                Rythme cardiaque
               </span>
             </a>
           </div>
@@ -79,7 +79,6 @@
           <div class="col-md-3">
           </div>
           <div class="col-md-6">
-            <hr class="hr">
             <h3>Nuit :</h3>
             <p class="beflist">Rechargez dans n'importe quelle pièce...</p>
             <ul class="listvert">
