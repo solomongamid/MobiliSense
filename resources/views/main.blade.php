@@ -20,11 +20,11 @@
   </head>
   <body>
     <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
-      <div>
+      <div class="navbarborder">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header page-scroll">
               <a class="nav-logo" href="/">
-                <img src="./img/logo-big.png" alt="">
+                <img src="./img/logo-big.png" alt="Logo MobiliSense">
               </a>
           </div>
 
@@ -60,6 +60,7 @@
                     <a href="#portfolio" class="dropbtn">ESPACE VOLONTAIRES</a>
                     <div class="dropdown-content">
                       <a href="#">Pourquoi participer ?</a>
+                      <a href="#">Comment participer ?</a>
                       @if (Auth::guest())
                           <a href="{{ route('login') }}">Se connecter</a>
                       @else
@@ -67,6 +68,7 @@
                             Mon espace
                           </a>
                       @endif
+                      <a href="#">Déclarer un déménagement</a>
                       <a href="#">Lettre d'information</a>
                       <a href="#">En savoir plus...</a>
                     </div>
@@ -85,7 +87,15 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                     <a type="button" class="navbar-btn login" href="#demenagement">S'inscrire</a>
+                    <!-- <a type="button" class="navbar-btn login" href="#déménagement">Déclarer un déménagement</a> -->
+                    <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a>
+                   </li>
+                  <li>
+                    @if (Auth::guest())
+                      <a type="button" class="navbar-btn login" href="#inscription">S'inscrire</a>
+                    @else
+                     <a type="button" class="navbar-btn login" href="/benevole">Mon espace</a>
+                   @endif
                    </li>
                    <li>
                     @if (Auth::guest())
@@ -99,6 +109,9 @@
                         </form>
                     @endif
                     </li>
+                    <!-- <li>
+                      <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a>
+                    </li> -->
                 </ul>
           </div>
           <!-- /.navbar-collapse -->

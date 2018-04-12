@@ -23,6 +23,43 @@
   margin-top: 140px;
 }
 
+<<<<<<< HEAD
+=======
+.carousel {
+  background-color: #fff;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  opacity: 0;
+}
+
+.carousel-control.left:focus,
+.carousel-control.right:focus {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  opacity: 0;
+}
+
+.carousel-control.left:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  opacity: 0.5;
+}
+
+.carousel-control.right:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  opacity: 0.5;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #636b6f;
+}
+
+.carousel .carousel-indicators li {
+  border: 1px solid #636b6f;
+}
+
+>>>>>>> 16e27174d97dbdbde084386aedc950dc2d33b708
 .statspub {
   background-color: #FBB900;
   font-size: 14px;
@@ -189,7 +226,6 @@ header .intro-text .skills {
   text-transform: uppercase;
   font-size: 10px;
   border-color: white;
-  border: 1px solid;
   padding: 5px 18px;
   border-radius: 4px;
   cursor: pointer;
@@ -599,6 +635,7 @@ fieldset[disabled] .btn-success.active {
   display: block;
   height: 140px;
   background-color: white;
+  border-bottom: 2px solid #29B224 !important;
 }
 
 .navbar .navbar-header .nav-logo {
@@ -647,6 +684,20 @@ fieldset[disabled] .btn-success.active {
 
 .navbar .login:hover {
   background-color: #3f5a75;
+}
+
+.navbar .englishflag img {
+  width: 20px;
+}
+
+.navbar .englishflag {
+  margin: 0 30px 0 0;
+  padding: 0;
+}
+
+.navbar .englishflag:hover,
+.navbar .englishflag:focus {
+  background-color: transparent;
 }
 
 .navbar .navbar-right {
@@ -811,14 +862,12 @@ fieldset[disabled] .btn-success.active {
 .mainuserhp a span {
   position: absolute;
   margin-top: 80px;
-  margin-left: -10px;
+  margin-left: -20px;
   color: #29B224;
   font-weight: bold;
-  background: #465256;
+  background-color: #dbdbdb;
   padding: 15px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(0) rotate(-12deg);
           transform: scale(0) rotate(-12deg);
   -webkit-transition: all .25s;
@@ -854,6 +903,7 @@ fieldset[disabled] .btn-success.active {
 
 .mainuserhp .night {
   background-color: #dbdbdb;
+  padding-top: 10px;
 }
 
 .mainuserhp .rowbottom {
@@ -863,6 +913,27 @@ fieldset[disabled] .btn-success.active {
 .mainuserhp .timev1 {
   position: absolute;
   margin-top: 62px;
+}
+
+.mainuserhp .imgrow {
+  height: 500px;
+}
+
+.mainuserhp h1,
+.mainuserhp h2,
+.mainuserhp h3,
+.mainuserhp h4,
+.mainuserhp h5,
+.mainuserhp h6 {
+  font-weight: bold;
+}
+
+.mainuserhp .sensor {
+  text-align: center;
+}
+
+.mainuserhp .sensor strong {
+  font-size: 16px;
 }
 
 footer {
