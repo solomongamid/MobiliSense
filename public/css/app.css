@@ -23,10 +23,6 @@
   margin-top: 140px;
 }
 
-p strong {
-  color: #29B224;
-}
-
 .statspub {
   background-color: #FBB900;
   font-size: 14px;
@@ -113,7 +109,7 @@ hr.star-primary:after {
 
 header {
   text-align: center;
-  background: #18BC9C;
+  background-color: #fff;
   color: white;
 }
 
@@ -650,13 +646,17 @@ fieldset[disabled] .btn-success.active {
 }
 
 .navbar .login:hover {
-  background-color: #3D3D3D;
+  background-color: #3f5a75;
 }
 
 .navbar .navbar-right {
   right: -5%;
   left: auto;
   display: grid;
+}
+
+.navbar a {
+  color: #636b6f;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -709,7 +709,7 @@ fieldset[disabled] .btn-success.active {
 }
 
 .dropdown .dropdown-content a:hover {
-  background-color: #ad9b91;
+  background-color: #dbdbdb;
 }
 
 .dropdown .dropbtn {
