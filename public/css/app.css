@@ -23,8 +23,6 @@
   margin-top: 140px;
 }
 
-<<<<<<< HEAD
-=======
 .carousel {
   background-color: #fff;
 }
@@ -59,7 +57,6 @@
   border: 1px solid #636b6f;
 }
 
->>>>>>> 16e27174d97dbdbde084386aedc950dc2d33b708
 .statspub {
   background-color: #FBB900;
   font-size: 14px;
@@ -912,7 +909,8 @@ fieldset[disabled] .btn-success.active {
 
 .mainuserhp .timev1 {
   position: absolute;
-  margin-top: 62px;
+  left: -50px;
+  margin-top: 42px;
 }
 
 .mainuserhp .imgrow {

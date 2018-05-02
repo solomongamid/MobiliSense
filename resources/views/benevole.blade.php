@@ -68,7 +68,7 @@
           </div>
           <div class="col-md-2">
             <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
-            <img class="align-right" src="{{ asset('img/fleche.png') }}" />
+            <img class="align-right" src="{{ asset('img/fleche2.png') }}" />
           </div>
         </div>
 

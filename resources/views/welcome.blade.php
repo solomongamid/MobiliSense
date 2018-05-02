@@ -97,7 +97,8 @@
                 <li>Les expositions à la pollution de l’air et au bruit sont étudiées conjointement, et non pas séparément.</li>
                 <li>Les expositions en condition de vie réelle sont établies, et non pas estimatiées.</li>
                 <li>Les expositions sont mesurées à l’aide de capteurs embarqués sur les personnes et non pas seulement à l’aide de capteurs fixes.</li>
-                <li>Les expositions tiennent compte de la mobilité des personnes.
+                <li>Les expositions tiennent compte de la
+                  $mobilité des personnes.
                   Elles sont appréhendées aux niveaux des lieux fréquentés comme des déplacements, et non pas simplement au domicile ou sur le lieu de travail.</li>
                 </ul>
                 <p>Très peu d’études similaires ont été mises en place dans le monde.</p>
