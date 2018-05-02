@@ -67,7 +67,7 @@
 
 .statspub img {
   float: left;
-  margin: 2% 1% 0 1%;
+  margin: 0.5% 1% 0.5% 1%;
 }
 
 .statspub p {
@@ -223,12 +223,11 @@ header .intro-text .skills {
   text-transform: uppercase;
   font-size: 10px;
   border-color: white;
-  padding: 5px 18px;
+  padding: 3px 18px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   float: right;
-  margin-right: 20px;
 }
 
 .navbar-custom .navbar-btn:hover,
@@ -687,11 +686,6 @@ fieldset[disabled] .btn-success.active {
   width: 20px;
 }
 
-.navbar .englishflag {
-  margin: 0 30px 0 0;
-  padding: 0;
-}
-
 .navbar .englishflag:hover,
 .navbar .englishflag:focus {
   background-color: transparent;
@@ -703,8 +697,16 @@ fieldset[disabled] .btn-success.active {
   display: grid;
 }
 
+.navbar .navbar-right-bene {
+  right: -2%;
+}
+
 .navbar a {
   color: #636b6f;
+}
+
+.navbar .navbar-btn {
+  margin: 0 0 5px 0;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -935,6 +937,7 @@ fieldset[disabled] .btn-success.active {
 }
 
 footer {
+  bottom: 0px;
   color: white;
 }
 

@@ -26,7 +26,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
   }
 
   .navbar-collapse.collapse {
@@ -48,10 +47,10 @@
     width: 20px;
   }
 
-  .englishflag{
-    margin: 0 30px 0 0;
-    padding: 0;
-  }
+  // .englishflag{
+  //   margin: 0;
+  //   padding: 0;
+  // }
 
   .englishflag:hover, .englishflag:focus{
     background-color: transparent;
@@ -62,10 +61,17 @@
     left:auto;
     display: grid;
   }
+  .navbar-right-bene {
+    right:-2%;
+  }
 
   a {
     color: #636b6f;
   }
+  .navbar-btn {
+    margin: 0 0 5px 0;
+  }
+
 }
 
 

@@ -47,7 +47,7 @@
                   </li>
               </ul>
 
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-right navbar-right-bene">
                  <li>
                   @if (Auth::guest())
                       <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>
