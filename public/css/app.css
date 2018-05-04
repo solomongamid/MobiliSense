@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://use.fontawesome.com/releases/v5.0.12/css/all.css);@charset "UTF-8";
 
 .presentation h1 {
   color: #2C3E50;
@@ -143,7 +143,6 @@ hr.star-primary:after {
 
 header {
   text-align: center;
-  background-color: #fff;
   color: white;
 }
 
@@ -627,6 +626,10 @@ fieldset[disabled] .btn-success.active {
   color: #29B224;
 }
 
+.maincontent {
+  padding-top: 150px;
+}
+
 .navbar {
   display: block;
   height: 140px;
@@ -692,7 +695,7 @@ fieldset[disabled] .btn-success.active {
 }
 
 .navbar .navbar-right {
-  right: -5%;
+  right: -70px;
   left: auto;
   display: grid;
 }
@@ -808,8 +811,6 @@ fieldset[disabled] .btn-success.active {
 }
 
 .mainuserhp {
-  background: #f2f4f6;
-  padding-top: 150px;
   /* Avant une list pour enlever l'espace */
   /* Position en dur des capteurs pour le moment */
   /* Pour l'ouverture + mise en forme de l'info bulle */
@@ -1022,6 +1023,41 @@ ul.Information li a:hover:not(.active) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.actuheader h1 {
+  color: #000;
+}
+
+.mainactu {
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.mainactu h3 {
+  margin-bottom: 0px;
+  color: #29B224;
+  font-weight: bold;
+}
+
+.mainactu .date {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mainactu p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.mainactu hr {
+  border-top: 2px solid #eeeeee;
+}
+
+.mainactu a,
+.mainactu a:focus,
+.mainactu a:hover {
+  color: #3f5a75;
 }
 
 /*!

@@ -56,7 +56,6 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background-color: #fff;
   color: white;
 }
 header .container {
@@ -477,4 +476,8 @@ fieldset[disabled] .btn-success.active {
   content: "• ";
   font-size: 20px;
   color: #29B224 ;
+}
+
+.maincontent {
+  padding-top: 150px;
 }

@@ -9,6 +9,7 @@
 
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
       <!-- Style -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -89,7 +90,7 @@
                     <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a>
                   </li>
                   <li>
-                    <a type="button" class="navbar-btn login" href="#déménagement">Déclarer un déménagement</a>
+                    <a type="button" class="navbar-btn login" href="#déménagement">Déménagement ?</a>
                     <!-- <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a> -->
                    </li>
                   <li>
