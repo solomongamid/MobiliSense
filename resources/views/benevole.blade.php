@@ -6,7 +6,7 @@
 
 @section('content')
 
-      <main class="mainuserhp">
+      <main class="maincontent">
 
         <!-- Header -->
         <div class="row rowbottom">

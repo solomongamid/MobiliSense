@@ -56,7 +56,6 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background-color: #fff;
   color: white;
 }
 header .container {
@@ -123,12 +122,11 @@ header .intro-text .skills {
   text-transform: uppercase;
   font-size: 10px;
   border-color: white;
-  padding: 5px 18px;
+  padding: 3px 18px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   float: right;
-  margin-right: 20px;
 }
 .navbar-custom .navbar-btn:hover,
 .navbar-custom .navbar-btn:focus {
@@ -478,4 +476,8 @@ fieldset[disabled] .btn-success.active {
   content: "• ";
   font-size: 20px;
   color: #29B224 ;
+}
+
+.maincontent {
+  padding-top: 150px;
 }

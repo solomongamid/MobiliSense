@@ -9,6 +9,7 @@
 
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
       <!-- Style -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -47,7 +48,7 @@
                   </li>
               </ul>
 
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-right navbar-right-bene">
                  <li>
                   @if (Auth::guest())
                       <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>

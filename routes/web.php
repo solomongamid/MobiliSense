@@ -18,7 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/actu', 'HomeController@actu')->name('actu');
+
 Route::get('/benevole', 'BenevoleController@index')->name('benevole');
+
+
 Route::get('/adminHome', 'AdminController@index')->name('adminHome');
 Route::get('/newsHome', 'AdminController@indexNews');
 Route::get('/addNews', 'AdminController@newsForm');
@@ -26,6 +31,7 @@ Route::post('/addNews', 'AdminController@store');
 Route::get('/delete/{news}','AdminController@destroy');
 Route::get('/newsHome/{news}', 'AdminController@showNews');
 Route::post('/newsHome/{news}','AdminController@updateNews');
+
 
 
 Route::get('/userHome', 'Auth\RegisterController@indexUser');
