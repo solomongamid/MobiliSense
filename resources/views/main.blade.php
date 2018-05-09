@@ -149,7 +149,7 @@
                 </div>
         <div class="row ml">
           <p>Mentions légales</p>
-          <p>Merci à R. Renout, Y. Qixin, S. Abdelgadeir, C. Rabehi qui ont développé ce site</p>
+          <p>Merci à Y. Qixin, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
   </body>
