@@ -30,3 +30,10 @@ Route::post('/newsHome/{news}','AdminController@updateNews');
 
 Route::get('/userHome', 'Auth\RegisterController@indexUser');
 Route::get('/deleteUser/{user}','Auth\RegisterController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//Approve users
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');

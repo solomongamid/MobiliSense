@@ -30,13 +30,19 @@ class LoginController extends Controller
 
     protected function authenticated($request, $user)
     {
+        if (!$user->verified) {
+            auth()->logout();
+            return back()->with('warning', 'You need to confirm your account. We have sent you an activation code, please check your email.');
+        }
+        //return redirect()->intended($this->redirectPath());
 
         if($user->role === 1) {
             return redirect()->intended('/adminHome');
+        } else {
+            return redirect()->intended('/benevole');
         }
-
-        return redirect()->intended('/benevole');
     }
+
 
     /**
      * Create a new controller instance.

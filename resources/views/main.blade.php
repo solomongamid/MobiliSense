@@ -92,7 +92,7 @@
                    </li>
                   <li>
                     @if (Auth::guest())
-                      <a type="button" class="navbar-btn login" href="#inscription">S'inscrire</a>
+                      <a type="button" class="navbar-btn login" href="/register">S'inscrire</a>
                     @else
                      <a type="button" class="navbar-btn login" href="/benevole">Mon espace</a>
                    @endif
@@ -148,7 +148,7 @@
                 </div>
         <div class="row ml">
           <p>Mentions légales</p>
-          <p>Merci à R. Renout, Y. Qixin, S. Abul, C. Rabehi qui ont développé ce site</p>
+          <p>Merci à R. Renout, Y. Qixin, S. Abdelgadeir, C. Rabehi qui ont développé ce site</p>
         </div>
     </footer>
   </body>

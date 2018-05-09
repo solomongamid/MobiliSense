@@ -8,9 +8,13 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
+                    @if (Auth::guest())
+                    @else
                     <ul class="pager">
                         <li class="previous"><a href="{{ url('userHome') }}">Previous</a></li>
-                      </ul> 
+                    </ul>
+                    @endif
+                    
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 

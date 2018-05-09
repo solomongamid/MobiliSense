@@ -49,13 +49,20 @@ class AdminController extends Controller
         return view('addNews');
     }
 
-    public function store(){
+    public function store(Request $request){
 
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
 
         $inputs['date'] = Carbon\Carbon::now();
+
+        if(Input::hasFile('news_file')) {
+            $file = Input::file('news_file');
+            //$file->move(public_path(). '/storage', $file->getClientOriginalName())->save();
+            $filePath = $request->file('news_file')->store('public');
+            $inputs['files'] = $filePath;
+        }
 
         DB::table('news')->insert($inputs);
 

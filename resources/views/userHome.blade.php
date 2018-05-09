@@ -38,9 +38,9 @@
       </tbody>
   </table>
 
-<script>
+<!-- <script>
   setTimeout(function() {
       $('.alert').fadeOut('fast');
       }, 3000);
-</script>
+</script> -->
 @endsection
