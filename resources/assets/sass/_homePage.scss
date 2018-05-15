@@ -6,16 +6,35 @@
 
 .home-container {
   margin-top: 10px;
+
+  .presentation {
+    text-align: center;
+  }
+
+  .main-text {
+    margin:0 10% 0 10%;
+    text-align: justify;
+  }
+
+  .statspub {
+    background-color: #FBB900;
+    font-size: 14px;
+    margin: 2% 10% 2% 10%;
+    text-align: justify;
+    color: #000;
+  }
+
+  .statspub img {
+  float:left;
+  margin: 0.5% 1% 0.5% 1%;
+  }
+
+  .statspub p {
+  padding: 1%;
+  }
+
 }
 
-.presentation {
-  text-align: center;
-}
-
-.main-text {
-  margin:0 10% 0 10%;
-  text-align: justify;
-}
 
 .carousel-container {
   margin-top: 140px;
@@ -53,19 +72,21 @@
     border: 1px solid #636b6f;
   }
 }
-.statspub {
-  background-color: #FBB900;
-  font-size: 14px;
-  margin: 2% 10% 2% 10%;
-  text-align: justify;
-  color: #000;
+
+
+.nav-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  .arrow-icon {
+    font-size: 5em;
+  }
 }
 
-.statspub img {
-float:left;
-margin: 0.5% 1% 0.5% 1%
-}
-
-.statspub p {
-padding: 1%;
+a.anchor {
+  display: block;
+  position: relative;
+  top: -140px;
+  visibility: hidden;
 }
