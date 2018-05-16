@@ -68,18 +68,21 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+                        @if (Auth::guest())
+                        @else
+                        <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">User type</label>
 
                             <div class="col-md-3">
                                 <label for="user" class="radio-inline">Admin</label>
-                                    <input type="radio" class="form-control" name="role" value="1">
+                                    <input type="radio" name="role" value="1">
                             </div>
                             <div class="col-md-3">
                                 <label for="user" class="radio-inline"> User</label>
-                                <input type="radio" checked="checked" class="form-control" name="role" value="0">
+                                <input type="radio" checked="checked"  name="role" value="0">
                             </div>
-                        </div> -->
+                        </div> 
+                        @endif
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
