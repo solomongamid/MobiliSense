@@ -112,7 +112,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('../public/js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('tinymce/js/tinymce/tinymce.min.js') }}"></script>
       <script type="text/javascript">
         tinymce.init({
