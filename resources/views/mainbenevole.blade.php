@@ -97,7 +97,7 @@
                 </div>
         <div class="row ml">
           <p>Mentions légales</p>
-          <p>Merci à R. Renout, Y. Qixin, S. Abul, C. Rabehi qui ont développé ce site</p>
+          <p>Merci à Y. Qixin, S. Abul et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
   </body>

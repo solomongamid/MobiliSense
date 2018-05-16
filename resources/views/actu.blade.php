@@ -15,10 +15,13 @@
       <br>
       <p>{!! html_entity_decode($news->description) !!}</p>
       <br>
-      <a href="./img/ARPH_Mobile sensing.pdf" target="_blank">
-        <i class="fas fa-external-link-alt"></i>
-        Retrouvez l'article complet ici
-      </a>
+      @if ($news->files != null)
+
+        <a href="./{{ $news->files }}" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+          Retrouvez l'article complet ici
+        </a>
+      @endif
       <br>
   @endforeach
 </main>

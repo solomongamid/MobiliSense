@@ -39,14 +39,14 @@
                       <a href="/" class="dropbtn">Accueil</a>
                   </li>
                   <li class="dropdown presentation">
-                      <a href="#portfolio" class="dropbtn">L'ÉTUDE</a>
+                      <a href="/study" class="dropbtn">L'ÉTUDE</a>
                       <div class="dropdown-content">
-                        <a href="#">Contexte et objectifs</a>
-                        <a href="#">Méthodologie</a>
-                        <a href="#">Donnés collectées</a>
-                        <a href="#">Confidentialité</a>
-                        <a href="#">Calendrier</a>
-                        <a href="#">Collaborateurs</a>
+                        <a href="/study#context">Contexte et objectifs</a>
+                        <a href="/study#methods">Méthodologie</a>
+                        <a href="/study#data-collected">Donnés collectées</a>
+                        <a href="/study#confidentiality">Confidentialité</a>
+                        <a href="/study#">Calendrier</a>
+                        <a href="/study#">Collaborateurs</a>
                       </div>
                   </li>
                   <li class="dropdown news">
@@ -120,8 +120,15 @@
       <!-- /.container-fluid -->
     </nav>
 
+    <a id="top-of-page" class="anchor"></a>
+
     @yield('content')
 
+    <section class="nav-to-top">
+      <a href="#top-of-page">
+      <i class="arrow-icon fas fa-arrow-circle-up"></i>
+      </a>
+    </section>
     <!-- Footer -->
     <footer class="text-center">
                 <div class="row">
@@ -149,7 +156,7 @@
                 </div>
         <div class="row ml">
           <p>Mentions légales</p>
-          <p>Merci à R. Renout, Y. Qixin, S. Abdelgadeir, C. Rabehi qui ont développé ce site</p>
+          <p>Merci à Y. Qixin, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
   </body>
