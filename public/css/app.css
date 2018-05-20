@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://use.fontawesome.com/releases/v5.0.12/css/all.css);@charset "UTF-8";
 
 .presentation h1 {
   color: #2C3E50;
@@ -29,7 +29,7 @@
 
 .home-container .statspub img {
   float: left;
-  margin: 2% 1% 0 1%;
+  margin: 0.5% 1% 0.5% 1%;
 }
 
 .home-container .statspub p {
@@ -161,7 +161,6 @@ hr.star-primary:after {
 
 header {
   text-align: center;
-  background-color: #fff;
   color: white;
 }
 
@@ -241,12 +240,11 @@ header .intro-text .skills {
   text-transform: uppercase;
   font-size: 10px;
   border-color: white;
-  padding: 5px 18px;
+  padding: 3px 18px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   float: right;
-  margin-right: 20px;
 }
 
 .navbar-custom .navbar-btn:hover,
@@ -641,6 +639,10 @@ fieldset[disabled] .btn-success.active {
   color: #29B224;
 }
 
+.maincontent {
+  padding-top: 150px;
+}
+
 .navbar {
   display: block;
   height: 140px;
@@ -700,24 +702,27 @@ fieldset[disabled] .btn-success.active {
   width: 20px;
 }
 
-.navbar .englishflag {
-  margin: 0 30px 0 0;
-  padding: 0;
-}
-
 .navbar .englishflag:hover,
 .navbar .englishflag:focus {
   background-color: transparent;
 }
 
 .navbar .navbar-right {
-  right: -5%;
+  right: -70px;
   left: auto;
   display: grid;
 }
 
+.navbar .navbar-right-bene {
+  right: -2%;
+}
+
 .navbar a {
   color: #636b6f;
+}
+
+.navbar .navbar-btn {
+  margin: 0 0 5px 0;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -818,136 +823,8 @@ fieldset[disabled] .btn-success.active {
   background: #E44212;
 }
 
-.mainuserhp {
-  background: #f2f4f6;
-  padding-top: 150px;
-  /* Avant une list pour enlever l'espace */
-  /* Position en dur des capteurs pour le moment */
-  /* Pour l'ouverture + mise en forme de l'info bulle */
-  /* Fin infobulle */
-  /* img de lune et soleil */
-  /* Trace une ligne horizontale verte */
-  /* On agrandit l'espace entre 2 lignes */
-  /* Flèche sur V1 pour le moment en dure */
-}
-
-.mainuserhp h1,
-.mainuserhp h3 {
-  margin-bottom: 0px;
-}
-
-.mainuserhp h3 {
-  margin-top: 0px;
-}
-
-.mainuserhp .beflist {
-  margin-bottom: 0px;
-}
-
-.mainuserhp .circle1 {
-  position: absolute;
-  left: 55px;
-  top: 220px;
-}
-
-.mainuserhp .circle2 {
-  position: absolute;
-  left: 155px;
-  top: 420px;
-}
-
-.mainuserhp .circle3 {
-  position: absolute;
-  left: 140px;
-  top: 140px;
-}
-
-.mainuserhp a:hover,
-.mainuserhp a:focus {
-  background: rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.mainuserhp a span {
-  position: absolute;
-  margin-top: 80px;
-  margin-left: -20px;
-  color: #29B224;
-  font-weight: bold;
-  background-color: #dbdbdb;
-  padding: 15px;
-  border-radius: 3px;
-  -webkit-transform: scale(0) rotate(-12deg);
-          transform: scale(0) rotate(-12deg);
-  -webkit-transition: all .25s;
-  transition: all .25s;
-  opacity: 0;
-}
-
-.mainuserhp a:hover span,
-.mainuserhp a:focus span {
-  -webkit-transform: scale(1) rotate(0);
-          transform: scale(1) rotate(0);
-  opacity: 1;
-}
-
-.mainuserhp .moon {
-  margin: 10% 0 0 10%;
-}
-
-.mainuserhp .day {
-  text-align: center;
-}
-
-.mainuserhp .hr {
-  margin-left: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 45%;
-  height: 2px;
-  background-color: #29B224;
-  border: none;
-  /*on supprime le style par défaut*/
-}
-
-.mainuserhp .night {
-  background-color: #dbdbdb;
-  padding-top: 10px;
-}
-
-.mainuserhp .rowbottom {
-  margin-bottom: 10px;
-}
-
-.mainuserhp .timev1 {
-  position: absolute;
-  left: -50px;
-  margin-top: 42px;
-}
-
-.mainuserhp .imgrow {
-  height: 500px;
-}
-
-.mainuserhp h1,
-.mainuserhp h2,
-.mainuserhp h3,
-.mainuserhp h4,
-.mainuserhp h5,
-.mainuserhp h6 {
-  font-weight: bold;
-}
-
-.mainuserhp .sensor {
-  text-align: center;
-}
-
-.mainuserhp .sensor strong {
-  font-size: 16px;
-}
-
 footer {
+  bottom: 0px;
   color: white;
 }
 
@@ -1032,6 +909,168 @@ ul.Information li a:hover:not(.active) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.mainuserhp {
+  /* Avant une list pour enlever l'espace */
+  /* Position en dur des capteurs pour le moment */
+  /* Pour l'ouverture + mise en forme de l'info bulle */
+  /* Fin infobulle */
+  /* img de lune et soleil */
+  /* Trace une ligne horizontale verte */
+  /* On agrandit l'espace entre 2 lignes */
+  /* Flèche sur V1 pour le moment en dure */
+}
+
+.mainuserhp h1,
+.mainuserhp h3 {
+  margin-bottom: 0px;
+}
+
+.mainuserhp h3 {
+  margin-top: 0px;
+}
+
+.mainuserhp .beflist {
+  margin-bottom: 0px;
+}
+
+.mainuserhp .circle1 {
+  position: absolute;
+  left: 55px;
+  top: 220px;
+}
+
+.mainuserhp .circle2 {
+  position: absolute;
+  left: 155px;
+  top: 420px;
+}
+
+.mainuserhp .circle3 {
+  position: absolute;
+  left: 140px;
+  top: 140px;
+}
+
+.mainuserhp a:hover,
+.mainuserhp a:focus {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.mainuserhp a span {
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -20px;
+  color: #29B224;
+  font-weight: bold;
+  background-color: #dbdbdb;
+  padding: 15px;
+  border-radius: 3px;
+  -webkit-transform: scale(0) rotate(-12deg);
+          transform: scale(0) rotate(-12deg);
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  opacity: 0;
+}
+
+.mainuserhp a:hover span,
+.mainuserhp a:focus span {
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
+  opacity: 1;
+}
+
+.mainuserhp .moon {
+  margin: 10% 0 0 10%;
+}
+
+.mainuserhp .day {
+  text-align: center;
+}
+
+.mainuserhp .hr {
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 45%;
+  height: 2px;
+  background-color: #29B224;
+  border: none;
+  /*on supprime le style par défaut*/
+}
+
+.mainuserhp .night {
+  background-color: #dbdbdb;
+  padding-top: 10px;
+}
+
+.mainuserhp .rowbottom {
+  margin-bottom: 10px;
+}
+
+.mainuserhp .timev1 {
+  position: absolute;
+  left: -50px;
+  margin-top: 42px;
+}
+
+.mainuserhp .imgrow {
+  height: 500px;
+}
+
+.mainuserhp h1,
+.mainuserhp h2,
+.mainuserhp h3,
+.mainuserhp h4,
+.mainuserhp h5,
+.mainuserhp h6 {
+  font-weight: bold;
+}
+
+.mainuserhp .sensor {
+  text-align: center;
+}
+
+.mainuserhp .sensor strong {
+  font-size: 16px;
+}
+
+.actuheader h1 {
+  color: #000;
+}
+
+.mainactu {
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.mainactu h3 {
+  margin-bottom: 0px;
+  color: #29B224;
+  font-weight: bold;
+}
+
+.mainactu .date {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mainactu p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.mainactu hr {
+  border-top: 2px solid #eeeeee;
+}
+
+.mainactu a,
+.mainactu a:focus,
+.mainactu a:hover {
+  color: #3f5a75;
 }
 
 .study-main-container {
@@ -2488,7 +2527,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -8974,7 +9013,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .carousel-control.left {
@@ -9063,7 +9102,7 @@ button.close {
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .carousel-indicators .active {

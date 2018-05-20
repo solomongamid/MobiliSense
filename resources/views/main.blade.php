@@ -50,7 +50,7 @@
                       </div>
                   </li>
                   <li class="dropdown news">
-                    <a href="#portfolio" class="dropbtn">Actualité</a>
+                    <a href="/actu" class="dropbtn">Actualité</a>
                     <div class="dropdown-content">
                       <a href="/actu">Actualité</a>
                       <a href="#">Newsletter</a>
