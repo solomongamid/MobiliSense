@@ -1,4 +1,4 @@
-@extends('mainbenevole')
+@extends('/benevole/mainbenevole')
 
 @section('title', 'Mon espace')
 
@@ -67,7 +67,7 @@
             <p>Réalisez 3 mesures...</p>
           </div>
           <div class="col-md-2">
-            <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
+            <img class="timev3" src="{{ asset('img/flecheright.png') }}" />
             <img class="align-right" src="{{ asset('img/fleche2.png') }}" />
           </div>
         </div>
@@ -92,6 +92,13 @@
           </div>
           <div class="col-md-2">
           </div>
+        </div>
+
+        <div class="row remerciements">
+            <p>
+              Un grand MERCI ! <strong>Si besoin, appelez 7 jours / 7</strong><br>
+              au <strong>01 44 73 84 56</strong> ou au <strong>06 17 99 21 73</strong>
+            </p>
         </div>
       </main>
 @endsection

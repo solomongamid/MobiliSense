@@ -82,7 +82,8 @@
 }
 
 .nav-to-top .arrow-icon {
-  font-size: 5em;
+  font-size: 4em;
+  color: #29B224;
 }
 
 a.anchor {
@@ -914,8 +915,6 @@ ul.Information li a:hover:not(.active) {
 .mainuserhp {
   /* Avant une list pour enlever l'espace */
   /* Position en dur des capteurs pour le moment */
-  /* Pour l'ouverture + mise en forme de l'info bulle */
-  /* Fin infobulle */
   /* img de lune et soleil */
   /* Trace une ligne horizontale verte */
   /* On agrandit l'espace entre 2 lignes */
@@ -953,36 +952,6 @@ ul.Information li a:hover:not(.active) {
   top: 140px;
 }
 
-.mainuserhp a:hover,
-.mainuserhp a:focus {
-  background: rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.mainuserhp a span {
-  position: absolute;
-  margin-top: 140px;
-  margin-left: -20px;
-  color: #29B224;
-  font-weight: bold;
-  background-color: #dbdbdb;
-  padding: 15px;
-  border-radius: 3px;
-  -webkit-transform: scale(0) rotate(-12deg);
-          transform: scale(0) rotate(-12deg);
-  -webkit-transition: all .25s;
-  transition: all .25s;
-  opacity: 0;
-}
-
-.mainuserhp a:hover span,
-.mainuserhp a:focus span {
-  -webkit-transform: scale(1) rotate(0);
-          transform: scale(1) rotate(0);
-  opacity: 1;
-}
-
 .mainuserhp .moon {
   margin: 10% 0 0 10%;
 }
@@ -1007,14 +976,73 @@ ul.Information li a:hover:not(.active) {
   padding-top: 10px;
 }
 
+.mainuserhp .remerciements {
+  padding-top: 10px;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  width: 500px;
+  background: #29B224;
+  border-radius: 30px;
+}
+
 .mainuserhp .rowbottom {
   margin-bottom: 10px;
+  /* Pour l'ouverture + mise en forme de l'info bulle */
+  /* Fin infobulle */
+}
+
+.mainuserhp .rowbottom a:hover,
+.mainuserhp .rowbottom a:focus {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.mainuserhp .rowbottom a span {
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -20px;
+  color: #29B224;
+  font-weight: bold;
+  background-color: #dbdbdb;
+  padding: 15px;
+  border-radius: 3px;
+  -webkit-transform: scale(0) rotate(-12deg);
+          transform: scale(0) rotate(-12deg);
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  opacity: 0;
+}
+
+.mainuserhp .rowbottom a:hover span,
+.mainuserhp .rowbottom a:focus span {
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
+  opacity: 1;
+}
+
+.mainuserhp .timev0 {
+  position: absolute;
+  left: -50px;
+  margin-top: 0px;
 }
 
 .mainuserhp .timev1 {
   position: absolute;
   left: -50px;
   margin-top: 42px;
+}
+
+.mainuserhp .timev2 {
+  position: absolute;
+  left: -50px;
+  margin-top: 211px;
+}
+
+.mainuserhp .timev3 {
+  position: absolute;
+  left: -50px;
+  margin-top: 379px;
 }
 
 .mainuserhp .imgrow {
@@ -1038,39 +1066,51 @@ ul.Information li a:hover:not(.active) {
   font-size: 16px;
 }
 
-.actuheader h1 {
-  color: #000;
+.actu-main-container {
+  margin-top: 140px;
+  padding: 50px 140px;
 }
 
-.mainactu {
-  margin-left: 10%;
-  margin-right: 5%;
+.actu-main-container .main-title {
+  color: #C21C75;
+  font-size: 52px;
+  font-weight: bold;
 }
 
-.mainactu h3 {
-  margin-bottom: 0px;
+.actu-main-container .my-hr {
+  border-top: 2px solid #9f9797;
+}
+
+.actu-main-container .main-text {
+  padding: 10px 20px;
+  background-color: #fffff6;
+}
+
+.actu-main-container .main-text:nth-of-type(2n) {
+  background-color: #fffffe;
+}
+
+.actu-main-container .main-text h2 {
+  font-size: 35px;
   color: #29B224;
+}
+
+.actu-main-container .main-text h2 span {
+  margin-left: 10px;
+}
+
+.actu-main-container .main-text .sub-text {
+  padding: 0 48px;
+}
+
+.actu-main-container .main-text .sub-text .date {
+  font-size: 25px;
   font-weight: bold;
 }
 
-.mainactu .date {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.mainactu p {
-  padding: 0px;
-  margin: 0px;
-}
-
-.mainactu hr {
-  border-top: 2px solid #eeeeee;
-}
-
-.mainactu a,
-.mainactu a:focus,
-.mainactu a:hover {
+.actu-main-container .main-text .sub-text a {
   color: #3f5a75;
+  font-size: 16px;
 }
 
 .study-main-container {
@@ -1106,6 +1146,7 @@ ul.Information li a:hover:not(.active) {
 }
 
 .study-main-container .main-text .sub-text {
+  text-align: justify;
   padding: 0 48px;
 }
 
