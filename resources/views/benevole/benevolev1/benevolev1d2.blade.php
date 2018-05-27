@@ -13,8 +13,8 @@
           <div class="col-md-4">
           </div>
           <div class="col-md-6">
-            <h1>Vague 2</h1>
-            <h3 >Jour 2 : Jeudi 05 avril 2018</h3>
+            <h1>Vague 1</h1>
+            <h3 id="date"></h3>
           </div>
 
         </div>
@@ -52,19 +52,22 @@
           </div>
           <div class="col-md-6">
             <hr class="hr">
-            <h3>Matin :</h3>
-            <p>Réalisez 3 mesures...</p>
-            <h3>Journée :</h3>
-            <p>Portez du lever au coucher...</p>
-            <ul class="listvert">
-              <li>Capteur 1</li>
-              <li>Capteur 4</li>
-              <li>Capteur 6</li>
+            <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Matin :</h3>
+            <p class="beflist">Réaliser <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
+            <ul>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile</li>
+              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
             </ul>
-            <p>Remplissez votre carnet de déplacement</p>
-            <p>Répondez au questionnaire sur l'Iphone</p>
-            <h3>Soir :</h3>
-            <p>Réalisez 3 mesures...</p>
+            <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Journée :</h3>
+            <p class="beflist"><strong>Portez du lever au coucher :</strong></p>
+            <ul>
+              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS + 2. Accéléromètre</li>
+              <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
+              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />7. Tension-mobile</li>
+            </ul>
+            <p><strong>Répondez</strong> au questionnaire sur l'iPhone.</p>
+            <p><strong>Remplissez</strong> votre carnet de déplacement.</p>
           </div>
           <div class="col-md-2">
             <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
@@ -79,15 +82,25 @@
           <div class="col-md-3">
           </div>
           <div class="col-md-6">
-            <h3>Nuit :</h3>
-            <p class="beflist">Rechargez dans n'importe quelle pièce...</p>
-            <ul class="listvert">
-              <li>Capteur 4</li>
-              <li>Capteur 6</li>
+            <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Nuit :</h3>
+            <p class="beflist">Réalisez <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
+            <ul>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile</li>
+              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
             </ul>
-            <p class="beflist">Rechargez dans la pièce où vous dormez...</p>
-            <ul class="listvert">
-              <li>Capteur 3</li>
+            <p class="beflist"><strong>Rechargez</strong> dans n'importe quelle pièce :</p>
+            <ul>
+              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS</li>
+              <li><img src="{{ asset('img/rondtest4.png') }}" />6. Cardio-électrodes</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />7. Piles du Tension-mobile</li>
+              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rondtest3.png') }}" />11. iPhone</li>
+            </ul>
+            <p class="beflist"><strong>Rechargez</strong> dans la pièce où vous dormez :</p>
+            <ul>
+              <li class="bruit"><img src="{{ asset('img/rondtest4.png') }}" />3. Bruit-micro</li>
+              <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
+              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau, <span class="red">allumez l'appareil</span></li>
             </ul>
           </div>
           <div class="col-md-2">
@@ -101,4 +114,12 @@
             </p>
         </div>
       </main>
+      <script>
+          n =  new Date();
+          var tab_jour=new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+          y = n.getFullYear();
+          var tab_mois=new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+          d = n.getDate();
+          document.getElementById("date").innerHTML = "Jour 1 : " + tab_jour[n.getDay()] + " " + d + " " + tab_mois[n.getMonth()] + " " + y;
+    </script>
 @endsection

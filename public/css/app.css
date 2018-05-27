@@ -934,6 +934,10 @@ ul.Information li a:hover:not(.active) {
   margin-bottom: 0px;
 }
 
+.mainuserhp .red {
+  color: #FF0000;
+}
+
 .mainuserhp .circle1 {
   position: absolute;
   left: 55px;
@@ -1064,6 +1068,20 @@ ul.Information li a:hover:not(.active) {
 
 .mainuserhp .sensor strong {
   font-size: 16px;
+}
+
+.mainuserhp ul {
+  list-style: none;
+  font-size: 20px;
+}
+
+.mainuserhp ul li {
+  text-indent: -.7em;
+}
+
+.mainuserhp ul li img {
+  width: 10px;
+  margin-right: 5px;
 }
 
 .actu-main-container {

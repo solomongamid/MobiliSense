@@ -12,6 +12,10 @@
     margin-bottom: 0px;
   }
 
+  .red {
+    color: #FF0000;
+  }
+
   /* Position en dur des capteurs pour le moment */
   .circle1 {
     position: absolute;
@@ -131,4 +135,19 @@
         font-size: 16px;
       }
     }
+
+    // Les capteurs (petite couleur pour liste à puces correspondante)
+    ul {
+      list-style: none;
+      font-size: 20px;
+    }
+
+    ul li{
+      text-indent: -.7em;
+      img {
+        width: 10px;
+        margin-right: 5px;
+      }
+    }
+
 }
