@@ -82,7 +82,8 @@
 }
 
 .nav-to-top .arrow-icon {
-  font-size: 5em;
+  font-size: 4em;
+  color: #29B224;
 }
 
 a.anchor {
@@ -823,133 +824,6 @@ fieldset[disabled] .btn-success.active {
   background: #E44212;
 }
 
-.mainuserhp {
-  /* Avant une list pour enlever l'espace */
-  /* Position en dur des capteurs pour le moment */
-  /* Pour l'ouverture + mise en forme de l'info bulle */
-  /* Fin infobulle */
-  /* img de lune et soleil */
-  /* Trace une ligne horizontale verte */
-  /* On agrandit l'espace entre 2 lignes */
-  /* Flèche sur V1 pour le moment en dure */
-}
-
-.mainuserhp h1,
-.mainuserhp h3 {
-  margin-bottom: 0px;
-}
-
-.mainuserhp h3 {
-  margin-top: 0px;
-}
-
-.mainuserhp .beflist {
-  margin-bottom: 0px;
-}
-
-.mainuserhp .circle1 {
-  position: absolute;
-  left: 55px;
-  top: 220px;
-}
-
-.mainuserhp .circle2 {
-  position: absolute;
-  left: 155px;
-  top: 420px;
-}
-
-.mainuserhp .circle3 {
-  position: absolute;
-  left: 140px;
-  top: 140px;
-}
-
-.mainuserhp a:hover,
-.mainuserhp a:focus {
-  background: rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.mainuserhp a span {
-  position: absolute;
-  margin-top: 80px;
-  margin-left: -20px;
-  color: #29B224;
-  font-weight: bold;
-  background-color: #dbdbdb;
-  padding: 15px;
-  border-radius: 3px;
-  -webkit-transform: scale(0) rotate(-12deg);
-          transform: scale(0) rotate(-12deg);
-  -webkit-transition: all .25s;
-  transition: all .25s;
-  opacity: 0;
-}
-
-.mainuserhp a:hover span,
-.mainuserhp a:focus span {
-  -webkit-transform: scale(1) rotate(0);
-          transform: scale(1) rotate(0);
-  opacity: 1;
-}
-
-.mainuserhp .moon {
-  margin: 10% 0 0 10%;
-}
-
-.mainuserhp .day {
-  text-align: center;
-}
-
-.mainuserhp .hr {
-  margin-left: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 45%;
-  height: 2px;
-  background-color: #29B224;
-  border: none;
-  /*on supprime le style par défaut*/
-}
-
-.mainuserhp .night {
-  background-color: #dbdbdb;
-  padding-top: 10px;
-}
-
-.mainuserhp .rowbottom {
-  margin-bottom: 10px;
-}
-
-.mainuserhp .timev1 {
-  position: absolute;
-  left: -50px;
-  margin-top: 42px;
-}
-
-.mainuserhp .imgrow {
-  height: 500px;
-}
-
-.mainuserhp h1,
-.mainuserhp h2,
-.mainuserhp h3,
-.mainuserhp h4,
-.mainuserhp h5,
-.mainuserhp h6 {
-  font-weight: bold;
-}
-
-.mainuserhp .sensor {
-  text-align: center;
-}
-
-.mainuserhp .sensor strong {
-  font-size: 16px;
-}
-
 footer {
   bottom: 0px;
   color: white;
@@ -1038,6 +912,244 @@ ul.Information li a:hover:not(.active) {
   background-size: contain;
 }
 
+.mainuserhp {
+  /* Avant une list pour enlever l'espace */
+  /* Position en dur des capteurs pour le moment */
+  /* img de lune et soleil */
+  /* Trace une ligne horizontale verte */
+  /* On agrandit l'espace entre 2 lignes */
+  /* Flèche sur V1 pour le moment en dure */
+}
+
+.mainuserhp h1,
+.mainuserhp h3 {
+  margin-bottom: 0px;
+}
+
+.mainuserhp h3 {
+  margin-top: 0px;
+}
+
+.mainuserhp .beflist {
+  margin-bottom: 0px;
+}
+
+.mainuserhp .red {
+  color: #FF0000;
+}
+
+.mainuserhp .circle1 {
+  position: absolute;
+  left: 55px;
+  top: 220px;
+}
+
+.mainuserhp .circle2 {
+  position: absolute;
+  left: 155px;
+  top: 420px;
+}
+
+.mainuserhp .circle3 {
+  position: absolute;
+  left: 140px;
+  top: 140px;
+}
+
+.mainuserhp .moon {
+  margin: 10% 0 0 10%;
+}
+
+.mainuserhp .day {
+  text-align: center;
+}
+
+.mainuserhp .hr {
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 45%;
+  height: 2px;
+  background-color: #29B224;
+  border: none;
+  /*on supprime le style par défaut*/
+}
+
+.mainuserhp .night {
+  background-color: #dbdbdb;
+  padding-top: 10px;
+}
+
+.mainuserhp .remerciements {
+  padding-top: 10px;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  width: 500px;
+  background: #29B224;
+  border-radius: 30px;
+}
+
+.mainuserhp .rowbottom {
+  margin-bottom: 10px;
+  /* Pour l'ouverture + mise en forme de l'info bulle */
+  /* Fin infobulle */
+}
+
+.mainuserhp .rowbottom a:hover,
+.mainuserhp .rowbottom a:focus {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.mainuserhp .rowbottom a span {
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -20px;
+  color: #29B224;
+  font-weight: bold;
+  background-color: #dbdbdb;
+  padding: 15px;
+  border-radius: 3px;
+  -webkit-transform: scale(0) rotate(-12deg);
+          transform: scale(0) rotate(-12deg);
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  opacity: 0;
+}
+
+.mainuserhp .rowbottom a:hover span,
+.mainuserhp .rowbottom a:focus span {
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
+  opacity: 1;
+}
+
+.mainuserhp .timev0 {
+  position: absolute;
+  left: -50px;
+  margin-top: 0px;
+}
+
+.mainuserhp .timev1 {
+  position: absolute;
+  left: -50px;
+  margin-top: 42px;
+}
+
+.mainuserhp .timev2 {
+  position: absolute;
+  left: -50px;
+  margin-top: 211px;
+}
+
+.mainuserhp .timev3 {
+  position: absolute;
+  left: -50px;
+  margin-top: 379px;
+}
+
+.mainuserhp .imgrow {
+  height: 500px;
+}
+
+.mainuserhp h1,
+.mainuserhp h2,
+.mainuserhp h3,
+.mainuserhp h4,
+.mainuserhp h5,
+.mainuserhp h6 {
+  font-weight: bold;
+}
+
+.mainuserhp .sensor {
+  text-align: center;
+}
+
+.mainuserhp .sensor strong {
+  font-size: 16px;
+}
+
+footer {
+  bottom: 0px;
+  color: white;
+}
+
+footer .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+footer h3 {
+  margin-bottom: 30px;
+}
+
+footer {
+  padding-top: 20px;
+  background-color: #3f5a75;
+
+.mainuserhp ul {
+  list-style: none;
+  font-size: 20px;
+
+}
+
+.mainuserhp ul li {
+  text-indent: -.7em;
+}
+
+.mainuserhp ul li img {
+  width: 10px;
+  margin-right: 5px;
+}
+
+.actu-main-container {
+  margin-top: 140px;
+  padding: 50px 140px;
+}
+
+.actu-main-container .main-title {
+  color: #C21C75;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.actu-main-container .my-hr {
+  border-top: 2px solid #9f9797;
+}
+
+.actu-main-container .main-text {
+  padding: 10px 20px;
+  background-color: #fffff6;
+}
+
+.actu-main-container .main-text:nth-of-type(2n) {
+  background-color: #fffffe;
+}
+
+.actu-main-container .main-text h2 {
+  font-size: 35px;
+  color: #29B224;
+}
+
+.actu-main-container .main-text h2 span {
+  margin-left: 10px;
+}
+
+.actu-main-container .main-text .sub-text {
+  padding: 0 48px;
+}
+
+.actu-main-container .main-text .sub-text .date {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.actu-main-container .main-text .sub-text a {
+  color: #3f5a75;
+  font-size: 16px;
+}
+
 .actuheader h1 {
   color: #000;
 }
@@ -1106,6 +1218,7 @@ ul.Information li a:hover:not(.active) {
 }
 
 .study-main-container .main-text .sub-text {
+  text-align: justify;
   padding: 0 48px;
 }
 
@@ -9478,4 +9591,3 @@ button.close {
     display: none !important;
   }
 }
-

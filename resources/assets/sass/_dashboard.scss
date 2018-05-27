@@ -12,6 +12,10 @@
     margin-bottom: 0px;
   }
 
+  .red {
+    color: #FF0000;
+  }
+
   /* Position en dur des capteurs pour le moment */
   .circle1 {
     position: absolute;
@@ -28,31 +32,6 @@
     left: 140px;
     top: 140px;
   }
-
-  /* Pour l'ouverture + mise en forme de l'info bulle */
-  a:hover,a:focus{
-       background:rgba(0,0,0,.4);
-       box-shadow:0 1px 0 rgba(255,255,255,.4);
-  }
-  a span{
-       position:absolute;
-       margin-top:80px;
-       margin-left:-20px;
-       color:#29B224;
-       font-weight: bold;
-       background-color: #dbdbdb;
-       padding:15px;
-       border-radius:3px;
-       // box-shadow:0 0 2px rgba(0,0,0,.5);
-       transform:scale(0) rotate(-12deg);
-       transition:all .25s;
-       opacity:0;
-  }
-  a:hover span, a:focus span{
-       transform:scale(1) rotate(0);
-       opacity:1;
-  }
-  /* Fin infobulle */
 
   /* img de lune et soleil */
   .moon {
@@ -79,15 +58,67 @@
     padding-top: 10px;
   }
 
+  .remerciements {
+    padding-top: 10px;
+    text-align: center;
+    margin:10px auto 10px auto;
+    width:500px;
+    background:#29B224;
+    border-radius: 30px;
+  }
+
   /* On agrandit l'espace entre 2 lignes */
   .rowbottom {
     margin-bottom: 10px;
+    /* Pour l'ouverture + mise en forme de l'info bulle */
+    a:hover,a:focus{
+         background:rgba(0,0,0,.4);
+         box-shadow:0 1px 0 rgba(255,255,255,.4);
+    }
+    a span{
+         position:absolute;
+         margin-top:140px;
+         margin-left:-20px;
+         color:#29B224;
+         font-weight: bold;
+         background-color: #dbdbdb;
+         padding:15px;
+         border-radius:3px;
+         // box-shadow:0 0 2px rgba(0,0,0,.5);
+         transform:scale(0) rotate(-12deg);
+         transition:all .25s;
+         opacity:0;
+    }
+    a:hover span, a:focus span{
+         transform:scale(1) rotate(0);
+         opacity:1;
+
+    }
+    /* Fin infobulle */
   }
   /* Flèche sur V1 pour le moment en dure */
+  .timev0 {
+  	position: absolute;
+    left:-50px;
+  	margin-top: 0px;
+  }
+
   .timev1 {
   	position: absolute;
     left:-50px;
   	margin-top: 42px;
+  }
+
+  .timev2 {
+  	position: absolute;
+    left:-50px;
+  	margin-top: 211px;
+  }
+
+  .timev3 {
+  	position: absolute;
+    left:-50px;
+  	margin-top: 379px;
   }
 
   .imgrow {
@@ -104,4 +135,19 @@
         font-size: 16px;
       }
     }
+
+    // Les capteurs (petite couleur pour liste à puces correspondante)
+    ul {
+      list-style: none;
+      font-size: 20px;
+    }
+
+    ul li{
+      text-indent: -.7em;
+      img {
+        width: 10px;
+        margin-right: 5px;
+      }
+    }
+
 }
