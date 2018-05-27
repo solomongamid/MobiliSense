@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://use.fontawesome.com/releases/v5.0.12/css/all.css);@charset "UTF-8";
 
 .presentation h1 {
   color: #2C3E50;
@@ -29,7 +29,7 @@
 
 .home-container .statspub img {
   float: left;
-  margin: 2% 1% 0 1%;
+  margin: 0.5% 1% 0.5% 1%;
 }
 
 .home-container .statspub p {
@@ -161,7 +161,6 @@ hr.star-primary:after {
 
 header {
   text-align: center;
-  background-color: #fff;
   color: white;
 }
 
@@ -241,12 +240,11 @@ header .intro-text .skills {
   text-transform: uppercase;
   font-size: 10px;
   border-color: white;
-  padding: 5px 18px;
+  padding: 3px 18px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   float: right;
-  margin-right: 20px;
 }
 
 .navbar-custom .navbar-btn:hover,
@@ -641,6 +639,10 @@ fieldset[disabled] .btn-success.active {
   color: #29B224;
 }
 
+.maincontent {
+  padding-top: 150px;
+}
+
 .navbar {
   display: block;
   height: 140px;
@@ -700,24 +702,27 @@ fieldset[disabled] .btn-success.active {
   width: 20px;
 }
 
-.navbar .englishflag {
-  margin: 0 30px 0 0;
-  padding: 0;
-}
-
 .navbar .englishflag:hover,
 .navbar .englishflag:focus {
   background-color: transparent;
 }
 
 .navbar .navbar-right {
-  right: -5%;
+  right: -70px;
   left: auto;
   display: grid;
 }
 
+.navbar .navbar-right-bene {
+  right: -2%;
+}
+
 .navbar a {
   color: #636b6f;
+}
+
+.navbar .navbar-btn {
+  margin: 0 0 5px 0;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -819,8 +824,6 @@ fieldset[disabled] .btn-success.active {
 }
 
 .mainuserhp {
-  background: #f2f4f6;
-  padding-top: 150px;
   /* Avant une list pour enlever l'espace */
   /* Position en dur des capteurs pour le moment */
   /* Pour l'ouverture + mise en forme de l'info bulle */
@@ -948,6 +951,7 @@ fieldset[disabled] .btn-success.active {
 }
 
 footer {
+  bottom: 0px;
   color: white;
 }
 
@@ -1032,6 +1036,41 @@ ul.Information li a:hover:not(.active) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.actuheader h1 {
+  color: #000;
+}
+
+.mainactu {
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.mainactu h3 {
+  margin-bottom: 0px;
+  color: #29B224;
+  font-weight: bold;
+}
+
+.mainactu .date {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mainactu p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.mainactu hr {
+  border-top: 2px solid #eeeeee;
+}
+
+.mainactu a,
+.mainactu a:focus,
+.mainactu a:hover {
+  color: #3f5a75;
 }
 
 .study-main-container {
@@ -2488,7 +2527,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -8974,7 +9013,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .carousel-control.left {
@@ -9063,7 +9102,7 @@ button.close {
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .carousel-indicators .active {
