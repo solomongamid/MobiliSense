@@ -11,7 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.babel(['resources/assets/js/app.js',
+mix.scripts(['resources/assets/js/webpack_bootstrap.js',
+        'resources/assets/js/app.js',
         'resources/assets/js/fontawesome-all.js',
         'resources/assets/js/bootstrap.js'
       ], 'public/js/app.js')
