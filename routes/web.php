@@ -31,6 +31,12 @@ Route::get('/delete/{news}','AdminController@destroy');
 Route::get('/newsHome/{news}', 'AdminController@showNews');
 Route::post('/newsHome/{news}','AdminController@updateNews');
 
+// Gestion des vagues
+Route::get('/wave', 'AdminController@waveForm');
+Route::post('/wave1', 'AdminController@wave1');
+Route::post('/betweenwave', 'AdminController@betweenwave');
+Route::post('/wave2', 'AdminController@wave2');
+Route::post('/stopwave', 'AdminController@stopwave');
 
 
 Route::get('/userHome', 'Auth\RegisterController@indexUser');

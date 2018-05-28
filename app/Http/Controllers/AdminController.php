@@ -68,6 +68,57 @@ class AdminController extends Controller
 
         return redirect('/adminHome');
     }
+    // Gestion des vagues
+    public function waveForm()
+    {
+        return view('wave');
+    }
+
+    public function wave1(Request $request){
+
+        $inputs['value'] = 1;
+
+        $inputs['date'] = Carbon\Carbon::today();
+
+        DB::table('wave')->where('id', '=', 1)->update($inputs);
+
+        return redirect('/adminHome');
+    }
+
+    public function betweenwave(Request $request){
+
+        $inputs['value'] = 2;
+
+        $inputs['date'] = Carbon\Carbon::today();
+
+        DB::table('wave')->where('id', '=', 1)->update($inputs);
+
+        return redirect('/adminHome');
+    }
+
+    public function wave2(Request $request){
+
+        $inputs['value'] = 3;
+
+        $inputs['date'] = Carbon\Carbon::today();
+
+        DB::table('wave')->where('id', '=', 1)->update($inputs);
+
+        return redirect('/adminHome');
+    }
+
+    public function stopwave(Request $request){
+
+        $inputs['value'] = 0;
+
+        $inputs['date'] = Carbon\Carbon::today();
+
+        DB::table('wave')->where('id', '=', 1)->update($inputs);
+
+        return redirect('/adminHome');
+    }
+    // Fin de gestion des vagues
+
 
     public function destroy($id){
 

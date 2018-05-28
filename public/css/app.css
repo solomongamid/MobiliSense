@@ -1070,28 +1070,9 @@ ul.Information li a:hover:not(.active) {
   font-size: 16px;
 }
 
-footer {
-  bottom: 0px;
-  color: white;
-}
-
-footer .row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-footer h3 {
-  margin-bottom: 30px;
-}
-
-footer {
-  padding-top: 20px;
-  background-color: #3f5a75;
-
 .mainuserhp ul {
   list-style: none;
   font-size: 20px;
-
 }
 
 .mainuserhp ul li {
@@ -1148,41 +1129,6 @@ footer {
 .actu-main-container .main-text .sub-text a {
   color: #3f5a75;
   font-size: 16px;
-}
-
-.actuheader h1 {
-  color: #000;
-}
-
-.mainactu {
-  margin-left: 10%;
-  margin-right: 5%;
-}
-
-.mainactu h3 {
-  margin-bottom: 0px;
-  color: #29B224;
-  font-weight: bold;
-}
-
-.mainactu .date {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.mainactu p {
-  padding: 0px;
-  margin: 0px;
-}
-
-.mainactu hr {
-  border-top: 2px solid #eeeeee;
-}
-
-.mainactu a,
-.mainactu a:focus,
-.mainactu a:hover {
-  color: #3f5a75;
 }
 
 .study-main-container {
@@ -9591,3 +9537,4 @@ button.close {
     display: none !important;
   }
 }
+

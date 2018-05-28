@@ -85,7 +85,7 @@
                                 </div>
                             @endif
 
-                          
+
 
                             <div class="sidebar">
                                 <div class="row">
@@ -94,7 +94,8 @@
                                       <li><a href="{{ url('newsHome') }}"><h3>Actualité</h3></a></li>
                                       <li> <a id="Qualification" class="link" href="{{ url('userHome') }}"> <h3>Users </h3></a></li>
                                       <li><a id="Experience" class="link"> <h3>Publications et communications </h3> </a></li>
-                                      <li><a id="skills" class="link"> <h3>Dossier depresse  </h3> </a></li> 
+                                      <li><a href="{{ url('wave') }}"> <h3>Gestion des vagues</h3> </a></li>
+                                      <li><a id="skills" class="link"> <h3>Dossier depresse  </h3> </a></li>
                                       <li><a id="Interests" class="link"> <h3>Collaborateurs  </h3> </a></li>
 
                                     </ul>
@@ -105,7 +106,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
