@@ -1104,10 +1104,6 @@ ul.Information li a:hover:not(.active) {
   background-color: #fffff6;
 }
 
-.actu-main-container .main-text:nth-of-type(2n) {
-  background-color: #fffffe;
-}
-
 .actu-main-container .main-text h2 {
   font-size: 35px;
   color: #29B224;
@@ -1129,6 +1125,98 @@ ul.Information li a:hover:not(.active) {
 .actu-main-container .main-text .sub-text a {
   color: #3f5a75;
   font-size: 16px;
+}
+
+.actu-main-container .btn-valid {
+  color: #fff;
+  background-color: #C21C75;
+  border-color: #C21C75;
+}
+
+.actu-main-container .submit {
+  text-align: center;
+}
+
+.actu-main-container .control-label {
+  padding-right: 0px;
+}
+
+.actu-main-container .btn:hover,
+.actu-main-container .btn:focus {
+  color: #e3e3e3;
+}
+
+.actu-main-container .alert-success {
+  text-align: center;
+}
+
+.contact-main-container {
+  margin-top: 140px;
+  padding: 50px 140px;
+}
+
+.contact-main-container .main-title {
+  color: #E44212;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.contact-main-container .my-hr {
+  border-top: 2px solid #9f9797;
+}
+
+.contact-main-container .main-text {
+  padding: 10px 20px;
+  background-color: #fffff6;
+}
+
+.contact-main-container .main-text:nth-of-type(2n) {
+  background-color: #fffffe;
+}
+
+.contact-main-container .main-text h2 {
+  font-size: 35px;
+}
+
+.contact-main-container .main-text h2 span {
+  margin-left: 10px;
+}
+
+.contact-main-container .main-text .sub-text {
+  padding: 0 48px;
+}
+
+.contact-main-container .main-text .sub-text .date {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.contact-main-container .main-text .sub-text a {
+  color: #3f5a75;
+  font-size: 16px;
+}
+
+.contact-main-container .btn-valid {
+  color: #fff;
+  background-color: #C21C75;
+  border-color: #C21C75;
+}
+
+.contact-main-container .submit {
+  text-align: center;
+}
+
+.contact-main-container .control-label {
+  padding-right: 0px;
+}
+
+.contact-main-container .btn:hover,
+.contact-main-container .btn:focus {
+  color: #e3e3e3;
+}
+
+.contact-main-container .alert-success {
+  text-align: center;
 }
 
 .study-main-container {

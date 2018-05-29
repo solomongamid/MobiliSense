@@ -19,25 +19,43 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/actu', 'NewsController@index')->name('actu');
+Route::get('/newsletter', 'NewsController@newsletter')->name('actu');
+Route::post('/newsletterok', 'NewsController@newsletterok');
+Route::get('/dossier', 'NewsController@dossier')->name('actu');
 Route::get('/study', 'StudyController@index')->name('study');
 Route::get('/volunteer', 'VolunteerController@index')->name('volunteer');
+Route::get('/contact', 'HomeController@contact')->name('contact');
+
+// Partie bénévole
 Route::get('/benevole', 'Benevole\BenevoleController@index')->name('benevole');
+Route::get('/bilan', 'Benevole\BilanController@index')->name('benevole');
+Route::get('/questionnaire', 'Benevole\QuestionnaireController@index')->name('benevole');
 
+Route::get('/adminHome', 'Admin\AdminController@index')->name('adminHome');
 
-Route::get('/adminHome', 'AdminController@index')->name('adminHome');
-Route::get('/newsHome', 'AdminController@indexNews');
-Route::get('/addNews', 'AdminController@newsForm');
-Route::post('/addNews', 'AdminController@store');
-Route::get('/delete/{news}','AdminController@destroy');
-Route::get('/newsHome/{news}', 'AdminController@showNews');
-Route::post('/newsHome/{news}','AdminController@updateNews');
+// Gestion des news
+Route::get('/newsHome', 'Admin\AdminNewsController@index');
+Route::get('/addNews', 'Admin\AdminNewsController@newsForm');
+Route::post('/addNews', 'Admin\AdminNewsController@store');
+Route::get('/deleteNews/{news}','Admin\AdminNewsController@destroy');
+Route::get('/newsHome/{news}', 'Admin\AdminNewsController@showNews');
+Route::post('/newsHome/{news}','Admin\AdminNewsController@updateNews');
+
+// Gestion des dossiers
+Route::get('/dossierHome', 'Admin\AdminDossierController@index');
+Route::get('/addDossier', 'Admin\AdminDossierController@dossierForm');
+Route::post('/addDossier', 'Admin\AdminDossierController@store');
+Route::get('/deleteDossier/{dossier}','Admin\AdminDossierController@destroy');
+Route::get('/dossierHome/{dossier}', 'Admin\AdminDossierController@showDossier');
+Route::post('/dossierHome/{dossier}','Admin\AdminDossierController@updateDossier');
+
 
 // Gestion des vagues
-Route::get('/wave', 'AdminController@waveForm');
-Route::post('/wave1', 'AdminController@wave1');
-Route::post('/betweenwave', 'AdminController@betweenwave');
-Route::post('/wave2', 'AdminController@wave2');
-Route::post('/stopwave', 'AdminController@stopwave');
+Route::get('/wave', 'Admin\AdminWaveController@index');
+Route::post('/wave1', 'Admin\AdminWaveController@wave1');
+Route::post('/betweenwave', 'Admin\AdminWaveController@betweenwave');
+Route::post('/wave2', 'Admin\AdminWaveController@wave2');
+Route::post('/stopwave', 'Admin\AdminWaveController@stopwave');
 
 
 Route::get('/userHome', 'Auth\RegisterController@indexUser');
