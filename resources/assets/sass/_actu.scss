@@ -16,7 +16,6 @@
     background-color: #fffff6;
     h2 {
       font-size: 35px;
-      color: #29B224;
       span {
         margin-left: 10px;
       }
@@ -48,10 +47,15 @@
   }
 
   .btn:hover, .btn:focus {
-    color:#e3e3e3;
+    color:#3f5a75;
   }
 
   .alert-success {
     text-align: center;
+  }
+
+  .form-control:focus {
+    border-color: #C21C75;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(194, 28, 117, 1);
   }
 }

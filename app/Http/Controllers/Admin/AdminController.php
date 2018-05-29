@@ -28,8 +28,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data = DB::table('news')->orderBy('id', 'DESC')->get()->all();
-        $users = DB::table('users')->orderBy('id', 'DESC')->get()->all();
+        // $data = DB::table('news')->orderBy('id', 'DESC')->get()->all();
+        // $users = DB::table('users')->orderBy('id', 'DESC')->get()->all();
         return view('/admin/adminHome', compact('data', 'users'));
     }
 

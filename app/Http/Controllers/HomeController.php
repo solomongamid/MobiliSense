@@ -20,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -41,5 +41,34 @@ class HomeController extends Controller
     public function contact()
     {
         return view('/contact');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function demenagement()
+    {
+        return view('/demenagement', ['send'=>'non']);
+    }
+
+    public function demenagementok(Request $request)
+    {
+      $inputs['name'] = Input::get('name');
+
+      $inputs['firstname'] = Input::get('firstname');
+
+      $inputs['email'] = Input::get('email');
+
+      $inputs['adress'] = Input::get('adress');
+
+      $inputs['postalcode'] = Input::get('postalcode');
+
+      $inputs['city'] = Input::get('city');
+
+      DB::table('demenagement')->insert($inputs);
+
+      return view('/demenagement', ['send'=>'ok']);
     }
 }

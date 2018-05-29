@@ -1,4 +1,4 @@
-@extends('main')
+ @extends('main')
 
 @section('title', 'Newsletter')
 
@@ -28,7 +28,7 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input name="firstname" placeholder="Prénom" class="form-control" required type="text">
+        <input name="firstname" placeholder="Prénom" class="form-control" required type="text" autofocus>
           </div>
         </div>
       </div>
@@ -45,20 +45,19 @@
       </div>
 
       <!-- Email -->
-        <div class="form-group">
+        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
         <label class="col-md-4 control-label">Email</label>
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
 
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            <input name="email" placeholder="Adresse email" class="form-control" required type="email">
-            @if ($errors->has('password'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-            @endif
-            
+            <input id="email" name="email" placeholder="Adresse email" class="form-control" required type="email">
           </div>
+          @if ($errors->has('email'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('email') }}</strong>
+              </span>
+          @endif
         </div>
       </div>
 
@@ -79,7 +78,7 @@
       <div class="form-group submit">
         <label class="col-md-4 control-label"></label>
         <div class="col-md-4">
-          <button type="submit" class="btn btn-valid" >Envoyer <span class="glyphicon glyphicon-send"></span></button>
+          <button type="submit" class="btn btn-valid" >Envoyer  <span class="glyphicon glyphicon-send"></span></button>
         </div>
       </div>
 

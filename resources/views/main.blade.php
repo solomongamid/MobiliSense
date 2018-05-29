@@ -87,10 +87,10 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a>
+                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
                   </li>
                   <li>
-                    <a type="button" class="navbar-btn login" href="#déménagement">Déménagement ?</a>
+                    <a type="button" class="navbar-btn login" href="/demenagement">Déménagement ?</a>
                     <!-- <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a> -->
                    </li>
                   <li>

@@ -912,6 +912,84 @@ ul.Information li a:hover:not(.active) {
   background-size: contain;
 }
 
+.login {
+  margin-top: 140px;
+  padding: 50px 140px;
+  margin-bottom: 100px;
+}
+
+.login .main-title {
+  color: #29B224;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.login .my-hr {
+  border-top: 2px solid #9f9797;
+}
+
+.login .main-text {
+  padding: 10px 20px;
+  background-color: #fffff6;
+}
+
+.login .main-text h2 {
+  font-size: 35px;
+  color: #29B224;
+}
+
+.login .main-text h2 span {
+  margin-left: 10px;
+}
+
+.login .main-text .sub-text {
+  padding: 0 48px;
+}
+
+.login .main-text .sub-text .date {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.login .main-text .sub-text a {
+  color: #3f5a75;
+  font-size: 16px;
+}
+
+.login .btn-valid {
+  color: #fff;
+  background-color: #29B224;
+  border-color: #29B224;
+}
+
+.login .submit {
+  text-align: center;
+}
+
+.login .control-label {
+  padding-right: 0px;
+}
+
+.login .btn:hover,
+.login .btn:focus {
+  color: #3f5a75;
+}
+
+.login .alert-success {
+  text-align: center;
+}
+
+.login .btn-link:hover,
+.login .btn-link:focus {
+  color: #3f5a75;
+}
+
+.login .form-control:focus {
+  border-color: #29B224;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #29b224;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #29b224;
+}
+
 .mainuserhp {
   /* Avant une list pour enlever l'espace */
   /* Position en dur des capteurs pour le moment */
@@ -1106,7 +1184,6 @@ ul.Information li a:hover:not(.active) {
 
 .actu-main-container .main-text h2 {
   font-size: 35px;
-  color: #29B224;
 }
 
 .actu-main-container .main-text h2 span {
@@ -1143,11 +1220,17 @@ ul.Information li a:hover:not(.active) {
 
 .actu-main-container .btn:hover,
 .actu-main-container .btn:focus {
-  color: #e3e3e3;
+  color: #3f5a75;
 }
 
 .actu-main-container .alert-success {
   text-align: center;
+}
+
+.actu-main-container .form-control:focus {
+  border-color: #C21C75;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #c21c75;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #c21c75;
 }
 
 .contact-main-container {
@@ -1198,8 +1281,8 @@ ul.Information li a:hover:not(.active) {
 
 .contact-main-container .btn-valid {
   color: #fff;
-  background-color: #C21C75;
-  border-color: #C21C75;
+  background-color: #E44212;
+  border-color: #E44212;
 }
 
 .contact-main-container .submit {
@@ -1212,11 +1295,17 @@ ul.Information li a:hover:not(.active) {
 
 .contact-main-container .btn:hover,
 .contact-main-container .btn:focus {
-  color: #e3e3e3;
+  color: #3f5a75;
 }
 
 .contact-main-container .alert-success {
   text-align: center;
+}
+
+.contact-main-container .form-control:focus {
+  border-color: #E44212;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e44212;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e44212;
 }
 
 .study-main-container {
