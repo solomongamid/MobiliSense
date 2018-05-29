@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/actu', 'NewsController@index')->name('actu');
 Route::get('/study', 'StudyController@index')->name('study');
+Route::get('/volunteer', 'VolunteerController@index')->name('volunteer');
 Route::get('/benevole', 'Benevole\BenevoleController@index')->name('benevole');
 
 

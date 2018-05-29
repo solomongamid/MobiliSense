@@ -58,10 +58,10 @@
                     </div>
                   </li>
                   <li class="dropdown infos">
-                    <a href="#portfolio" class="dropbtn">ESPACE VOLONTAIRES</a>
+                    <a href="/volunteer" class="dropbtn">ESPACE VOLONTAIRES</a>
                     <div class="dropdown-content">
-                      <a href="#">Pourquoi participer ?</a>
-                      <a href="#">Comment participer ?</a>
+                      <a href="/volunteer">Pourquoi participer ?</a>
+                      <a href="/volunteer">Comment participer ?</a>
                       @if (Auth::guest())
                           <a href="{{ route('login') }}">Se connecter</a>
                       @else
@@ -69,8 +69,8 @@
                             Mon espace
                           </a>
                       @endif
-                      <a href="#">Lettre d'information</a>
-                      <a href="#">En savoir plus...</a>
+                      <a href="/volunteer">Lettre d'information</a>
+                      <a href="/volunteer">En savoir plus...</a>
                     </div>
                   </li>
                   <li class="dropdown works">
