@@ -95,7 +95,7 @@
                                       <li> <a id="Qualification" class="link" href="{{ url('userHome') }}"> <h3>Users </h3></a></li>
                                       <li><a id="Experience" class="link"> <h3>Publications et communications </h3> </a></li>
                                       <li><a href="{{ url('wave') }}"> <h3>Gestion des vagues</h3> </a></li>
-                                      <li><a id="skills" class="link"> <h3>Dossier depresse  </h3> </a></li>
+                                      <li><a href="{{ url('dossierHome') }}"> <h3>Dossier de presse  </h3> </a></li>
                                       <li><a id="Interests" class="link"> <h3>Collaborateurs  </h3> </a></li>
 
                                     </ul>

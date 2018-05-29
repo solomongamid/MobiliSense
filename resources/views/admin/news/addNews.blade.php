@@ -8,22 +8,22 @@
         {!! csrf_field() !!}
 
           <div class="form-group">
-            <label>The title </label>
+            <label>Titre</label>
             <input type="text" name="title" class="form-control">
           </div>
 
           <div class="form-group">
-              <label>Select file to upload:</label>
+              <label>Sélectionner un fichier PDF</label>
               <input type="file" name="news_file">
           </div>
 
           <div class="form-group">
             <label>Description</label>
-            <textarea name="description" id="mytextarea" rows="4" cols="150">Hello, World!</textarea>
+            <textarea name="description" id="mytextarea" rows="10" cols="150">Bonjour, ceci est un exemple !</textarea>
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-primary">Add news</button>
+            <button type="submit" class="btn btn-primary">Ajouter une actu</button>
           </div>
 
         </form>

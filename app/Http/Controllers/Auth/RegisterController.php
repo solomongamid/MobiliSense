@@ -78,27 +78,27 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
- 
+
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
- 
+
         $verifyUser = VerifyUser::create([
             'user_id' => $user->id,
             'token' => str_random(40)
         ]);
- 
+
         Mail::to('konexionparis@gmail.com')->send(new VerifyMail($user));
- 
+
         return $user;
     }
 
     public function indexUser()
     {
         $users = DB::table('users')->orderBy('id', 'DESC')->get()->all();
-        return view('userHome', compact('users'));
+        return view('/admin/userHome', compact('users'));
     }
 
     public function destroy($id){
@@ -107,7 +107,7 @@ class RegisterController extends Controller
 
          if (!is_null($user)) {
             $user->delete();
-            session()->flash('message', 'Le user a bien été suprimé');
+            session()->flash('message', 'L\'utilisateur a bien été suprimé');
         }
 
 
@@ -124,14 +124,14 @@ class RegisterController extends Controller
             if(!$user->verified) {
                 $verifyUser->user->verified = 1;
                 $verifyUser->user->save();
-                $status = "Your e-mail is verified. You can now login.";
+                $status = "Votre adresse email a été validé, vous pouvez vous connecter.";
             }else{
-                $status = "Your e-mail is already verified. You can now login.";
+                $status = "Votre adresse email est toujours valable, vous pouvez vous connecter.";
             }
         }else{
-            return redirect('/login')->with('warning', "Sorry your email cannot be identified.");
+            return redirect('/login')->with('warning', "Désolé, votre adresse mail n'a pas été validée.");
         }
- 
+
         return redirect('/login')->with('status', $status);
     }
 
@@ -139,6 +139,6 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         $this->guard()->logout();
-        return redirect('/login')->with('status', 'We sent you an activation code. Check your email and click on the link to verify.');
+        return redirect('/login')->with('status', 'Nous vous avons envoyé un code d\'activation. Regardez dans vos mails et cliquez sur le lien de vérification.');
     }
 }

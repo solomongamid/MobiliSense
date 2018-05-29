@@ -9,12 +9,12 @@
 @endif
 
   <ul class="pager">
-    <li class="previous"><a href="{{ url('register') }}">Create new user</a></li>
-  </ul> 
+    <li class="previous"><a href="{{ url('register') }}">Créer un nouvel utilisateur</a></li>
+  </ul>
   <table class="table">
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Nom</th>
           <th>Email</th>
           <th>Role</th>
         </tr>
@@ -30,7 +30,7 @@
               <td>User</td>
           @endif
           <th><a href="{{ url('deleteUser/'.$user->id) }}" class="btn btn-operation btn-danger" onclick="return confirmation();">
-                  Effacer 
+                  Effacer
               </a>
           </th>
         </tr>

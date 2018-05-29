@@ -53,8 +53,8 @@
                     <a href="/actu" class="dropbtn">Actualité</a>
                     <div class="dropdown-content">
                       <a href="/actu">Actualité</a>
-                      <a href="#">Newsletter</a>
-                      <a href="#">Dossier de presse</a>
+                      <a href="/newsletter">Newsletter</a>
+                      <a href="/dossier">Dossier de presse</a>
                     </div>
                   </li>
                   <li class="dropdown infos">
@@ -82,7 +82,7 @@
                     </div>
                   </li>
                   <li class="dropdown contact">
-                    <a href="#portfolio" class="dropbtn">Contact</a>
+                    <a href="/contact" class="dropbtn">Contact</a>
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

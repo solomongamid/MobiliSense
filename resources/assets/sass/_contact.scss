@@ -1,9 +1,9 @@
-.actu-main-container {
+.contact-main-container {
   margin-top: 140px;
   padding: 50px 140px;
 
   .main-title {
-    color: #C21C75;
+    color: #E44212;
     font-size: 52px;
     font-weight: bold;
   }
@@ -14,9 +14,11 @@
   .main-text {
     padding: 10px 20px;
     background-color: #fffff6;
+    &:nth-of-type(2n) {
+      background-color: #fffffe;
+    }
     h2 {
       font-size: 35px;
-      color: #29B224;
       span {
         margin-left: 10px;
       }

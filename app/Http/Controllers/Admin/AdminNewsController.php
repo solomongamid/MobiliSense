@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use DB;
 use Carbon;
 
-class AdminController extends Controller
+class AdminNewsController extends Controller
 {
      /**
      * Create a new controller instance.
@@ -19,34 +20,22 @@ class AdminController extends Controller
         $this->middleware('admin')->except('logout');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $data = DB::table('news')->orderBy('id', 'DESC')->get()->all();
-        $users = DB::table('users')->orderBy('id', 'DESC')->get()->all();
-        return view('adminHome', compact('data', 'users'));
-    }
-
-    public function indexNews()
-    {
         $datas = DB::table('news')->orderBy('id', 'DESC')->get()->all();
-        return view('news', compact('datas'));
+        return view('/admin/news/newsHome', compact('datas'));
     }
 
     public function showNews($id){
 
         $news = DB::table('news')->find($id);
-        return view('show', compact('news'));
+        return view('/admin/news/showNews', compact('news'));
 
     }
 
     public function newsForm()
     {
-        return view('addNews');
+        return view('/admin/news/addNews');
     }
 
     public function store(Request $request){
@@ -68,57 +57,6 @@ class AdminController extends Controller
 
         return redirect('/adminHome');
     }
-    // Gestion des vagues
-    public function waveForm()
-    {
-        return view('wave');
-    }
-
-    public function wave1(Request $request){
-
-        $inputs['value'] = 1;
-
-        $inputs['date'] = Carbon\Carbon::today();
-
-        DB::table('wave')->where('id', '=', 1)->update($inputs);
-
-        return redirect('/adminHome');
-    }
-
-    public function betweenwave(Request $request){
-
-        $inputs['value'] = 2;
-
-        $inputs['date'] = Carbon\Carbon::today();
-
-        DB::table('wave')->where('id', '=', 1)->update($inputs);
-
-        return redirect('/adminHome');
-    }
-
-    public function wave2(Request $request){
-
-        $inputs['value'] = 3;
-
-        $inputs['date'] = Carbon\Carbon::today();
-
-        DB::table('wave')->where('id', '=', 1)->update($inputs);
-
-        return redirect('/adminHome');
-    }
-
-    public function stopwave(Request $request){
-
-        $inputs['value'] = 0;
-
-        $inputs['date'] = Carbon\Carbon::today();
-
-        DB::table('wave')->where('id', '=', 1)->update($inputs);
-
-        return redirect('/adminHome');
-    }
-    // Fin de gestion des vagues
-
 
     public function destroy($id){
 

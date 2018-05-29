@@ -41,10 +41,10 @@
                     <a href="/benevole" class="dropbtn">Mon espace</a>
                   </li>
                   <li class="dropdown infos">
-                    <a href="#portfolio" class="dropbtn">Mon Bilan</a>
+                    <a href="/bilan" class="dropbtn">Mon Bilan</a>
                   </li>
                   <li class="dropdown works">
-                    <a href="#portfolio" class="dropbtn">Questionnaire Géo</a>
+                    <a href="/questionnaire" class="dropbtn">Questionnaire Géo</a>
                   </li>
               </ul>
 
