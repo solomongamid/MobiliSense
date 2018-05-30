@@ -144,6 +144,11 @@
 
   <section  class="main-text">
     <h2 class="title"><i class="fas fa-angle-right"></i><span>Méthodologie</span></h2>
+    <p>Circa hos dies Lollianus primae lanuginis adulescens, Lampadi filius ex praefecto, exploratius causam Maximino spectante, convictus codicem noxiarum artium nondum per aetatem firmato consilio descripsisse, exulque mittendus, ut sperabatur, patris inpulsu provocavit ad principem, et iussus ad eius comitatum duci, de fumo, ut aiunt, in flammam traditus Phalangio Baeticae consulari cecidit funesti carnificis manu.</p>
+
+    <p>Et quia Mesopotamiae tractus omnes crebro inquietari sueti praetenturis et stationibus servabantur agrariis, laevorsum flexo itinere Osdroenae subsederat extimas partes, novum parumque aliquando temptatum commentum adgressus. quod si impetrasset, fulminis modo cuncta vastarat. erat autem quod cogitabat huius modi.</p>
+
+    <p>Tu autem, Fanni, quod mihi tantum tribui dicis quantum ego nec adgnosco nec postulo, facis amice; sed, ut mihi videris, non recte iudicas de Catone; aut enim nemo, quod quidem magis credo, aut si quisquam, ille sapiens fuit. Quo modo, ut alia omittam, mortem filii tulit! memineram Paulum, videram Galum, sed hi in pueris, Cato in perfecto et spectato viro.</p>
     <a id="data-collected" class="anchor"></a>
   </section>
 
@@ -169,6 +174,31 @@
     <p>Les analyses statistiques conduites à partir des données recueillies concernent l’ensemble des participants de l’étude. Soyez assuré que les chercheurs ne s’intéressent jamais aux données d’un participant en particulier. Les résultats publiés concernent toujours l’ensemble des participants, et en aucun cas tel ou tel cas individuel.</p>
     <p>Les données seront analysées en combinant l'ensemble des volontaires MobiliSense. Stockées de façon sécurisée, elles seront accessibles uniquement au responsable de l’étude et à son équipe de recherche et de terrain, ainsi qu’à des collaborateurs encadrés par une clause de protection et de confidentialité.</p>
     <p>Bien sûr, puisque nous avons envoyé et prévoyons d’envoyer régulièrement des courriers de résultats aux participants de l’étude, nous disposons de leurs noms, prénoms et adresses, ainsi que de leurs coordonnées téléphoniques. Mais il est important de préciser que toutes ces informations nominatives ne figurent pas dans la base de données globale que nous utilisons pour les analyses. Les données d’analyse ne contiennent aucune information directement nominative.</p>
+    <a id="calendar" class="anchor"></a>
+  </section>
+
+  <section  class="main-text">
+    <h2 class="title"><i class="fas fa-angle-right"></i><span>Calendrier</span></h2>
+    <div class="sub-text">
+      @foreach ($calendar as $calendar)
+        <h3 class="title"><span>{{ $calendar->title }}</span></h3>
+        <p class="date">{{ date('d/m/Y', strtotime($calendar->date)) }}</p>
+          <p>{!! html_entity_decode($calendar->description) !!}</p>
+          @if ($calendar->files != null)
+            <a href="./{{ $calendar->files }}" target="_blank">
+            <i class="fas fa-external-link-alt"></i>
+              Retrouvez l'événement complet ici
+            </a><br>
+          @endif
+          @if ($calendar->link != null)
+            <a href="./{{ $calendar->link }}" target="_blank">
+            <i class="fas fa-external-link-alt"></i>
+              Retrouvez l'événement complet ici
+            </a>
+          @endif
+          <hr>
+      @endforeach
+    </div>
   </section>
 
 </main>

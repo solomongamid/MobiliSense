@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 use DB;
 use Carbon;
 
-class AdminNewsController extends Controller
+class AdminInfoletterController extends Controller
 {
      /**
      * Create a new controller instance.
@@ -22,20 +22,20 @@ class AdminNewsController extends Controller
 
     public function index()
     {
-        $datas = DB::table('news')->orderBy('id', 'DESC')->get()->all();
-        return view('/admin/news/newsHome', compact('datas'));
+        $datas = DB::table('information_letter')->orderBy('id', 'DESC')->get()->all();
+        return view('/admin/infoletter/infoletterHome', compact('datas'));
     }
 
-    public function showNews($id){
+    public function showinfoletter($id){
 
-        $news = DB::table('news')->find($id);
-        return view('/admin/news/showNews', compact('news'));
+        $infoletter = DB::table('information_letter')->find($id);
+        return view('/admin/infoletter/showInfoletter', compact('infoletter'));
 
     }
 
-    public function newsForm()
+    public function infoletterForm()
     {
-        return view('/admin/news/addNews');
+        return view('/admin/infoletter/addInfoletter');
     }
 
     public function store(Request $request){
@@ -53,27 +53,26 @@ class AdminNewsController extends Controller
             $inputs['files'] = $filePath;
         }
 
-        DB::table('news')->insert($inputs);
+        DB::table('information_letter')->insert($inputs);
 
-        return redirect('/newsHome');
+        return redirect('/infoletterHome');
     }
 
     public function destroy($id){
 
-        $news = \DB::table('news')->where('id', '=', $id);
+        $infoletter = \DB::table('information_letter')->where('id', '=', $id);
 
-         if (!is_null($news)) {
-            $news->delete();
+         if (!is_null($infoletter)) {
+            $infoletter->delete();
         }
 
 
-        return redirect('/newsHome');
+        return redirect('/infoletterHome');
 
     }
 
-    public function updateNews(Request $request, $id){
+    public function updateInfoletter(Request $request, $id){
 
-        //$news = \DB::table('news')->where('id', '=', $id);
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
@@ -82,9 +81,9 @@ class AdminNewsController extends Controller
 
         $inputs['date'] = Carbon\Carbon::now();
 
-        DB::table('news')->where('id', '=', $id)->update($inputs);
+        DB::table('information_letter')->where('id', '=', $id)->update($inputs);
 
-        return redirect('/newsHome');
+        return redirect('/infoletterHome');
     }
 
 

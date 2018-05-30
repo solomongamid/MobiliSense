@@ -1,30 +1,9 @@
-// .study-header {
-//   position: relative;
-//   .cover-bloc {
-//     background-image: url("/img/placeholder3.jpg");
-//     background-position: center;
-//     background-size: cover;
-//     height: 300px;
-//     filter: blur(5px)  brightness(50%);
-//     -webkit-filter: blur(7px) brightness(60%);
-//   }
-//   .title {
-//     position: absolute;
-//     top: 20%;
-//     left: 20%;
-//     font-weight: bold;
-//     font-size: 45px;
-//   }
-// }
-
-
-
-.study-main-container {
+.volunteer-main-container {
   margin-top: 140px;
   padding: 50px 140px;
 
   .main-title {
-    color: #005596;
+    color: #F27B07;
     font-size: 52px;
     font-weight: bold;
   }
@@ -73,13 +52,16 @@
     }
   }
 
-  h3 {
-    color:#3f5a75;
-    font-weight: 800;
-    margin-bottom: 5px;
+  .faq {
+    .faqtitle {
+      color: #F27B07;
+    }
+    i {
+      color: #3a3838;
+      font-size: 30px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
   }
-
-  .date {
-    font-size: 16px;
-  }
+  
 }

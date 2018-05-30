@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Volunteer')
+@section('title', 'Espace volontaires')
 
 @section('content')
 
@@ -12,10 +12,12 @@
   </div>
 </header> -->
 
-<main class="study-main-container">
+<main class="volunteer-main-container">
   <a id="context" class="anchor"></a>
   <h1 class="main-title">Espaces Volontaires</h1>
+  <a id="why" class="anchor"></a>
   <hr class="my-hr"/>
+
 
   <section class="main-text">
     <h2 class="title"><i class="fas fa-angle-right"></i><span>Pourquoi participer ?</span></h2>
@@ -46,20 +48,20 @@
         Vous recevrez un bilan de vos expositions environnementales et sur certains aspects de votre santé cardiovasculaire et respiratoire.
       </p>
       <p>
-        Si vous souhaitez avoir des informations complémentaires, vous pouvez nous contacter. Rendez-vous sur la page <a target="_blank" href="/contact">Contact</a>.
+        Si vous souhaitez avoir des informations complémentaires, vous pouvez nous contacter. Rendez-vous sur la page <a href="{{ url('contact') }}">Contact</a>.
       </p>
     </div>
-    <a id="participating" class="anchor"></a>
+    <a id="how" class="anchor"></a>
   </section>
 
   <section  class="main-text">
     <h2 class="title"><i class="fas fa-angle-right"></i><span>Comment participer ?</span></h2>
     <div class="sub-text">
       <p>
-        En partenariat avec <a href="https://www.insee.fr/fr/accueil"> <i class="fas fa-external-link-alt"></i>l’Insee</a>
+        En partenariat avec <a href="https://www.insee.fr/fr/accueil" target="_blank"> <i class="fas fa-external-link-alt"></i>l’Insee</a>
         et à partir des fichiers du Recensement de la Population de 2014, des logements ont été tirés de manière aléatoire (notre échantillon est stratifié à 3 degrés).
         Si c’est le cas de votre logements vous pouvez participez ! Inscrivez-vous directement sur le
-        site dans la page <a target="_blank" href="/register">S'inscrire</a> que vous trouverez en page d’accueil.
+        site dans la page <a href="{{ url('register') }}">S'inscrire</a> que vous trouverez en page d’accueil.
         Vous pouvez aussi nous contacter, rendez-vous sur la page <atarget="_blank" href="/contact">Contact</a>!
       </p>
 
@@ -73,18 +75,38 @@
          des transports et de la santé.
       </p>
     </div>
-    <a id="howto" class="anchor"></a>
-  </section>
-
-  <section  class="main-text">
-    <h2 class="title"><i class="fas fa-angle-right"></i><span>Lettre d'informations</span></h2>
-
     <a id="infoLetter" class="anchor"></a>
   </section>
 
   <section  class="main-text">
+    <h2 class="title"><i class="fas fa-angle-right"></i><span>Lettre d'informations</span></h2>
+    <p>
+      @foreach ($information_letter as $information_letter)
+        <h3><span>{{ $information_letter->title }}</span></h3>
+        <p class="date">{{ date('d/m/Y', strtotime($information_letter->date)) }}</p>
+          <p>{!! html_entity_decode($information_letter->description) !!}</p>
+          @if ($information_letter->files != null)
+            <a href="./{{ $information_letter->files }}" target="_blank">
+            <i class="fas fa-external-link-alt"></i>
+              Retrouvez l'événement complet ici
+            </a>
+          @endif
+          <hr>
+      @endforeach
+    </p>
+    <a id="moreinfo" class="anchor"></a>
+  </section>
+
+  <section class="main-text faq">
     <h2 class="title"><i class="fas fa-angle-right"></i><span>En savoir plus</span></h2>
-    <a id="more" class="anchor"></a>
+    @foreach ($faq as $faq)
+        <h3>
+          <span class="faqtitle">{{ $faq->title }}</span>
+          <i class="fas fa-chevron-circle-down"></i>
+        </h3>
+        <p>{!! html_entity_decode($faq->description) !!}</p>
+        <hr>
+    @endforeach
   </section>
 
 </main>
