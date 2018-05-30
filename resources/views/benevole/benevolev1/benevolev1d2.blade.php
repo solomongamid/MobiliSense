@@ -53,18 +53,18 @@
           <div class="col-md-6">
             <hr class="hr">
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Matin :</h3>
-            <p class="beflist">Réaliser <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
+            <p class="beflist">Réaliser <strong>3 mesures</strong> correctes de votre fonction respiratoire et de votre tension avec les :</p>
             <ul>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile</li>
-              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />8. Tension-domicile + <img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile + <img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
             </ul>
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Journée :</h3>
             <p class="beflist"><strong>Portez du lever au coucher :</strong></p>
             <ul>
-              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS + 2. Accéléromètre</li>
+              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS + <img src="{{ asset('img/rondtest3.png') }}" /> 2. Accéléromètre</li>
               <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
               <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau</li>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />7. Tension-mobile</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />6. Cardio-électrodes</li>
             </ul>
             <p><strong>Répondez</strong> au questionnaire sur l'iPhone.</p>
             <p><strong>Remplissez</strong> votre carnet de déplacement.</p>
@@ -83,24 +83,23 @@
           </div>
           <div class="col-md-6">
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Nuit :</h3>
-            <p class="beflist">Réalisez <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
+            <p class="beflist">Réalisez <strong>3 mesures</strong> correctes de votre fonction respiratoire et de votre tension avec les :</p>
             <ul>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile</li>
-              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />8. Tension-domicile + <img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile + <img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
             </ul>
             <p class="beflist"><strong>Rechargez</strong> dans n'importe quelle pièce :</p>
             <ul>
               <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS</li>
-              <li><img src="{{ asset('img/rondtest4.png') }}" />6. Cardio-électrodes</li>
               <li><img src="{{ asset('img/rondtest1.png') }}" />7. Piles du Tension-mobile</li>
               <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
               <li><img src="{{ asset('img/rondtest3.png') }}" />11. iPhone</li>
             </ul>
             <p class="beflist"><strong>Rechargez</strong> dans la pièce où vous dormez :</p>
             <ul>
-              <li class="bruit"><img src="{{ asset('img/rondtest4.png') }}" />3. Bruit-micro</li>
+              <li class="bruit"><img src="{{ asset('img/rondtest4.png') }}" />3. Bruit-micro, <span class="red">le voyant doit être vert clignotant</span></li>
               <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
-              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau, <span class="red">allumez l'appareil</span></li>
+              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau</li>
             </ul>
           </div>
           <div class="col-md-2">
@@ -120,6 +119,6 @@
           y = n.getFullYear();
           var tab_mois=new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
           d = n.getDate();
-          document.getElementById("date").innerHTML = "Jour 1 : " + tab_jour[n.getDay()] + " " + d + " " + tab_mois[n.getMonth()] + " " + y;
+          document.getElementById("date").innerHTML = "Jour 2 : " + tab_jour[n.getDay()] + " " + d + " " + tab_mois[n.getMonth()] + " " + y;
     </script>
 @endsection

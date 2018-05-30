@@ -13,7 +13,6 @@
       <h2><i class="fas fa-angle-right"></i><span>{{ $dossiers->title }}</span></h2>
       <div class="sub-text">
         <p class="date">{{ date('d/m/Y', strtotime($dossiers->date)) }}</p>
-        <br>
         <p>{!! html_entity_decode($dossiers->description) !!}</p>
         <br>
         @if ($dossiers->files != null)

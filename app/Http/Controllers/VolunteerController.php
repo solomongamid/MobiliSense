@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use DB;
 
 class VolunteerController extends Controller
 {
@@ -23,6 +25,8 @@ class VolunteerController extends Controller
      */
     public function index()
     {
-        return view('/volunteerPage/volunteerPage');
+        $information_letter = DB::table('information_letter')->orderBy('date', 'DESC')->get();
+        $faq = DB::table('faq')->orderBy('id', 'DESC')->get();
+        return view('/volunteerPage/volunteerPage', compact('information_letter','faq'));
     }
 }

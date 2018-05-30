@@ -43,8 +43,8 @@
                         <a href="{{ url('study') }}#methods">Méthodologie</a>
                         <a href="{{ url('study') }}#data-collected">Donnés collectées</a>
                         <a href="{{ url('study') }}#confidentiality">Confidentialité</a>
-                        <a href="{{ url('study') }}#">Calendrier</a>
-                        <a href="{{ url('study') }}#">Collaborateurs</a>
+                        <a href="{{ url('study') }}#calendar">Calendrier</a>
+                        <a href="{{ url('collaborater') }}">Collaborateurs</a>
                       </div>
                   </li>
                   <li class="dropdown news">
@@ -56,10 +56,10 @@
                     </div>
                   </li>
                   <li class="dropdown infos">
-                    <a href="/volunteer" class="dropbtn">ESPACE VOLONTAIRES</a>
+                    <a href="{{ url('volunteer') }}" class="dropbtn">ESPACE VOLONTAIRES</a>
                     <div class="dropdown-content">
-                      <a href="/volunteer">Pourquoi participer ?</a>
-                      <a href="/volunteer">Comment participer ?</a>
+                      <a href="{{ url('volunteer') }}#why">Pourquoi participer ?</a>
+                      <a href="{{ url('volunteer') }}#how">Comment participer ?</a>
                       @if (Auth::guest())
                           <a href="{{ route('login') }}">Se connecter</a>
                       @else
@@ -67,8 +67,8 @@
                             Mon espace
                           </a>
                       @endif
-                      <a href="/volunteer">Lettre d'information</a>
-                      <a href="/volunteer">En savoir plus...</a>
+                      <a href="{{ url('volunteer') }}#infoLetter">Lettre d'information</a>
+                      <a href="{{ url('volunteer') }}#moreinfo">En savoir plus...</a>
                     </div>
                   </li>
                   <li class="dropdown works">

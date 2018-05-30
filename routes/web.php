@@ -17,12 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/actu', 'NewsController@index')->name('actu');
 Route::get('/newsletter', 'NewsController@newsletter')->name('actu');
 Route::post('/newsletterok', 'NewsController@newsletterok');
 Route::get('/dossier', 'NewsController@dossier')->name('actu');
 Route::get('/study', 'StudyController@index')->name('study');
+Route::get('/collaborater', 'StudyController@collaborater')->name('collaborater');
 Route::get('/volunteer', 'VolunteerController@index')->name('volunteer');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/demenagement', 'HomeController@demenagement')->name('demenagement');
@@ -50,6 +50,30 @@ Route::post('/addDossier', 'Admin\AdminDossierController@store');
 Route::get('/deleteDossier/{dossier}','Admin\AdminDossierController@destroy');
 Route::get('/dossierHome/{dossier}', 'Admin\AdminDossierController@showDossier');
 Route::post('/dossierHome/{dossier}','Admin\AdminDossierController@updateDossier');
+
+// Gestion des calendriers
+Route::get('/calendarHome', 'Admin\AdminCalendarController@index');
+Route::get('/addCalendar', 'Admin\AdminCalendarController@calendarForm');
+Route::post('/addCalendar', 'Admin\AdminCalendarController@store');
+Route::get('/deleteCalendar/{calendar}','Admin\AdminCalendarController@destroy');
+Route::get('/calendarHome/{calendar}', 'Admin\AdminCalendarController@showCalendar');
+Route::post('/calendarHome/{calendar}','Admin\AdminCalendarController@updateCalendar');
+
+// Gestion des lettres d'information
+Route::get('/infoletterHome', 'Admin\AdminInfoletterController@index');
+Route::get('/addInfoletter', 'Admin\AdminInfoletterController@infoletterForm');
+Route::post('/addInfoletter', 'Admin\AdminInfoletterController@store');
+Route::get('/deleteInfoletter/{infoletter}','Admin\AdminInfoletterController@destroy');
+Route::get('/infoletterHome/{infoletter}', 'Admin\AdminInfoletterController@showInfoletter');
+Route::post('/infoletterHome/{infoletter}','Admin\AdminInfoletterController@updateInfoletter');
+
+// Gestion des FAQ
+Route::get('/faqHome', 'Admin\AdminFaqController@index');
+Route::get('/addFaq', 'Admin\AdminFaqController@faqForm');
+Route::post('/addFaq', 'Admin\AdminFaqController@store');
+Route::get('/deleteFaq/{faq}','Admin\AdminFaqController@destroy');
+Route::get('/faqHome/{faq}', 'Admin\AdminFaqController@showFaq');
+Route::post('/faqHome/{faq}','Admin\AdminFaqController@updateFaq');
 
 
 // Gestion des vagues

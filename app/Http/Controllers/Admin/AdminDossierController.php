@@ -55,7 +55,7 @@ class AdminDossierController extends Controller
 
         DB::table('dossier')->insert($inputs);
 
-        return redirect('/adminHome');
+        return redirect('/dossierHome');
     }
 
     public function destroy($id){
@@ -66,7 +66,7 @@ class AdminDossierController extends Controller
             $dossier->delete();
         }
 
-        return redirect('/adminHome');
+        return redirect('/dossierHome');
 
     }
 

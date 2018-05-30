@@ -30,9 +30,12 @@ class BenevoleController extends Controller
 
           if ($datenow == $datesave)
           {
-            return view('/benevole/benevolev1/benevolev1d1');
+            return view('/benevole/benevolev1/benevolev1d0');
           }
           elseif ($datesave == $datenow->subDay()) {
+            return view('/benevole/benevolev1/benevolev1d1');
+          }
+          elseif ($datesave == $datenow->subDay(1)) {
             return view('/benevole/benevolev1/benevolev1d2');
           }
           else {
