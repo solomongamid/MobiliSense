@@ -661,8 +661,30 @@ fieldset[disabled] .btn-success.active {
           box-shadow: 3px 3px 5px 0px #aaa;
 }
 
+@media screen and (max-width: 1300px) {
+  .navbar .navbar-header .nav-logo {
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .navbar .navbar-header .nav-logo img {
   height: 180px;
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .navbar .navbar-header .nav-logo .logo-big {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar .navbar-header .nav-logo .logo-small {
+    display: block;
+    height: 50px;
+  }
 }
 
 .navbar .navbar-navigation {
@@ -683,9 +705,15 @@ fieldset[disabled] .btn-success.active {
       justify-content: space-around;
 }
 
-.navbar .navbar-collapse.collapse {
+.navbar .navbar-collapse {
   height: 140px !important;
   margin-left: 280px;
+}
+
+@media screen and (max-width: 1400px) {
+  .navbar .navbar-collapse {
+    margin-left: 340px;
+  }
 }
 
 .navbar .login {
@@ -712,6 +740,39 @@ fieldset[disabled] .btn-success.active {
   right: -70px;
   left: auto;
   display: grid;
+}
+
+.navbar .navbar-right-small {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.navbar .navbar-right-small-trigger {
+  right: 20px;
+  left: auto;
+  font-size: 26px;
+}
+
+@media screen and (min-width: 1300px) {
+  .navbar .navbar-right-small-trigger {
+    display: none;
+  }
+}
+
+.navbar .navbar-right-small-trigger:focus .navbar-right-small {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navbar .navbar-right-small-trigger:focus + .navbar-right-small {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar .navbar-right-desktop {
+    display: none;
+  }
 }
 
 .navbar .navbar-right-bene {
@@ -786,6 +847,7 @@ fieldset[disabled] .btn-success.active {
   border: none;
   text-decoration: none;
   display: block;
+  white-space: nowrap;
 }
 
 .dropdown .dropbtn:hover {

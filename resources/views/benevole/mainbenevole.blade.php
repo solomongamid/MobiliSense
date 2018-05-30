@@ -14,27 +14,25 @@
       <!-- Style -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-      <script src="./js/app.js"></script>
-
   </head>
   <body>
-
     <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
-      <div>
+      <div class="navbarborder">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header page-scroll">
               <a class="nav-logo" href="/">
-                <img src="./img/logo-big.png" alt="">
+                <img src="./img/logo-big.png" alt="Logo MobiliSense" class="logo-big">
+                <img src="./img/logo-small.png" alt="Logo MobiliSense" class="logo-small">
               </a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="navbar-navigation">
                   <li class="hidden">
                       <a href="#page-top"></a>
                   </li>
-                  <li class="dropdown presentation">
+                  <li class="dropdown accueil">
                       <a href="/" class="dropbtn">Accueil</a>
                   </li>
                   <li class="dropdown news">
@@ -64,6 +62,8 @@
               </ul>
           </div>
           <!-- /.navbar-collapse -->
+
+        </div>
       </div>
       <!-- /.container-fluid -->
     </nav>

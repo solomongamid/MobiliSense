@@ -13,7 +13,6 @@
 
       <!-- Style -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
   </head>
   <body>
@@ -190,19 +189,7 @@
           <p>Merci à Y. Qixin, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
-    <!-- <script>
-    $(function(){
-        $('a[href^="#top-of-page"]').on('click', function(event) {
-            var $target = $($(this).attr('href'));
 
-            $('html, body').animate({
-                scrolltop: $target.offset().top
-            }, 400);
-
-            event.preventDefault();
-        });
-    });
-    </script> -->
     <script src="{{ mix('js/vendor.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
   </body>
