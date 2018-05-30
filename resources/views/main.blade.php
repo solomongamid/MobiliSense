@@ -39,22 +39,22 @@
                       <a href="/" class="dropbtn">Accueil</a>
                   </li>
                   <li class="dropdown presentation">
-                      <a href="/study" class="dropbtn">L'ÉTUDE</a>
+                      <a href="{{ url('study') }}" class="dropbtn">L'ÉTUDE</a>
                       <div class="dropdown-content">
-                        <a href="/study#context">Contexte et objectifs</a>
-                        <a href="/study#methods">Méthodologie</a>
-                        <a href="/study#data-collected">Donnés collectées</a>
-                        <a href="/study#confidentiality">Confidentialité</a>
-                        <a href="/study#">Calendrier</a>
-                        <a href="/study#">Collaborateurs</a>
+                        <a href="{{ url('study') }}#context">Contexte et objectifs</a>
+                        <a href="{{ url('study') }}#methods">Méthodologie</a>
+                        <a href="{{ url('study') }}#data-collected">Donnés collectées</a>
+                        <a href="{{ url('study') }}#confidentiality">Confidentialité</a>
+                        <a href="{{ url('study') }}#">Calendrier</a>
+                        <a href="{{ url('study') }}#">Collaborateurs</a>
                       </div>
                   </li>
                   <li class="dropdown news">
-                    <a href="/actu" class="dropbtn">Actualité</a>
+                    <a href="{{ url('actu') }}" class="dropbtn">Actualité</a>
                     <div class="dropdown-content">
-                      <a href="/actu">Actualité</a>
-                      <a href="/newsletter">Newsletter</a>
-                      <a href="/dossier">Dossier de presse</a>
+                      <a href="{{ url('actu') }}">Actualité</a>
+                      <a href="{{ url('newsletter') }}">Newsletter</a>
+                      <a href="{{ url('dossier') }}">Dossier de presse</a>
                     </div>
                   </li>
                   <li class="dropdown infos">
@@ -82,22 +82,21 @@
                     </div>
                   </li>
                   <li class="dropdown contact">
-                    <a href="/contact" class="dropbtn">Contact</a>
+                    <a href="{{ url('contact') }}" class="dropbtn">Contact</a>
                   </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a>
+                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
                   </li>
                   <li>
-                    <a type="button" class="navbar-btn login" href="#déménagement">Déménagement ?</a>
-                    <!-- <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a> -->
+                    <a type="button" class="navbar-btn login" href="{{ url('demenagement') }}">Déménagement ?</a>
                    </li>
                   <li>
                     @if (Auth::guest())
-                      <a type="button" class="navbar-btn login" href="/register">S'inscrire</a>
+                      <a type="button" class="navbar-btn login" href="{{ url('register') }}">S'inscrire</a>
                     @else
-                     <a type="button" class="navbar-btn login" href="/benevole">Mon espace</a>
+                     <a type="button" class="navbar-btn login" href="{{ url('benevole') }}">Mon espace</a>
                    @endif
                    </li>
                    <li>

@@ -1,7 +1,6 @@
 @extends('layouts.appAdmin')
 
 @section('content')
-
 <div class="row">
   @if($flash = session('message'))
     <div class="col-md-4 alert alert-info">
@@ -11,29 +10,28 @@
 </div>
 
 <div class="row">
+
   <ul class="pager">
-    <li class="previous"><a href="{{ url('register') }}">Créer un nouvel utilisateur</a></li>
+    <li class="previous"><a href="{{ url('newsletter') }}">Créer un nouvel abonné à la Newsletter</a></li>
   </ul>
   <table class="table">
       <thead>
         <tr>
+          <th>Prénom</th>
           <th>Nom</th>
           <th>Email</th>
-          <th>Role</th>
+          <th>Lieu de travail</th>
         </tr>
       </thead>
       <tbody>
-      @foreach($users as $user)
+      @foreach($newsletter as $newsletter)
         <tr>
-          <th>{{ $user->name }}</th>
-          <th> {{ $user->email }} </th>
-          @if($user->role===1)
-              <td>Admin</td>
-          @elseif($user->role===0)
-              <td>User</td>
-          @endif
-          <th><a href="{{ url('deleteUser/'.$user->id) }}" class="btn btn-operation btn-danger" onclick="return confirmation();">
-                  Effacer
+          <th>{{ $newsletter->firstname }}</th>
+          <th>{{ $newsletter->lastname }}</th>
+          <th> {{ $newsletter->email }} </th>
+          <th>{{ $newsletter->job }}</th>
+          <th><a href="{{ url('deleteNewsletter/'.$newsletter->id) }}" class="btn btn-operation btn-danger" onclick="return confirmation();">
+                  Supprimer
               </a>
           </th>
         </tr>

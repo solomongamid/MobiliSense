@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/actu', 'NewsController@index')->name('actu');
 Route::get('/newsletter', 'NewsController@newsletter')->name('actu');
 Route::post('/newsletterok', 'NewsController@newsletterok');
@@ -25,6 +25,8 @@ Route::get('/dossier', 'NewsController@dossier')->name('actu');
 Route::get('/study', 'StudyController@index')->name('study');
 Route::get('/volunteer', 'VolunteerController@index')->name('volunteer');
 Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/demenagement', 'HomeController@demenagement')->name('demenagement');
+Route::post('/demenagementok', 'HomeController@demenagementok');
 
 // Partie bénévole
 Route::get('/benevole', 'Benevole\BenevoleController@index')->name('benevole');
@@ -57,7 +59,11 @@ Route::post('/betweenwave', 'Admin\AdminWaveController@betweenwave');
 Route::post('/wave2', 'Admin\AdminWaveController@wave2');
 Route::post('/stopwave', 'Admin\AdminWaveController@stopwave');
 
+// Gestion des abonnés à la NL
+Route::get('/newsletterAdmin', 'Admin\AdminNewsletterController@index')->name('newsletter');
+Route::get('/deleteNewsletter/{newsletter}','Admin\AdminNewsletterController@destroy');
 
+// Gestion des utilisateurs
 Route::get('/userHome', 'Auth\RegisterController@indexUser');
 Route::get('/deleteUser/{user}','Auth\RegisterController@destroy');
 
