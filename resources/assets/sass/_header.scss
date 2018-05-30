@@ -11,9 +11,24 @@
       border: aliceblue 1px solid;
       border-radius: 6px;
       box-shadow: 3px 3px 5px 0px #aaa;
-
+      @media screen and (max-width: 1300px ) {
+        border: 0;
+      	box-shadow: none;
+      }
       img {
         height: 180px;
+        display: none;
+      }
+      .logo-big {
+        @media screen and (min-width: 1300px ) {
+          display: block;
+        }
+      }
+      .logo-small {
+        @media screen and (max-width: 1300px ) {
+          display: block;
+          height: 50px;
+        }
       }
     }
   }
@@ -28,9 +43,12 @@
     justify-content: space-around;
   }
 
-  .navbar-collapse.collapse {
+  .navbar-collapse {
     height: 140px !important;
     margin-left: 280px;
+    @media screen and (max-width: 1400px ) {
+      margin-left: 340px;
+    }
   }
 
   .login {
@@ -61,6 +79,36 @@
     left:auto;
     display: grid;
   }
+
+  .navbar-right-small {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .navbar-right-small-trigger {
+    right: 20px;
+    left: auto;
+    font-size: 26px;
+    @media screen and (min-width: 1300px ) {
+      display: none;
+    }
+    &:focus .navbar-right-small {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .navbar-right-small-trigger:focus + .navbar-right-small {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-right-desktop {
+    @media screen and (max-width: 1300px ) {
+      display: none;
+    }
+  }
+
   .navbar-right-bene {
     right:-2%;
   }
@@ -123,6 +171,7 @@
         border: none;
         text-decoration: none;
         display: block;
+        white-space: nowrap;
         &:hover {
           background-color: transparent;
         }

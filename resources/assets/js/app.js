@@ -6,8 +6,7 @@
  */
 
 //
-// require('./bootstrap');
-// require('./fontawesome-all');
+require('./bootstrap');
 // window.Vue = require('vue');
 
 /**
@@ -21,11 +20,3 @@
 // const app = new Vue({
 //     el: '#app'
 // });
-
-function confirmation(){
-    if(confirm('are you sure?')){
-        document.getElementById('delete-form').submit();
-    }else{
-        return false;
-    }
-}

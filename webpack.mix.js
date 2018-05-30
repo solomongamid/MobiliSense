@@ -11,10 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.scripts(['resources/assets/js/webpack_bootstrap.js',
-        'resources/assets/js/app.js',
-        'resources/assets/js/fontawesome-all.js',
-        'resources/assets/js/bootstrap.js'
-      ], 'public/js/app.js')
+mix.js(['resources/assets/js/app.js',
+        'resources/assets/js/fontawesome-all.js'
+      ], 'public/js/vendor.js')
+    .js(['resources/assets/js/customScript.js'
+  ], 'public/js/app.js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 mix.browserSync();

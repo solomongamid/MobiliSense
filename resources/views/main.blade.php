@@ -15,9 +15,6 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
-      <script src="./js/app.js"></script>
-
-
   </head>
   <body>
     <nav id="mainNav" class="navbar navbar-fixed-top navbar-custom">
@@ -25,12 +22,13 @@
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header page-scroll">
               <a class="nav-logo" href="/">
-                <img src="./img/logo-big.png" alt="Logo MobiliSense">
+                <img src="./img/logo-big.png" alt="Logo MobiliSense" class="logo-big">
+                <img src="./img/logo-small.png" alt="Logo MobiliSense" class="logo-small">
               </a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="navbar-navigation">
                   <li class="hidden">
                       <a href="#page-top"></a>
@@ -85,7 +83,9 @@
                     <a href="{{ url('contact') }}" class="dropbtn">Contact</a>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+
+                <!-- Login menu desktop -->
+                <ul class="nav navbar-nav navbar-right navbar-right-desktop ">
                   <li>
                     <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
                   </li>
@@ -112,6 +112,38 @@
                     @endif
                     </li>
 
+                </ul>
+
+                <!-- Login menu small -->
+                <div tabindex="1" class="navbar-nav navbar-right-small-trigger">
+                  <i class="far fa-caret-square-down "></i>
+                </div>
+                <ul class="nav navbar-nav navbar-right-small">
+                  <li>
+                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a type="button" class="navbar-btn login" href="{{ url('demenagement') }}">Déménagement ?</a>
+                   </li>
+                  <li>
+                    @if (Auth::guest())
+                      <a type="button" class="navbar-btn login" href="{{ url('register') }}">S'inscrire</a>
+                    @else
+                     <a type="button" class="navbar-btn login" href="{{ url('benevole') }}">Mon espace</a>
+                   @endif
+                   </li>
+                   <li>
+                    @if (Auth::guest())
+                        <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>
+                    @else
+                        <a type="button" class="navbar-btn login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                          Se déconnecter
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    @endif
+                    </li>
                 </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -158,7 +190,7 @@
           <p>Merci à Y. Qixin, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
-    <script>
+    <!-- <script>
     $(function(){
         $('a[href^="#top-of-page"]').on('click', function(event) {
             var $target = $($(this).attr('href'));
@@ -170,6 +202,8 @@
             event.preventDefault();
         });
     });
-    </script>
+    </script> -->
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
   </body>
 </html>
