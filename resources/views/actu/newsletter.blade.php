@@ -10,9 +10,17 @@
 
   <div class="container">
 
-    <form class="well form-horizontal" action="/newsletterok" method="post" id="contact_form">
+    <form class="form-horizontal" action="/newsletterok" method="POST">
       {!! csrf_field() !!}
+
       <fieldset>
+
+      @if (Auth::guest())
+      @else
+      <ul class="pager">
+          <li class="previous"><a href="{{ url('newsletterAdmin') }}">Précédent</a></li>
+      </ul>
+      @endif
 
       <!-- Message de validation -->
       @if ($send == 'ok')

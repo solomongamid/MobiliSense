@@ -30,7 +30,8 @@ class AdminController extends Controller
     {
         // $data = DB::table('news')->orderBy('id', 'DESC')->get()->all();
         // $users = DB::table('users')->orderBy('id', 'DESC')->get()->all();
-        return view('/admin/adminHome', compact('data', 'users'));
+        // return view('/admin/adminHome', compact('data', 'users'));
+        return view('/admin/adminHome');
     }
 
 }

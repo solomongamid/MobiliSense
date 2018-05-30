@@ -76,14 +76,14 @@
               </div>
           </div>
 
-          <div class="form-group">
-              <div class="col-md-6 col-md-offset-4">
-                  <button type="submit" class="btn btn-valid">
-                      S'inscrire  <span class="glyphicon glyphicon-send"></span>
-                  </button>
-
-              </div>
+          <!-- Bouton -->
+          <div class="form-group submit">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-valid" >S'inscrire  <span class="glyphicon glyphicon-send"></span></button>
+            </div>
           </div>
+
         </form>
       <p> Pour toute autre demande, contactez l'équipe MobiliSense.</p>
       <ul>

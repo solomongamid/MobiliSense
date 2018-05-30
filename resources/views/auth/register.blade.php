@@ -82,23 +82,23 @@
           <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
               <label class="col-md-4 control-label">Type d'utilisateur</label>
 
-              <div class="col-md-3">
-                  <label for="user" class="radio-inline">Administrateur</label>
+              <div class="col-md-2 alignradio">
+                  <label for="user" class="radio-inline">Administrateur  </label>
                       <input type="radio" name="role" value="1">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-2 alignradio">
                   <label for="user" class="radio-inline">Utilisateur</label>
-                  <input type="radio" checked="checked"  name="role" value="0">
+                  <input type="radio" checked="checked"  name="role" value="0" class="register-radio">
               </div>
           </div>
           @endif
 
-          <div class="form-group">
-              <div class="col-md-6 col-md-offset-4">
-                  <button type="submit" class="btn btn-valid">
-                      S'inscrire  <span class="glyphicon glyphicon-send"></span>
-                  </button>
-              </div>
+          <!-- Bouton -->
+          <div class="form-group submit">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-valid" >S'inscrire  <span class="glyphicon glyphicon-send"></span></button>
+            </div>
           </div>
       </form>
   </div>

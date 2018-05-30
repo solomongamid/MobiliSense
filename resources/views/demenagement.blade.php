@@ -19,8 +19,10 @@
       </div>
     @endif
 
-      <form class="form-horizontal" action="/demenagementok" method="post">
-          {{ csrf_field() }}
+      <form class="form-horizontal" action="/demenagementok" method="POST">
+        {{ csrf_field() }}
+
+        <fieldset>
 
           <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
               <label for="name" class="col-md-4 control-label">Nom</label>
@@ -113,13 +115,14 @@
               </div>
           </div>
 
-          <div class="form-group">
-              <div class="col-md-6 col-md-offset-4">
-                  <button type="submit" class="btn btn-valid">
-                      Déclarer son déméngament  <span class="glyphicon glyphicon-send"></span>
-                  </button>
-              </div>
+          <!-- Bouton -->
+          <div class="form-group submit">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-valid" >Déclarer un déménagement  <span class="glyphicon glyphicon-send"></span></button>
+            </div>
           </div>
+        </fieldset>
       </form>
   </div>
 </main>

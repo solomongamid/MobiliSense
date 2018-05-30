@@ -990,6 +990,15 @@ ul.Information li a:hover:not(.active) {
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #29b224;
 }
 
+.login .radio-inline {
+  margin-right: 5px;
+  padding-top: 0px !important;
+}
+
+.login .alignradio {
+  padding-top: 7px;
+}
+
 .mainuserhp {
   /* Avant une list pour enlever l'espace */
   /* Position en dur des capteurs pour le moment */
