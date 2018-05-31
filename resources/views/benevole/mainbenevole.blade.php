@@ -36,13 +36,13 @@
                       <a href="/" class="dropbtn">Accueil</a>
                   </li>
                   <li class="dropdown news">
-                    <a href="/benevole" class="dropbtn">Mon espace</a>
+                    <a href="{{ url('benevole') }}" class="dropbtn">Mon espace</a>
                   </li>
                   <li class="dropdown infos">
-                    <a href="/bilan" class="dropbtn">Mon Bilan</a>
+                    <a href="{{ url('bilan') }}" class="dropbtn">Mon Bilan</a>
                   </li>
                   <li class="dropdown works">
-                    <a href="/questionnaire" class="dropbtn">Questionnaire Géo</a>
+                    <a href="{{ url('questionnaire') }}" class="dropbtn">Questionnaire Géo</a>
                   </li>
               </ul>
 

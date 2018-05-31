@@ -13,7 +13,7 @@
           <div class="col-md-4">
           </div>
           <div class="col-md-6">
-            <h1>Vague 1</h1>
+            <h1>Vague 2</h1>
             <h3 id="date"></h3>
           </div>
 
@@ -32,7 +32,7 @@
             <p>Visite 1</p>
           </div>
           <div class="col-md-2">
-            <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
+            <img class="timev3" src="{{ asset('img/flecheright.png') }}" />
             <img class="align-right" src="{{ asset('img/fleche2.png') }}" />
           </div>
         </div>

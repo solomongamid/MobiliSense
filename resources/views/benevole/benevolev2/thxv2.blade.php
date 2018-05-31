@@ -13,29 +13,29 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-6">
-      <h1>Entre deux vagues</h1>
+      <h1>La Vague 2 est terminée</h1>
     </div>
 
   </div>
 
-  <div class="row justify">
+  <div class="row">
     <div class="col-md-2">
     </div>
 
     <div class="col-md-6">
       <hr class="hr">
-      <h3>Merci de votre participations</h3>
-      <p>
-        Vos données ont bien été récoltées.<br>
-        Nous reviendrons vers vous dès que ces dernières seront communicables.<br>
-        En attendant, n'hésitez pas à aller répondre au <a href="{{ url('questionnaire') }}" target="_self">Questionnaire Géo</a> lorsque ce dernier
-        sera prêt.
+      <h3>L'enquête de mobilité</h3>
+      <p class="aligncontentbenevole">
+        Une fois le matériel récupéré, nous réaliserons un premier traitement des données collectées grâce à vous.
+        Vous recevrez (soit par mail, soit par courier) un ensemble de cartes retraçant les déplacements que vous aurez effectués
+        durant les 6 jours (à partir des données GPS). Nous fixerons ensemble un rendez-vous afin de valider avec
+        vous et de compléter ces données de déplacements. L’entretien d’une heure environ se déroulera par téléphone.
       </p>
     </div>
     <div class="col-md-2">
     </div>
     <div class="col-md-2">
-      <img class="timev2" src="{{ asset('img/flecheright.png') }}" />
+      <img class="timev3" src="{{ asset('img/flecheright.png') }}" />
       <img class="align-right" src="{{ asset('img/fleche2.png') }}" />
     </div>
   </div>

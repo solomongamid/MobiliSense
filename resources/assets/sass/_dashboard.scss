@@ -36,20 +36,20 @@
   }
   .circle3 {
     position: absolute;
-    left: 140px;
-    top: 140px;
+    left: 150px;
+    top: 220px;
     width: 20px;
   }
   .circle4 {
     position: absolute;
     left: 165px;
-    top: 235px;
+    top: 245px;
     width: 20px;
   }
   .circle5 {
     position: absolute;
-    left: 175px;
-    top: 255px;
+    left: 177px;
+    top: 265px;
     width: 20px;
   }
   .circle6 {
@@ -102,32 +102,37 @@
   /* On agrandit l'espace entre 2 lignes */
   .rowbottom {
     margin-bottom: 10px;
+
     /* Pour l'ouverture + mise en forme de l'info bulle */
-    a:hover,a:focus{
+    .sensor:hover,.sensor:focus{
          background:rgba(0,0,0,.4);
          box-shadow:0 1px 0 rgba(255,255,255,.4);
     }
-    a span{
+    .sensor span{
          position:absolute;
          margin-top:140px;
          margin-left:-20px;
-         color:#29B224;
          font-weight: bold;
-         background-color: #dbdbdb;
          padding:15px;
          border-radius:3px;
-         // box-shadow:0 0 2px rgba(0,0,0,.5);
          transform:scale(0) rotate(-12deg);
          transition:all .25s;
          opacity:0;
     }
-    a:hover span, a:focus span{
+
+    .sensor:hover span, .sensor:focus span{
          transform:scale(1) rotate(0);
          opacity:1;
-
     }
+
+    p {
+      margin-right: 70px;
+      text-align: justify;
+    }
+
     /* Fin infobulle */
   }
+
   /* Flèche sur V1 pour le moment en dure */
   .timev0 {
   	position: absolute;
@@ -161,7 +166,7 @@
       font-weight: bold;
     }
 
-    .sensor {
+    .sensor span {
       text-align: center;
       strong{
         font-size: 16px;
@@ -195,4 +200,48 @@
       }
     }
 
+    .aligncontentbenevole {
+      margin-top: 11px;
+      margin-right: 70px;
+      text-align: justify;
+    }
+
+    ul .sensorpdf {
+      margin-left: 17px;
+      font-size: 10px;
+    }
+    .sensorpdf {
+      margin-left: 3px;
+      font-size: 10px;
+    }
+
+    .sensor1 {
+      color:#ffbd00;
+      background-color: #808080;
+    }
+    .sensor3 {
+      color:#00d424;
+      background-color: #808080;
+    }
+    .sensor4 {
+      color:#00f590;
+      background-color: #808080;
+    }
+    .sensor5 {
+      color:#00f136;
+      background-color: #808080;
+    }
+    .sensor6 {
+      color:#ff5c5c;
+      background-color: #dbdbdb;
+    }
+    .sensor7 {
+      color:#e64b00;
+      background-color: #dbdbdb;
+    }
+
+
+    .justify {
+      text-align: justify;
+    }
 }

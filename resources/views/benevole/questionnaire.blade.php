@@ -18,7 +18,7 @@
 
   </div>
 
-  <div class="row">
+  <div class="row justify">
     <div class="col-md-2">
     </div>
 
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify">
     <div class="col-md-2">
     </div>
 
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify">
     <div class="col-md-2">
     </div>
 
