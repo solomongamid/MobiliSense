@@ -26,7 +26,7 @@
           <div class="col-md-3">
             <img height="500px;" src="{{ asset('img/humanbody.png') }}"/>
             <a href="#">
-              <img class="circle1" src="{{ asset('img/circle.png') }}" />
+              <img class="circle1" src="{{ asset('img/rond1.png') }}" />
               <span class="sensor">
                 <strong>Capteur 1 :</strong><br />
                 Jaune<br />
@@ -34,7 +34,7 @@
               </span>
             </a>
             <a href="#">
-              <img class="circle2" src="{{ asset('img/circle.png') }}"/>
+              <img class="circle4" src="{{ asset('img/rond4.png') }}"/>
               <span class="sensor">
                 <strong>Capteur 4 :</strong><br />
                 Rouge<br />
@@ -42,7 +42,15 @@
               </span>
             </a>
             <a href="#">
-              <img class="circle3" src="{{ asset('img/circle.png') }}"/>
+              <img class="circle5" src="{{ asset('img/rond5.png') }}"/>
+              <span class="sensor">
+                <strong>Capteur 4 :</strong><br />
+                Rouge<br />
+                Pollution de l'air
+              </span>
+            </a>
+            <a href="#">
+              <img class="circle7" src="{{ asset('img/rond7.png') }}"/>
               <span class="sensor">
                 <strong>Capteur 6 :</strong><br />
                 Marron<br />
@@ -55,19 +63,23 @@
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Matin :</h3>
             <p class="beflist">Réaliser <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
             <ul>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile</li>
-              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rond9.png') }}" />9. Respiratoire-dommicile + <img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
             </ul>
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Journée :</h3>
             <p class="beflist"><strong>Portez du lever au coucher :</strong></p>
             <ul>
-              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS + <img src="{{ asset('img/rondtest3.png') }}" /> 2. Accéléromètre</li>
-              <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
-              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau</li>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />7. Tension-mobile</li>
+              <li><img src="{{ asset('img/rond1.png') }}" />1. GPS <span class="grey">led orange</span> + <img src="{{ asset('img/rond2.png') }}" /> 2. Accéléromètre <span class="grey">led verte clignotante</span></li>
+              <li class="airbandouliere"><img src="{{ asset('img/rond4.png') }}" />4. Air-bandoulière <span class="grey">led verte clignotante</span></li>
+              <li class="airtuyau"><img src="{{ asset('img/rond5.png') }}" />5. Air-tuyau <span class="grey">led verte clignotante</span></li>
+              <li><img src="{{ asset('img/rond7.png') }}" />7. Tension-mobile</li>
             </ul>
-            <p><strong>Répondez</strong> au questionnaire sur l'iPhone.</p>
+            <p><strong>Répondez</strong> au questionnaire sur le <img src="{{ asset('img/rond11.png') }}" />11. iPhone. <span class="grey">20h30 !</span></p>
             <p><strong>Remplissez</strong> votre carnet de déplacement.</p>
+            <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Soir :</h3>
+            <p class="beflist">Réalisez <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
+            <ul>
+              <li><img src="{{ asset('img/rond9.png') }}" />9. Respiratoire-dommicile + <img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
+            </ul>
           </div>
           <div class="col-md-2">
             <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
@@ -83,28 +95,29 @@
           </div>
           <div class="col-md-6">
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Nuit :</h3>
-            <p class="beflist">Réalisez <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
-            <ul>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />9. Respiratoire-dommicile + <img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
-            </ul>
             <p class="beflist"><strong>Rechargez</strong> dans n'importe quelle pièce :</p>
             <ul>
-              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS</li>
-              <li><img src="{{ asset('img/rondtest4.png') }}" />6. Cardio-électrodes</li>
-              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
-              <li><img src="{{ asset('img/rondtest3.png') }}" />11. iPhone</li>
+              <li><img src="{{ asset('img/rond1.png') }}" />1. GPS <span class="grey">led orange (fixe ou clignotante)</span></li>
+              <li><img src="{{ asset('img/rond6.png') }}" />6. Cardio-électrodes <span class="grey">led bleue et orange</span></li>
+              <li><img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rond11.png') }}" />11. iPhone</li>
             </ul>
             <p class="beflist"><strong>Rechargez</strong> dans la pièce où vous dormez :</p>
             <ul>
-              <li class="bruit"><img src="{{ asset('img/rondtest4.png') }}" />3. Bruit-micro</li>
-              <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
-              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air-tuyau</li>
+              <li class="bruit"><img src="{{ asset('img/rond3.png') }}" />3. Bruit-micro <span class="grey">led verte clignotante</span></li>
+              <li class="airbandouliere"><img src="{{ asset('img/rond4.png') }}" />4. Air-bandoulière <span class="grey">led verte clignotante</span></li>
+              <li class="airtuyau"><img src="{{ asset('img/rond5.png') }}" />5. Air-tuyau <span class="grey">led verte clignotante</span></li>
             </ul>
           </div>
           <div class="col-md-2">
           </div>
         </div>
-
+        <div class="row planning">
+          <p>
+            <i class="far fa-file-pdf"></i> Retrouvez <a href="./files/MobiliSense_Planning.pdf" target="_blank">le planning complet</a><br>
+            <i class="far fa-file-pdf"></i> Téléchagez <a href="./files/MobiliSense_Carnet_de_déplacements.pdf.pdf" target="_blank">votre carnet de déplacements</a>
+          </p>
+        </div>
         <div class="row remerciements">
             <p>
               Un grand MERCI ! <strong>Si besoin, appelez 7 jours / 7</strong><br>

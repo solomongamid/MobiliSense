@@ -16,21 +16,53 @@
     color: #FF0000;
   }
 
+  .grey {
+    font-size: 17px;
+    color: #3f5a75;
+  }
+
   /* Position en dur des capteurs pour le moment */
   .circle1 {
     position: absolute;
-    left: 55px;
+    left: 85px;
     top: 220px;
+    width: 20px;
   }
   .circle2 {
     position: absolute;
     left: 155px;
     top: 420px;
+    width: 20px;
   }
   .circle3 {
     position: absolute;
     left: 140px;
     top: 140px;
+    width: 20px;
+  }
+  .circle4 {
+    position: absolute;
+    left: 165px;
+    top: 235px;
+    width: 20px;
+  }
+  .circle5 {
+    position: absolute;
+    left: 175px;
+    top: 255px;
+    width: 20px;
+  }
+  .circle6 {
+    position: absolute;
+    left: 135px;
+    top: 155px;
+    width: 20px;
+  }
+  .circle7 {
+    position: absolute;
+    left: 70px;
+    top: 145px;
+    width: 20px;
   }
 
   /* img de lune et soleil */
@@ -147,6 +179,19 @@
       img {
         width: 10px;
         margin-right: 5px;
+      }
+    }
+    p img {
+        width: 10px;
+        margin-right: 5px;
+    }
+
+    .planning {
+      margin: 10px 0px 0px 0px;
+      text-align: center;
+      p {
+        margin-bottom: 0px;
+        font-size: 23px;
       }
     }
 
