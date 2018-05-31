@@ -11,6 +11,14 @@ function confirmation(){
     }
 }
 
+
+var showLoginMenu = false;
 $( ".navbar-right-small-trigger" ).click(function() {
-  alert( "Handler for .click() called." );
+  if (showLoginMenu) {
+    $( ".navbar-right-small" ).removeClass("navbar-show").addClass('navbar-hidden');
+    showLoginMenu = false;
+  }else {
+    $( ".navbar-right-small" ).addClass("navbar-show").removeClass('navbar-hidden');
+    showLoginMenu = true;
+  }
 });
