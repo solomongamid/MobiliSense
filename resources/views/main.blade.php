@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
       <title>MobiliSense - @yield('title')</title>
 
@@ -114,10 +114,10 @@
                 </ul>
 
                 <!-- Login menu small -->
-                <div tabindex="1" class="navbar-nav navbar-right-small-trigger">
-                  <i class="far fa-caret-square-down "></i>
+                <div class="navbar-nav navbar-right-small-trigger">
+                  <i class="far fa-caret-square-down"></i>
                 </div>
-                <ul class="nav navbar-nav navbar-right-small">
+                <ul class="nav navbar-nav navbar-right-small navbar-hidden">
                   <li>
                     <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
                   </li>

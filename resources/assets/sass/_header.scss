@@ -3,6 +3,9 @@
   height: 140px;
   background-color: white;
   border-bottom: 2px solid #29B224 !important;
+  @media screen and (max-width: 1300px ) {
+    height: 90px;
+  }
   .navbar-header {
     .nav-logo {
       position: absolute;
@@ -14,6 +17,7 @@
       @media screen and (max-width: 1300px ) {
         border: 0;
       	box-shadow: none;
+        margin-top: 19px;
       }
       img {
         height: 180px;
@@ -44,10 +48,13 @@
   }
 
   .navbar-collapse {
-    height: 140px !important;
+    height: 140px;
     margin-left: 280px;
     @media screen and (max-width: 1400px ) {
       margin-left: 340px;
+    }
+    @media screen and (max-width: 1300px ) {
+      height: 90px;
     }
   }
 
@@ -80,25 +87,33 @@
     display: grid;
   }
 
-  .navbar-right-small {
-    visibility: hidden;
-    opacity: 0;
-  }
-
   .navbar-right-small-trigger {
-    right: 20px;
+    right: 5px;
     left: auto;
     font-size: 26px;
     @media screen and (min-width: 1300px ) {
       display: none;
     }
-    &:focus .navbar-right-small {
-      visibility: visible;
-      opacity: 1;
-    }
   }
 
-  .navbar-right-small-trigger:focus + .navbar-right-small {
+  .navbar-right-small {
+    padding: 0 6px 4px 6px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s ease-out;
+    right: -75px;
+    left: auto;
+    top: 168px;
+    border: 1px solid #e3d6d6;
+    background-color: white;
+  }
+
+  .navbar-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .navbar-show{
     visibility: visible;
     opacity: 1;
   }
@@ -180,6 +195,9 @@
         }
         a {
           text-decoration: none !important;
+        }
+        @media screen and (max-width: 1300px ) {
+          font-size: 14px;
         }
     }
 
