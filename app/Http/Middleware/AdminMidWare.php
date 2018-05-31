@@ -20,7 +20,7 @@ class AdminMidWare
         if($user && $user->role == '1') {
             return $next($request);
         }
-        
-        return redirect('home');
+
+        return redirect('login');
     }
 }

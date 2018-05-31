@@ -20,7 +20,27 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
+    }
+
+    // /**
+    //  * Show the application dashboard.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function index()
+    // {
+    //     return view('home');
+    // }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contact()
+    {
+        return view('/contact');
     }
 
     /**
@@ -28,15 +48,27 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function demenagement()
     {
-        return view('home');
+        return view('/demenagement', ['send'=>'non']);
     }
 
-    /*  Actu section */
-    public function actu()
+    public function demenagementok(Request $request)
     {
-  		  $news = DB::table('news')->orderBy('date', 'DESC')->get();
-        return view('actu', compact('news'));
+      $inputs['name'] = Input::get('name');
+
+      $inputs['firstname'] = Input::get('firstname');
+
+      $inputs['email'] = Input::get('email');
+
+      $inputs['adress'] = Input::get('adress');
+
+      $inputs['postalcode'] = Input::get('postalcode');
+
+      $inputs['city'] = Input::get('city');
+
+      DB::table('demenagement')->insert($inputs);
+
+      return view('/demenagement', ['send'=>'ok']);
     }
 }

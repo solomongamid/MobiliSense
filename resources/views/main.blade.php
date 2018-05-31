@@ -13,10 +13,6 @@
 
       <!-- Style -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
-      <script src="./js/app.js"></script>
-
 
   </head>
   <body>
@@ -25,12 +21,13 @@
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header page-scroll">
               <a class="nav-logo" href="/">
-                <img src="./img/logo-big.png" alt="Logo MobiliSense">
+                <img src="./img/logo-big.png" alt="Logo MobiliSense" class="logo-big">
+                <img src="./img/logo-small.png" alt="Logo MobiliSense" class="logo-small">
               </a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="navbar-navigation">
                   <li class="hidden">
                       <a href="#page-top"></a>
@@ -39,29 +36,29 @@
                       <a href="/" class="dropbtn">Accueil</a>
                   </li>
                   <li class="dropdown presentation">
-                      <a href="/study" class="dropbtn">L'ÉTUDE</a>
+                      <a href="{{ url('study') }}" class="dropbtn">L'ÉTUDE</a>
                       <div class="dropdown-content">
-                        <a href="/study#context">Contexte et objectifs</a>
-                        <a href="/study#methods">Méthodologie</a>
-                        <a href="/study#data-collected">Donnés collectées</a>
-                        <a href="/study#confidentiality">Confidentialité</a>
-                        <a href="/study#">Calendrier</a>
-                        <a href="/study#">Collaborateurs</a>
+                        <a href="{{ url('study') }}#context">Contexte et objectifs</a>
+                        <a href="{{ url('study') }}#methods">Méthodologie</a>
+                        <a href="{{ url('study') }}#data-collected">Donnés collectées</a>
+                        <a href="{{ url('study') }}#confidentiality">Confidentialité</a>
+                        <a href="{{ url('study') }}#calendar">Calendrier</a>
+                        <a href="{{ url('collaborater') }}">Collaborateurs</a>
                       </div>
                   </li>
                   <li class="dropdown news">
-                    <a href="#portfolio" class="dropbtn">Actualité</a>
+                    <a href="{{ url('actu') }}" class="dropbtn">Actualité</a>
                     <div class="dropdown-content">
-                      <a href="/actu">Actualité</a>
-                      <a href="#">Newsletter</a>
-                      <a href="#">Dossier de presse</a>
+                      <a href="{{ url('actu') }}">Actualité</a>
+                      <a href="{{ url('newsletter') }}">Newsletter</a>
+                      <a href="{{ url('dossier') }}">Dossier de presse</a>
                     </div>
                   </li>
                   <li class="dropdown infos">
-                    <a href="#portfolio" class="dropbtn">ESPACE VOLONTAIRES</a>
+                    <a href="{{ url('volunteer') }}" class="dropbtn">ESPACE VOLONTAIRES</a>
                     <div class="dropdown-content">
-                      <a href="#">Pourquoi participer ?</a>
-                      <a href="#">Comment participer ?</a>
+                      <a href="{{ url('volunteer') }}#why">Pourquoi participer ?</a>
+                      <a href="{{ url('volunteer') }}#how">Comment participer ?</a>
                       @if (Auth::guest())
                           <a href="{{ route('login') }}">Se connecter</a>
                       @else
@@ -69,8 +66,8 @@
                             Mon espace
                           </a>
                       @endif
-                      <a href="#">Lettre d'information</a>
-                      <a href="#">En savoir plus...</a>
+                      <a href="{{ url('volunteer') }}#infoLetter">Lettre d'information</a>
+                      <a href="{{ url('volunteer') }}#moreinfo">En savoir plus...</a>
                     </div>
                   </li>
                   <li class="dropdown works">
@@ -82,22 +79,23 @@
                     </div>
                   </li>
                   <li class="dropdown contact">
-                    <a href="#portfolio" class="dropbtn">Contact</a>
+                    <a href="{{ url('contact') }}" class="dropbtn">Contact</a>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+
+                <!-- Login menu desktop -->
+                <ul class="nav navbar-nav navbar-right navbar-right-desktop ">
                   <li>
-                    <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a>
+                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
                   </li>
                   <li>
-                    <a type="button" class="navbar-btn login" href="#déménagement">Déménagement ?</a>
-                    <!-- <a type="button" class="navbar-btn englishflag" href="#demenagement"><img src="./img/britishflag.png" alt=""></a> -->
+                    <a type="button" class="navbar-btn login" href="{{ url('demenagement') }}">Déménagement ?</a>
                    </li>
                   <li>
                     @if (Auth::guest())
-                      <a type="button" class="navbar-btn login" href="/register">S'inscrire</a>
+                      <a type="button" class="navbar-btn login" href="{{ url('register') }}">S'inscrire</a>
                     @else
-                     <a type="button" class="navbar-btn login" href="/benevole">Mon espace</a>
+                     <a type="button" class="navbar-btn login" href="{{ url('benevole') }}">Mon espace</a>
                    @endif
                    </li>
                    <li>
@@ -113,6 +111,38 @@
                     @endif
                     </li>
 
+                </ul>
+
+                <!-- Login menu small -->
+                <div tabindex="1" class="navbar-nav navbar-right-small-trigger">
+                  <i class="far fa-caret-square-down "></i>
+                </div>
+                <ul class="nav navbar-nav navbar-right-small">
+                  <li>
+                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a type="button" class="navbar-btn login" href="{{ url('demenagement') }}">Déménagement ?</a>
+                   </li>
+                  <li>
+                    @if (Auth::guest())
+                      <a type="button" class="navbar-btn login" href="{{ url('register') }}">S'inscrire</a>
+                    @else
+                     <a type="button" class="navbar-btn login" href="{{ url('benevole') }}">Mon espace</a>
+                   @endif
+                   </li>
+                   <li>
+                    @if (Auth::guest())
+                        <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>
+                    @else
+                        <a type="button" class="navbar-btn login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                          Se déconnecter
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    @endif
+                    </li>
                 </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -159,5 +189,8 @@
           <p>Merci à Y. Qixin, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
+
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
   </body>
 </html>

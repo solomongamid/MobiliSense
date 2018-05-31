@@ -32,7 +32,7 @@ class LoginController extends Controller
     {
         if (!$user->verified) {
             auth()->logout();
-            return back()->with('warning', 'You need to confirm your account. We have sent you an activation code, please check your email.');
+            return back()->with('warning', 'Vous devez confirmer votre compte. Nous vous avons envoyé un code d\'activation, merci de vérifier dans vos emails.');
         }
         //return redirect()->intended($this->redirectPath());
 

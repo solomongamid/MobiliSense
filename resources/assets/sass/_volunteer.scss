@@ -1,0 +1,67 @@
+.volunteer-main-container {
+  margin-top: 140px;
+  padding: 50px 140px;
+
+  .main-title {
+    color: #F27B07;
+    font-size: 52px;
+    font-weight: bold;
+  }
+
+  .my-hr {
+    border-top: 2px solid #9f9797;
+  }
+  .main-text {
+    padding: 10px 20px;
+    background-color: #fffff6;
+    &:nth-of-type(2n) {
+      background-color: #fffffe;
+    }
+    h2 {
+      font-size: 40px;
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    .sub-text {
+      text-align: justify;
+      padding: 0 48px;
+      .title {
+        margin: 38px 0 16px 0;
+        text-decoration: underline;
+      }
+    }
+    .list-of-text {
+      .first-list {
+        & > li {
+          list-style-type: none;
+          margin-top: 14px;
+          font-size: 18px;
+        }
+      }
+      .sub-list {
+        & > li {
+          margin-top: 5px;
+          font-size: 17px;
+        }
+        ul > li {
+          list-style: decimal;
+        }
+      }
+    }
+  }
+
+  .faq {
+    .faqtitle {
+      color: #F27B07;
+    }
+    i {
+      color: #3a3838;
+      font-size: 30px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+  
+}

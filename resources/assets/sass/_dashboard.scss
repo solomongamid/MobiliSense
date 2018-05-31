@@ -12,47 +12,58 @@
     margin-bottom: 0px;
   }
 
+  .red {
+    color: #FF0000;
+  }
+
+  .grey {
+    font-size: 17px;
+    color: #3f5a75;
+  }
+
   /* Position en dur des capteurs pour le moment */
   .circle1 {
     position: absolute;
-    left: 55px;
+    left: 85px;
     top: 220px;
+    width: 20px;
   }
   .circle2 {
     position: absolute;
     left: 155px;
     top: 420px;
+    width: 20px;
   }
   .circle3 {
     position: absolute;
     left: 140px;
     top: 140px;
+    width: 20px;
   }
-
-  /* Pour l'ouverture + mise en forme de l'info bulle */
-  a:hover,a:focus{
-       background:rgba(0,0,0,.4);
-       box-shadow:0 1px 0 rgba(255,255,255,.4);
+  .circle4 {
+    position: absolute;
+    left: 165px;
+    top: 235px;
+    width: 20px;
   }
-  a span{
-       position:absolute;
-       margin-top:80px;
-       margin-left:-20px;
-       color:#29B224;
-       font-weight: bold;
-       background-color: #dbdbdb;
-       padding:15px;
-       border-radius:3px;
-       // box-shadow:0 0 2px rgba(0,0,0,.5);
-       transform:scale(0) rotate(-12deg);
-       transition:all .25s;
-       opacity:0;
+  .circle5 {
+    position: absolute;
+    left: 175px;
+    top: 255px;
+    width: 20px;
   }
-  a:hover span, a:focus span{
-       transform:scale(1) rotate(0);
-       opacity:1;
+  .circle6 {
+    position: absolute;
+    left: 135px;
+    top: 155px;
+    width: 20px;
   }
-  /* Fin infobulle */
+  .circle7 {
+    position: absolute;
+    left: 70px;
+    top: 145px;
+    width: 20px;
+  }
 
   /* img de lune et soleil */
   .moon {
@@ -79,15 +90,67 @@
     padding-top: 10px;
   }
 
+  .remerciements {
+    padding-top: 10px;
+    text-align: center;
+    margin:10px auto 10px auto;
+    width:500px;
+    background:#29B224;
+    border-radius: 30px;
+  }
+
   /* On agrandit l'espace entre 2 lignes */
   .rowbottom {
     margin-bottom: 10px;
+    /* Pour l'ouverture + mise en forme de l'info bulle */
+    a:hover,a:focus{
+         background:rgba(0,0,0,.4);
+         box-shadow:0 1px 0 rgba(255,255,255,.4);
+    }
+    a span{
+         position:absolute;
+         margin-top:140px;
+         margin-left:-20px;
+         color:#29B224;
+         font-weight: bold;
+         background-color: #dbdbdb;
+         padding:15px;
+         border-radius:3px;
+         // box-shadow:0 0 2px rgba(0,0,0,.5);
+         transform:scale(0) rotate(-12deg);
+         transition:all .25s;
+         opacity:0;
+    }
+    a:hover span, a:focus span{
+         transform:scale(1) rotate(0);
+         opacity:1;
+
+    }
+    /* Fin infobulle */
   }
   /* Flèche sur V1 pour le moment en dure */
+  .timev0 {
+  	position: absolute;
+    left:-50px;
+  	margin-top: 0px;
+  }
+
   .timev1 {
   	position: absolute;
     left:-50px;
   	margin-top: 42px;
+  }
+
+  .timev2 {
+  	position: absolute;
+    left:-50px;
+  	margin-top: 211px;
+  }
+
+  .timev3 {
+  	position: absolute;
+    left:-50px;
+  	margin-top: 379px;
   }
 
   .imgrow {
@@ -104,4 +167,32 @@
         font-size: 16px;
       }
     }
+
+    // Les capteurs (petite couleur pour liste à puces correspondante)
+    ul {
+      list-style: none;
+      font-size: 20px;
+    }
+
+    ul li{
+      text-indent: -.7em;
+      img {
+        width: 10px;
+        margin-right: 5px;
+      }
+    }
+    p img {
+        width: 10px;
+        margin-right: 5px;
+    }
+
+    .planning {
+      margin: 10px 0px 0px 0px;
+      text-align: center;
+      p {
+        margin-bottom: 0px;
+        font-size: 23px;
+      }
+    }
+
 }
