@@ -1087,22 +1087,58 @@ ul.Information li a:hover:not(.active) {
   color: #FF0000;
 }
 
+.mainuserhp .grey {
+  font-size: 17px;
+  color: #3f5a75;
+}
+
 .mainuserhp .circle1 {
   position: absolute;
-  left: 55px;
+  left: 85px;
   top: 220px;
+  width: 20px;
 }
 
 .mainuserhp .circle2 {
   position: absolute;
   left: 155px;
   top: 420px;
+  width: 20px;
 }
 
 .mainuserhp .circle3 {
   position: absolute;
   left: 140px;
   top: 140px;
+  width: 20px;
+}
+
+.mainuserhp .circle4 {
+  position: absolute;
+  left: 165px;
+  top: 235px;
+  width: 20px;
+}
+
+.mainuserhp .circle5 {
+  position: absolute;
+  left: 175px;
+  top: 255px;
+  width: 20px;
+}
+
+.mainuserhp .circle6 {
+  position: absolute;
+  left: 135px;
+  top: 155px;
+  width: 20px;
+}
+
+.mainuserhp .circle7 {
+  position: absolute;
+  left: 70px;
+  top: 145px;
+  width: 20px;
 }
 
 .mainuserhp .moon {
@@ -1231,6 +1267,21 @@ ul.Information li a:hover:not(.active) {
 .mainuserhp ul li img {
   width: 10px;
   margin-right: 5px;
+}
+
+.mainuserhp p img {
+  width: 10px;
+  margin-right: 5px;
+}
+
+.mainuserhp .planning {
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+}
+
+.mainuserhp .planning p {
+  margin-bottom: 0px;
+  font-size: 23px;
 }
 
 .actu-main-container {

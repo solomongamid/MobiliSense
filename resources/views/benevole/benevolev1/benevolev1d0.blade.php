@@ -47,27 +47,32 @@
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Nuit :</h3>
             <p class="beflist"><strong>Rechargez</strong> dans n'importe quelle pièce :</p>
             <ul>
-              <li><img src="{{ asset('img/rondtest.png') }}" />1. GPS</li>
-              <li><img src="{{ asset('img/rondtest1.png') }}" />7. Piles du Tension-mobile</li>
-              <li><img src="{{ asset('img/rondtest2.png') }}" />10. Smartphone</li>
-              <li><img src="{{ asset('img/rondtest3.png') }}" />11. iPhone</li>
+              <li><img src="{{ asset('img/rond1.png') }}" />1. GPS <span class="grey">led orange (fixe ou clignotante)</span></li>
+              <li><img src="{{ asset('img/rond7.png') }}" />7. Piles du Tension-mobile</li>
+              <li><img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rond11.png') }}" />11. iPhone</li>
             </ul>
             <p class="beflist"><strong>Rechargez</strong> dans la pièce où vous dormez :</p>
             <ul>
-              <li class="bruit"><img src="{{ asset('img/rondtest4.png') }}" />3. Bruit-micro</li>
-              <li class="airbandouliere"><img src="{{ asset('img/rondtest3.png') }}" />4. Air-bandoulière</li>
-              <li class="airtuyau"><img src="{{ asset('img/rondtest1.png') }}" />5. Air tuyau, <span class="red">allumez l'appareil</span></li>
+              <li class="bruit"><img src="{{ asset('img/rond3.png') }}" />3. Bruit-micro <span class="grey">led verte clignotante</span></li>
+              <li class="airbandouliere"><img src="{{ asset('img/rond4.png') }}" />4. Air-bandoulière <span class="grey">led verte clignotante</span></li>
+              <li class="airtuyau"><img src="{{ asset('img/rond5.png') }}" />5. Air tuyau, <span class="red">allumez l'appareil</span> <span class="grey">led verte clignotante</span></li>
             </ul>
           </div>
           <div class="col-md-2">
           </div>
         </div>
-
+        <div class="row planning">
+          <p>
+            <i class="far fa-file-pdf"></i> Retrouvez <a href="./files/MobiliSense_Planning.pdf" target="_blank">le planning complet</a><br>
+            <i class="far fa-file-pdf"></i> Téléchagez <a href="./files/MobiliSense_Carnet_de_déplacements.pdf.pdf" target="_blank">votre carnet de déplacements</a>
+          </p>
+        </div>
         <div class="row remerciements">
-            <p>
-              Un grand MERCI ! <strong>Si besoin, appelez 7 jours / 7</strong><br>
-              au <strong>01 44 73 84 56</strong> ou au <strong>06 17 99 21 73</strong>
-            </p>
+          <p>
+            Un grand MERCI ! <strong>Si besoin, appelez 7 jours / 7</strong><br>
+            au <strong>01 44 73 84 56</strong> ou au <strong>06 17 99 21 73</strong>
+          </p>
         </div>
       </main>
       <script>
