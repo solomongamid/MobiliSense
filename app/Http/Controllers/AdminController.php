@@ -34,14 +34,22 @@ class AdminController extends Controller
     public function indexNews()
     {
         $datas = DB::table('news')->orderBy('id', 'DESC')->get()->all();
+        $filename = 'test.pdf';
+        $path = storage_path($filename);
+
+        return Response::make(file_get_contents($path), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.$filename.'"'
+        ]);
         return view('news', compact('datas'));
     }
 
     public function showNews($id){
-
+        
         $news = DB::table('news')->find($id);
+        return response()->file($pathToFile);
         return view('show', compact('news'));
-
+         
     }
 
     public function newsForm()
@@ -60,7 +68,7 @@ class AdminController extends Controller
         if(Input::hasFile('news_file')) {
             $file = Input::file('news_file');
             //$file->move(public_path(). '/storage', $file->getClientOriginalName())->save();
-            $filePath = $request->file('news_file')->store('files');
+            $filePath = $request->file('news_file')->store('public');
             $inputs['files'] = $filePath;
         }
 
@@ -70,16 +78,16 @@ class AdminController extends Controller
     }
 
     public function destroy($id){
-
+        
         $news = \DB::table('news')->where('id', '=', $id);
 
          if (!is_null($news)) {
             $news->delete();
         }
-
+         
 
         return redirect('/adminHome');
-
+         
     }
 
     public function updateNews(Request $request, $id){
@@ -96,5 +104,5 @@ class AdminController extends Controller
         return redirect('/newsHome');
     }
 
-
+    
 }
