@@ -7,6 +7,7 @@
 
 //
 require('./bootstrap');
+require('tinymce');
 // window.Vue = require('vue');
 
 /**

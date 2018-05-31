@@ -1,3 +1,7 @@
+tinymce.init({
+  selector: '#mytextarea',
+});
+
 function confirmation(){
     if(confirm('are you sure?')){
         document.getElementById('delete-form').submit();
