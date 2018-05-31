@@ -22,7 +22,7 @@ class AdminCalendarController extends Controller
 
     public function index()
     {
-        $datas = DB::table('calendar')->orderBy('id', 'DESC')->get()->all();
+        $datas = DB::table('calendar')->orderBy('date', 'DESC')->get()->all();
         return view('/admin/calendar/calendarHome', compact('datas'));
     }
 
@@ -83,10 +83,6 @@ class AdminCalendarController extends Controller
         $inputs['description'] = Input::get('description');
 
         $inputs['link'] = Input::get('link');
-
-        $inputs['files'] = Input::get('calendar_file');
-
-        $inputs['date'] = Carbon\Carbon::now();
 
         DB::table('calendar')->where('id', '=', $id)->update($inputs);
 

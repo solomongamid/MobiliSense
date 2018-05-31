@@ -1,6 +1,6 @@
 tinymce.init({
   selector: '#mytextarea',
-  skin_url: '/css/skins/lightgray'
+  skin_url: '/css/tinymceSkins/lightgray'
 });
 
 function confirmation(){

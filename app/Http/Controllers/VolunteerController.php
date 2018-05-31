@@ -26,7 +26,7 @@ class VolunteerController extends Controller
     public function index()
     {
         $information_letter = DB::table('information_letter')->orderBy('date', 'DESC')->get();
-        $faq = DB::table('faq')->orderBy('id', 'DESC')->get();
+        $faq = DB::table('faq')->orderBy('position', 'ASC')->get();
         return view('/volunteerPage/volunteerPage', compact('information_letter','faq'));
     }
 }

@@ -22,7 +22,7 @@ class AdminInfoletterController extends Controller
 
     public function index()
     {
-        $datas = DB::table('information_letter')->orderBy('id', 'DESC')->get()->all();
+        $datas = DB::table('information_letter')->orderBy('date', 'DESC')->get()->all();
         return view('/admin/infoletter/infoletterHome', compact('datas'));
     }
 
@@ -76,10 +76,6 @@ class AdminInfoletterController extends Controller
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
-
-        $inputs['files'] = Input::get('files');
-
-        $inputs['date'] = Carbon\Carbon::now();
 
         DB::table('information_letter')->where('id', '=', $id)->update($inputs);
 

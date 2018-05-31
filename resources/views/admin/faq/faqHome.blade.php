@@ -11,6 +11,7 @@
 	  <tr>
 	    <th>Titre</th>
 	    <th>Description</th>
+			<th>Position</th>
 	  </tr>
 	</thead>
 	<tbody>
@@ -18,6 +19,7 @@
 	  <tr>
 	    <th><a href="{{ url('faqHome/'.$data->id) }}" > {{ str_limit(strip_tags($data->title), 30) }}</a></th>
 	    <th>{{ str_limit(strip_tags($data->description), 35) }}</th>
+			<th>{{ $data->position }}</th>
 	    <th>
 	        <a href="{{ url('deleteFaq/'.$data->id) }}" class="btn btn-operation btn-danger">
 	             Effacer

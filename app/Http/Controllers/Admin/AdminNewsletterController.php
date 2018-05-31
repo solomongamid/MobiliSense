@@ -28,7 +28,7 @@ class AdminNewsletterController extends Controller
      */
       public function index()
       {
-          $newsletter = DB::table('newsletter')->orderBy('id', 'DESC')->get()->all();
+          $newsletter = DB::table('newsletter')->orderBy('lastname', 'ASC')->get()->all();
           return view('/admin/newsletterAdmin', compact('newsletter'));
       }
 

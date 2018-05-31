@@ -19,11 +19,6 @@
     </div>
 
     <div class="form-group">
-        <label>Fichier PDF <br>S'il y en a un déjà enregistré et que vous ne souhaitez pas le modifier, ne touchez à rien ici.</label>
-        <input type="file" name="calendar_file" value="{{ $calendar->files }}">
-    </div>
-
-    <div class="form-group">
       <label>Lien</label>
       <input type="text" name="link" class="form-control" value="{{ $calendar->link }}">
     </div>

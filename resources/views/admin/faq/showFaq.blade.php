@@ -24,6 +24,11 @@
     </div>
 
     <div class="form-group">
+      <label>Position</label>
+      <input type="text" name="position" class="form-control" value="{{ $faq->position }}">
+    </div>
+
+    <div class="form-group">
       <button type="submit" class="btn btn-primary">Mettre à jour</button>
     </div>
 

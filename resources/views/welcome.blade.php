@@ -23,7 +23,7 @@
                         <div class="item" style="background-image: url(./img/carrou2.png)">
                         </div>
 
-                        <div class="item" style="background-image: url(./img/placeholder3.jpg)">
+                        <div class="item" style="background-image: url(./img/carrou3.jpg)">
                         </div>
                       </div>
 

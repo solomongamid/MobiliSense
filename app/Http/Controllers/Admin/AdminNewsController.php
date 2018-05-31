@@ -22,12 +22,12 @@ class AdminNewsController extends Controller
 
     public function index()
     {
-        $datas = DB::table('news')->orderBy('id', 'DESC')->get()->all();
+        $datas = DB::table('news')->orderBy('date', 'DESC')->get()->all();
         return view('/admin/news/newsHome', compact('datas'));
     }
 
     public function showNews($id){
-        
+
         $news = DB::table('news')->find($id);
         return view('/admin/news/showNews', compact('news'));
     }
@@ -48,7 +48,7 @@ class AdminNewsController extends Controller
         if(Input::hasFile('news_file')) {
             $file = Input::file('news_file');
             //$file->move(public_path(). '/storage', $file->getClientOriginalName())->save();
-            $filePath = $request->file('news_file')->store('public');
+            $filePath = $request->file('news_file')->store('files');
             $inputs['files'] = $filePath;
         }
 
@@ -58,31 +58,26 @@ class AdminNewsController extends Controller
     }
 
     public function destroy($id){
-        
+
         $news = \DB::table('news')->where('id', '=', $id);
 
          if (!is_null($news)) {
             $news->delete();
         }
-         
+
         return redirect('/newsHome');
     }
 
     public function updateNews(Request $request, $id){
 
-        //$news = \DB::table('news')->where('id', '=', $id);
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
-
-        $inputs['files'] = Input::get('files');
-
-        $inputs['date'] = Carbon\Carbon::now();
 
         DB::table('news')->where('id', '=', $id)->update($inputs);
 
         return redirect('/newsHome');
     }
 
-    
+
 }

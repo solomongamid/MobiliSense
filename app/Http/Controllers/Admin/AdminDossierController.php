@@ -22,7 +22,7 @@ class AdminDossierController extends Controller
 
     public function index()
     {
-        $datas = DB::table('dossier')->orderBy('id', 'DESC')->get()->all();
+        $datas = DB::table('dossier')->orderBy('date', 'DESC')->get()->all();
         return view('/admin/dossier/dossierHome', compact('datas'));
     }
 
@@ -72,12 +72,9 @@ class AdminDossierController extends Controller
 
     public function updateDossier(Request $request, $id){
 
-        //$dossier = \DB::table('dossier')->where('id', '=', $id);
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
-
-        $inputs['date'] = Carbon\Carbon::now();
 
         DB::table('dossier')->where('id', '=', $id)->update($inputs);
 

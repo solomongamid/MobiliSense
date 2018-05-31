@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        MobiliSense
+                        Retour au site MobiliSense
                     </a>
                 </div>
 
@@ -96,7 +96,7 @@
                                       <li><a id="Experience" class="link"> <h3>Publications et communications</h3> </a></li>
                                       <li><a href="{{ url('wave') }}"> <h3>Gestion des vagues</h3> </a></li>
                                       <li><a href="{{ url('dossierHome') }}"> <h3>Dossier de presse </h3> </a></li>
-                                      <li><a id="Interests" class="link"> <h3>Collaborateurs</h3> </a></li>
+                                      <!-- <li><a id="Interests" class="link"> <h3>Collaborateurs</h3> </a></li> -->
                                       <li><a href="{{ url('calendarHome') }}"> <h3>Calendrier</h3> </a></li>
                                       <li><a href="{{ url('infoletterHome') }}"> <h3>Lettre d'information</h3> </a></li>
                                       <li><a href="{{ url('faqHome') }}"> <h3>FAQ - En savoir plus</h3> </a></li>

@@ -85,7 +85,7 @@
           </div>
 
         </form>
-      <p> Pour toute autre demande, contactez l'équipe MobiliSense.</p>
+      <p> Pour toute autre demande, contactez l'équipe MobiliSense :</p>
       <ul>
         <li>Audrey Pelletier</li>
         <li>Jean Bon</li>

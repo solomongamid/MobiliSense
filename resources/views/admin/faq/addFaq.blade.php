@@ -18,6 +18,11 @@
           </div>
 
           <div class="form-group">
+            <label>Position sur la page</label>
+            <input type="text" name="position" class="form-control">
+          </div>
+
+          <div class="form-group">
             <button type="submit" class="btn btn-primary">Ajouter une question à la FAQ</button>
           </div>
 

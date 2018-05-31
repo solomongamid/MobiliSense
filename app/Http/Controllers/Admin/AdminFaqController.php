@@ -22,7 +22,7 @@ class AdminFaqController extends Controller
 
     public function index()
     {
-        $datas = DB::table('faq')->orderBy('id', 'DESC')->get()->all();
+        $datas = DB::table('faq')->orderBy('position', 'ASC')->get()->all();
         return view('/admin/faq/faqHome', compact('datas'));
     }
 
@@ -43,6 +43,8 @@ class AdminFaqController extends Controller
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
+
+        $inputs['position'] = Input::get('position');
 
         DB::table('faq')->insert($inputs);
 
@@ -67,6 +69,8 @@ class AdminFaqController extends Controller
         $inputs['title'] = Input::get('title');
 
         $inputs['description'] = Input::get('description');
+
+        $inputs['position'] = Input::get('position');
 
         DB::table('faq')->where('id', '=', $id)->update($inputs);
 
