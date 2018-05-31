@@ -8,6 +8,7 @@
 //
 require('./bootstrap');
 require('tinymce');
+require('tinymce/themes/modern/theme');
 // window.Vue = require('vue');
 
 /**
