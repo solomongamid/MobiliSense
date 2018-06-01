@@ -93,13 +93,15 @@
                                       <li><a href="{{ url('newsHome') }}"><h3>Actualité</h3></a></li>
                                       <li> <a id="Qualification" class="link" href="{{ url('userHome') }}"> <h3>Utilisateurs</h3></a></li>
                                       <li> <a href="{{ url('newsletterAdmin') }}"><h3>Liste des abonnés à la Newsletter</h3></a></li>
-                                      <li><a id="Experience" class="link"> <h3>Publications et communications</h3> </a></li>
                                       <li><a href="{{ url('wave') }}"> <h3>Gestion des vagues</h3> </a></li>
                                       <li><a href="{{ url('dossierHome') }}"> <h3>Dossier de presse </h3> </a></li>
                                       <!-- <li><a id="Interests" class="link"> <h3>Collaborateurs</h3> </a></li> -->
                                       <li><a href="{{ url('calendarHome') }}"> <h3>Calendrier</h3> </a></li>
                                       <li><a href="{{ url('infoletterHome') }}"> <h3>Lettre d'information</h3> </a></li>
                                       <li><a href="{{ url('faqHome') }}"> <h3>FAQ - En savoir plus</h3> </a></li>
+                                      <li><a href="{{ url('communicationHome') }}"> <h3>Publications et communications</h3> </a></li>
+                                      <li><a href="{{ url('academicWorkHome') }}"> <h3>Travaux universitaires</h3> </a></li>
+                                      <li><a href="{{ url('principleResultsHome') }}"> <h3>Principaux résultats</h3> </a></li>
                                     </ul>
                                   </div>
                                   <div class="col-sm-9">

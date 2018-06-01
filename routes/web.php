@@ -83,6 +83,30 @@ Route::post('/betweenwave', 'Admin\AdminWaveController@betweenwave');
 Route::post('/wave2', 'Admin\AdminWaveController@wave2');
 Route::post('/stopwave', 'Admin\AdminWaveController@stopwave');
 
+// Gestion des space Communication
+Route::get('/communicationHome', 'Admin\AdminCommunicationsController@index');
+Route::get('/addCommunication', 'Admin\AdminCommunicationsController@communicationForm');
+Route::post('/addCommunication', 'Admin\AdminCommunicationsController@store');
+Route::get('/deleteCommunication/{communication}','Admin\AdminCommunicationsController@destroy');
+Route::get('/communicationHome/{communication}', 'Admin\AdminCommunicationsController@showCommunication');
+Route::post('/communicationHome/{communication}','Admin\AdminCommunicationsController@updateCommunication');
+
+// Gestion des space Travaux_uni
+Route::get('/academicWorkHome', 'Admin\AdminAcademicWorkController@index');
+Route::get('/addAcademicWork', 'Admin\AdminAcademicWorkController@AcademicWorkForm');
+Route::post('/addAcademicWork', 'Admin\AdminAcademicWorkController@store');
+Route::get('/deleteAcademicWork/{academicWork}','Admin\AdminAcademicWorkController@destroy');
+Route::get('/academicWorkHome/{academicWork}', 'Admin\AdminAcademicWorkController@showAcademicWork');
+Route::post('/academicWorkHome/{academicWork}','Admin\AdminAcademicWorkController@updateAcademicWork');
+
+// Gestion des space Principle Results
+Route::get('/principleResultsHome', 'Admin\AdminPrincipleResultsController@index');
+Route::get('/addPrincipleResults', 'Admin\AdminPrincipleResultsController@principleResultsForm');
+Route::post('/addPrincipleResults', 'Admin\AdminPrincipleResultsController@store');
+Route::get('/deletePrincipleResults/{principleResults}','Admin\AdminPrincipleResultsController@destroy');
+Route::get('/principleResultsHome/{principleResults}', 'Admin\AdminPrincipleResultsController@showPrincipleResult');
+Route::post('/PrincipleResultsHome/{principleResults}','Admin\AdminPrincipleResultsController@updatePrincipleResults');
+
 // Gestion des abonnés à la NL
 Route::get('/newsletterAdmin', 'Admin\AdminNewsletterController@index')->name('newsletter');
 Route::get('/deleteNewsletter/{newsletter}','Admin\AdminNewsletterController@destroy');
