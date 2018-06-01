@@ -83,8 +83,8 @@
                   </li>
                 </ul>
 
-                <!-- Login menu desktop -->
-                <ul class="nav navbar-nav navbar-right navbar-right-desktop ">
+                <!-- Login menu -->
+                <ul class="nav navbar-nav navbar-right navbar-right-desktop navbar-hidden">
                   <li>
                     <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
                   </li>
@@ -117,35 +117,79 @@
                 <div class="navbar-nav navbar-right-small-trigger">
                   <i class="far fa-caret-square-down"></i>
                 </div>
-                <ul class="nav navbar-nav navbar-right-small navbar-hidden">
-                  <li>
-                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
-                  </li>
-                  <li>
-                    <a type="button" class="navbar-btn login" href="{{ url('demenagement') }}">Déménagement ?</a>
-                   </li>
-                  <li>
-                    @if (Auth::guest())
-                      <a type="button" class="navbar-btn login" href="{{ url('register') }}">S'inscrire</a>
-                    @else
-                     <a type="button" class="navbar-btn login" href="{{ url('benevole') }}">Mon espace</a>
-                   @endif
-                   </li>
-                   <li>
-                    @if (Auth::guest())
-                        <a type="button" class="navbar-btn login" href="{{ route('login') }}">Se connecter</a>
-                    @else
-                        <a type="button" class="navbar-btn login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                          Se déconnecter
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    @endif
-                    </li>
-                </ul>
           </div>
           <!-- /.navbar-collapse -->
+
+          <!-- Mobile nav menu -->
+          <section class="navbar-mobile">
+            <input type="checkbox" class="menu-toggler" id="menu-toggler" aria-hidden="true">
+            <label for="menu-toggler" class="menu-toggler__label" aria-hidden="true">
+                <span class="menu-toggler__label__text">Menu</span>
+                <span class="menu-toggler__label__visual">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </label>
+
+            <ul class="main-menu">
+                <li><a href="/">Accueil</a></li>
+                <li>
+                  <input type="checkbox" name ="sub-group-trigger-1" class="sub-group-trigger-1" id="sub-group-trigger-1">
+                  <label for="sub-group-trigger-1">L'étude</label>
+                  <ul class="sub-navbar-mobile">
+                      <li><a href="{{ url('study') }}#context">Contexte et objectifs</a></li>
+                      <li><a href="{{ url('study') }}#methods">Méthodologie</a></li>
+                      <li><a href="{{ url('study') }}#data-collected">Donnés collectées</a></li>
+                      <li><a href="{{ url('study') }}#confidentiality">Confidentialité</a></li>
+                      <li><a href="{{ url('study') }}#calendar">Calendrier</a></li>
+                      <li><a href="{{ url('collaborater') }}">Collaborateurs</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" name ="sub-group-trigger-2" class="sub-group-trigger-2" id="sub-group-trigger-2">
+                  <label for="sub-group-trigger-2">ACTUALITÉS</label>
+                  <ul class="sub-navbar-mobile">
+                      <li><a href="#">ACCÈS</a></li>
+                      <li><a href="#">HORAIRES</a></li>
+                      <li><a href="#">TARIFS</a></li>
+                      <li><a href="#">RESTAURANT</a></li>
+                      <li><a href="#">BOUTIQUE</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" name ="sub-group-trigger-3" class="sub-group-trigger-3" id="sub-group-trigger-3">
+                  <label for="sub-group-trigger-3">ESPACE VOLONTAIRES</label>
+                  <ul class="sub-navbar-mobile">
+                      <li><a href="{{ url('volunteer') }}#why">Pourquoi participer ?</a></li>
+                      <li><a href="{{ url('volunteer') }}#how">Comment participer ?</a></li>
+                      <li>
+                        @if (Auth::guest())
+                            <a href="{{ route('login') }}">Se connecter</a>
+                        @else
+                            <a href="/benevole">
+                              Mon espace
+                            </a>
+                        @endif
+                      </li>
+                      <li><a href="{{ url('volunteer') }}#infoLetter">Lettre d'information</a></li>
+                      <li><a href="{{ url('volunteer') }}#moreinfo">En savoir plus...</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">ESPACE SCIENTIFIQUE</a>
+                  <ul class="sub-navbar-mobile">
+                      <li><a href="#">Publications et communications</a></li>
+                      <li><a href="#">Travaux universitaires</a></li>
+                      <li><a href="#">Principaux résultats</a></li>
+                  </ul>
+                </li>
+                <li><a href="{{ url('contact') }}">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-overlay">
+            </div>
+        </section>
+
       </div>
       <!-- /.container-fluid -->
     </nav>
@@ -186,7 +230,7 @@
                 </div>
         <div class="row ml">
           <p>Mentions légales</p>
-          <p>Merci à Y. Qixin, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
+          <p>Merci à Q. Ying, S. Abdelgadeir et R. Renout qui ont développé ce site</p>
         </div>
     </footer>
 

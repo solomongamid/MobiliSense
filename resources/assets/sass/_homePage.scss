@@ -38,6 +38,9 @@
 
 .carousel-container {
   margin-top: 140px;
+  @media screen and (max-width: $mobile ) {
+    margin-top: 70px;
+  }
 }
 
 .carousel {
