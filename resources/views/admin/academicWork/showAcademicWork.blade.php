@@ -7,7 +7,7 @@
     <li class="previous"><a href="{{ url('academicWorkHome') }}">Précédent</a></li>
   </ul>
 
-<h3>Mise à jour d'un travaux universitaire</h3>
+<h3>Mise à jour d'un travail universitaire</h3>
 
   <form method="POST" action="/academicWorkHome/{{ $academicWork->id }}">
 

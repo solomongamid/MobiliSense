@@ -93,6 +93,7 @@
                                       <li><div class="tcolor"><a href="{{ url('newsHome') }}"><h3>Actualité</h3></a></div></li>
                                       <li><div class="tcolor"> <a id="Qualification" class="link" href="{{ url('userHome') }}"> <h3>Utilisateurs</h3></a></div></li>
                                       <li> <div class="tcolor"><a href="{{ url('newsletterAdmin') }}"><h3>Liste des abonnés à la Newsletter</h3></a></div></li>
+                                      <li> <div class="tcolor"><a href="{{ url('demenagementAdmin') }}"><h3>Déménagement</h3></a></div></li>
                                       <li><div class="tcolor"><a href="{{ url('wave') }}"> <h3>Gestion des vagues</h3> </a></div></li>
                                       <li><div class="tcolor"><a href="{{ url('dossierHome') }}"> <h3>Dossier de presse </h3> </a></div></li>
                                       <!-- <li><a id="Interests" class="link"> <h3>Collaborateurs</h3> </a></li> -->

@@ -4,7 +4,7 @@
 
 
 	<ul class="pager">
-		<li class="previous"><a href="{{ url('addAcademicWork') }}">Créer un nouveau travaux universitaire</a></li>
+		<li class="previous"><a href="{{ url('addAcademicWork') }}">Créer un nouveau travail universitaire</a></li>
 	</ul>
 	<table class="table">
 	<thead>

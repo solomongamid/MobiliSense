@@ -4,7 +4,7 @@
 
 
 	<ul class="pager">
-		<li class="previous"><a href="{{ url('addCommunication') }}">Créer un nouveau communication</a></li>
+		<li class="previous"><a href="{{ url('addCommunication') }}">Créer une nouvelle communication</a></li>
 	</ul>
 	<table class="table">
 	<thead>

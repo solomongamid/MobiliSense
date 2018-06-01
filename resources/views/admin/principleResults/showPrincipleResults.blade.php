@@ -7,7 +7,7 @@
     <li class="previous"><a href="{{ url('principleResultsHome') }}">Précédent</a></li>
   </ul>
 
-<h3>Mise à jour d'un principaux résultats</h3>
+<h3>Mise à jour d'un principal résultat</h3>
 
   <form method="POST" action="/principleResultsHome/{{ $principleResults->id }}">
 

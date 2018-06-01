@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 01 juin 2018 à 11:33
+-- Généré le :  ven. 01 juin 2018 à 11:56
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.6
 
@@ -115,8 +115,8 @@ CREATE TABLE `demenagement` (
 --
 
 INSERT INTO `demenagement` (`id`, `name`, `firstname`, `email`, `adress`, `postalcode`, `city`) VALUES
-(1, 'ez', 'ez', 'ez@z.fr', 'ez', 3, 'ez'),
-(2, 'ez', 'ez', 'ez@z', 'ez', 3, 'ez');
+(2, 'ez', 'ez', 'ez@z', 'ez', 3, 'ez'),
+(3, 'Renout', 'Raphael', 'rapha@te.co', '8 rue Amyot', 75005, 'Paris');
 
 -- --------------------------------------------------------
 
@@ -287,49 +287,6 @@ INSERT INTO `principleResults` (`id`, `title`, `description`, `files`, `date`) V
 -- --------------------------------------------------------
 
 --
--- Structure de la table `publications`
---
-
-CREATE TABLE `publications` (
-  `id` int(11) NOT NULL,
-  `title` varchar(30) NOT NULL,
-  `text` longtext NOT NULL,
-  `image` varchar(100) NOT NULL,
-  `pdf` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `sensors_list`
---
-
-CREATE TABLE `sensors_list` (
-  `id` int(11) NOT NULL,
-  `name` text NOT NULL,
-  `x_coordinates` int(5) NOT NULL,
-  `y_coordinates` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `university work`
---
-
-CREATE TABLE `university work` (
-  `id` int(11) NOT NULL,
-  `title` varchar(30) NOT NULL,
-  `author's_name` varchar(30) NOT NULL,
-  `author's_fname` varchar(30) NOT NULL,
-  `text` longtext NOT NULL,
-  `image` varchar(100) NOT NULL,
-  `pdf` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `users`
 --
 
@@ -352,7 +309,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `role`, `verified`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'solomon', 1, 1, 'sulimanabdulgadeir@gmail.com', '$2y$10$4LUXDNlMpfZNv8PcYbRWGuonpQIhejBjgGWkq3pLjDlBVw23I1zeS', 'Jeb8XJs4C9jQqKdq2VrXXr8NR8mxDXX7LdziyZU5559aBREzeVrcAaNodfPZ', '2018-02-28 12:20:45', '2018-03-01 17:05:50'),
 (2, 'solomon', 0, 0, 'solomon@solo.so', '$2y$10$Eu3Zg3G1RP892uSORXolPuTgU.D1pNUOQLSTZswzN8zNlZgdsbsZy', 'HvNNSKiXnnlZ239DW8Gns1FDo0VfIzM04EeAO0VMlRgVf7PhtsgkpFTeOHKk', '2018-02-28 12:34:25', '2018-02-28 12:34:25'),
-(3, 'test', 1, 1, 'test@test.test', '$2y$10$ZEywT2JS9Gz.UsypYDYGgeheBe2hOWcVIAfzbn2ozAprWMOhTwtNG', 'J84gdEpmHzmmIJ1pW9R2Aodx1zYNEISMOOdp6zPhuttwjUEQnf0qbh782VnA', '2018-03-26 13:36:09', '2018-03-26 13:36:09'),
+(3, 'test', 1, 1, 'test@test.test', '$2y$10$ZEywT2JS9Gz.UsypYDYGgeheBe2hOWcVIAfzbn2ozAprWMOhTwtNG', '7U8TfHKmGrsi3PDVIJkCpty6I6tjzYZTaTC4LiEbtF4geeAVIdw2Z2eCKVU1', '2018-03-26 13:36:09', '2018-03-26 13:36:09'),
 (14, 'Raphael', 0, 1, 'rapha@admin.fr', '$2y$10$wXNcwhPJ9kKdkpWr78Reae4iY9ntv5OroDHgGCXe6WWHlJi1I2rX.', 'hw16DWBVL2D8KUzhQ0c46XgXgHe9jhuvze79RWVv4L4I6BYnNba7mj5YnG0w', '2018-05-30 13:59:01', '2018-05-30 13:59:01');
 
 -- --------------------------------------------------------
@@ -486,24 +443,6 @@ ALTER TABLE `principleResults`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `publications`
---
-ALTER TABLE `publications`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `sensors_list`
---
-ALTER TABLE `sensors_list`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `university work`
---
-ALTER TABLE `university work`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
@@ -543,7 +482,7 @@ ALTER TABLE `contributors_list`
 -- AUTO_INCREMENT pour la table `demenagement`
 --
 ALTER TABLE `demenagement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `dossier`
 --
@@ -584,21 +523,6 @@ ALTER TABLE `password_resets`
 --
 ALTER TABLE `principleResults`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT pour la table `publications`
---
-ALTER TABLE `publications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `sensors_list`
---
-ALTER TABLE `sensors_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `university work`
---
-ALTER TABLE `university work`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `users`
 --

@@ -23,7 +23,7 @@
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-primary">Ajouter des principaux résultats</button>
+            <button type="submit" class="btn btn-primary">Ajouter un résultat</button>
           </div>
 
         </form>

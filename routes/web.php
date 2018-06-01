@@ -115,6 +115,10 @@ Route::post('/PrincipleResultsHome/{principleResults}','Admin\AdminPrincipleResu
 Route::get('/newsletterAdmin', 'Admin\AdminNewsletterController@index')->name('newsletter');
 Route::get('/deleteNewsletter/{newsletter}','Admin\AdminNewsletterController@destroy');
 
+// Gestion des abonnés à la NL
+Route::get('/demenagementAdmin', 'Admin\AdminDemenagementController@index')->name('demenagement');
+Route::get('/deleteDemenagement/{demenagement}','Admin\AdminDemenagementController@destroy');
+
 // Gestion des utilisateurs
 Route::get('/userHome', 'Auth\RegisterController@indexUser');
 Route::get('/deleteUser/{user}','Auth\RegisterController@destroy');
