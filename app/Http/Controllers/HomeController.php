@@ -71,4 +71,14 @@ class HomeController extends Controller
 
       return view('/demenagement', ['send'=>'ok']);
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function eng()
+    {
+        return view('/eng', ['send'=>'non']);
+    }
 }

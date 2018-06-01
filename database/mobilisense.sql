@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  jeu. 31 mai 2018 à 18:21
+-- Généré le :  ven. 01 juin 2018 à 11:33
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.1.6
 
@@ -13,6 +13,28 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `Mobilisense`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `academicWork`
+--
+
+CREATE TABLE `academicWork` (
+  `id` int(11) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `author_name` varchar(128) NOT NULL,
+  `description` longtext NOT NULL,
+  `files` longtext,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `academicWork`
+--
+
+INSERT INTO `academicWork` (`id`, `title`, `author_name`, `description`, `files`, `date`) VALUES
+(2, 'Les thèses conservées', 'solomon suli', '<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\">Un exemplaire de chaque th&egrave;se soutenue &agrave; Paris 1 est conserv&eacute; au&nbsp;<a style=\"box-sizing: inherit; background-color: transparent; color: #117bb8; transition: all 0.1s ease-in;\" href=\"https://www.univ-paris1.fr/bibliotheques/nos-services/deposer-une-these/\">SCD de l&rsquo;Universit&eacute;</a>&nbsp;&nbsp; 90 rue de Tolbiac Paris 13 et&nbsp;<span style=\"box-sizing: inherit; font-weight: bold;\">parfois</span>&nbsp;le centre de recherche qui a h&eacute;berg&eacute; le chercheur conserve un second exemplaire.</p>\r\n<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\"><span style=\"box-sizing: inherit; font-weight: bold;\">Th&egrave;se soutenue avant 2013 &agrave; Paris 1</span>&nbsp;: Pour les th&egrave;ses en version papier, la th&egrave;se est consultable sur place par tout lecteur qui en fait la demande.</p>\r\n<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\"><span style=\"box-sizing: inherit; font-weight: bold;\">Depuis 2013 :&nbsp;</span>&nbsp;le d&eacute;p&ocirc;t &agrave; Paris 1 est &eacute;lectronique et le th&eacute;sard a indiqu&eacute; s&rsquo;il souhaitait&nbsp; diffuser sa th&egrave;se sur Internet, ou non. Dans ce cas, elle est librement accessible sur les sites institutionnels suivants :&nbsp;<a class=\"external-link-new-window\" style=\"box-sizing: inherit; background-color: transparent; color: #117bb8; transition: all 0.1s ease-in;\" title=\"Opens external link in new window\" href=\"http://www.theses.fr/\" target=\"_blank\" rel=\"noopener\">Theses.fr</a>&nbsp;et&nbsp;<a class=\"external-link-new-window\" style=\"box-sizing: inherit; background-color: transparent; color: #117bb8; transition: all 0.1s ease-in;\" title=\"Opens external link in new window\" href=\"http://www.theses.fr/\" target=\"_blank\" rel=\"noopener\">Th&egrave;ses en ligne</a>.</p>\r\n<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\">Dans le cas contraire la th&egrave;se &eacute;lectronique reste consultable au S.C.D. de l&rsquo;Universit&eacute; Paris I.</p>', NULL, '2018-06-01');
 
 -- --------------------------------------------------------
 
@@ -36,6 +58,27 @@ CREATE TABLE `calendar` (
 INSERT INTO `calendar` (`id`, `title`, `description`, `files`, `date`, `link`) VALUES
 (1, 'Binôme', '<p style=\"text-align: justify;\">Bin&ocirc;me est un projet artistique qui rapproche science et th&eacute;&acirc;tre. Un auteur rencontre un scientifique en temps limit&eacute;, puis con&ccedil;oit une courte pi&egrave;ce de th&eacute;&acirc;tre &agrave; partir de leurs &eacute;changes. Les chercheurs Inserm ont tent&eacute; l\'exp&eacute;rience.</p>', NULL, '2018-05-30', NULL),
 (2, 'Conférences Santé en Questions', '<p style=\"text-align: justify;\">Sant&eacute; en Questions est un cycle de conf&eacute;rences autour d\'enjeux de sant&eacute; et de soci&eacute;t&eacute;. Six fois par an, rencontrez des scientifiques et participez au d&eacute;bat. Gratuites et ouvertes &agrave; tous, les conf&eacute;rences ont lieu simultan&eacute;ment &agrave; Paris et en r&eacute;gion. N\'h&eacute;sitez pas &agrave; nous rejoindre.</p>', NULL, '2018-05-23', 'https://www.inserm.fr/actualites-et-evenements/evenements-culture-scientifique/conferences-sante-en-questions#prochaine');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `communication`
+--
+
+CREATE TABLE `communication` (
+  `id` int(11) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `description` longtext NOT NULL,
+  `files` longtext,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `communication`
+--
+
+INSERT INTO `communication` (`id`, `title`, `description`, `files`, `date`) VALUES
+(2, 'Lorem Ipsum', '<p style=\"text-align: justify;\">Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>\r\n<p style=\"text-align: justify;\">Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato repellenteque a conlimitiis suis ferocissimas gentes, quae mente quadam versabili hostiliter eum saepe incessunt et in nos arma moventem aliquotiens iuvant, Nohodares quidam nomine e numero optimatum, incursare Mesopotamiam quotiens copia dederit ordinatus, explorabat nostra sollicite, si repperisset usquam locum vi subita perrupturus.</p>\r\n<p style=\"text-align: justify;\">Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.</p>', NULL, '2018-06-01');
 
 -- --------------------------------------------------------
 
@@ -221,6 +264,29 @@ INSERT INTO `password_resets` (`id`, `email`, `token`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `principleResults`
+--
+
+CREATE TABLE `principleResults` (
+  `id` int(11) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `description` longtext NOT NULL,
+  `files` longtext,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `principleResults`
+--
+
+INSERT INTO `principleResults` (`id`, `title`, `description`, `files`, `date`) VALUES
+(2, 'test', 'Bonjour, ceci est un exemple d\'travaux universitaire !', 'files/eIdwoMFoXHush7VRJ56omPwmcpTfPPKuZXboykGS.pdf', '2018-05-31'),
+(3, 'test 2', 'Bonjour, ceci est un exemple d\'travaux universitaire !', 'files/iCkNSsX7iq3e0jVDDjfEbkF5jQQvps87P7LCrWGE.pdf', '2018-05-31'),
+(4, 'test user', '<p>Bonjour, ceci est un exemple d\'travaux universitaire !</p>\r\n<p>it is a good news</p>', 'files/pnVdJeofmjAh73A2UB5O4GT2wmbiA6xkus7eEAS6.pdf', '2018-06-01');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `publications`
 --
 
@@ -342,9 +408,21 @@ INSERT INTO `wave` (`id`, `value`, `date`) VALUES
 --
 
 --
+-- Index pour la table `academicWork`
+--
+ALTER TABLE `academicWork`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `calendar`
 --
 ALTER TABLE `calendar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `communication`
+--
+ALTER TABLE `communication`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -402,6 +480,12 @@ ALTER TABLE `password_resets`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `principleResults`
+--
+ALTER TABLE `principleResults`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `publications`
 --
 ALTER TABLE `publications`
@@ -436,10 +520,20 @@ ALTER TABLE `wave`
 --
 
 --
+-- AUTO_INCREMENT pour la table `academicWork`
+--
+ALTER TABLE `academicWork`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT pour la table `calendar`
 --
 ALTER TABLE `calendar`
   MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT pour la table `communication`
+--
+ALTER TABLE `communication`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `contributors_list`
 --
@@ -485,6 +579,11 @@ ALTER TABLE `newsletter`
 --
 ALTER TABLE `password_resets`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT pour la table `principleResults`
+--
+ALTER TABLE `principleResults`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `publications`
 --
