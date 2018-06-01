@@ -1,18 +1,50 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le :  jeu. 31 mai 2018 à 18:21
--- Version du serveur :  5.6.35
--- Version de PHP :  7.1.6
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  ven. 01 juin 2018 à 12:12
+-- Version du serveur :  5.7.19
+-- Version de PHP :  7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Base de données :  `Mobilisense`
+-- Base de données :  `mobilisense`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `academicwork`
+--
+
+DROP TABLE IF EXISTS `academicwork`;
+CREATE TABLE IF NOT EXISTS `academicwork` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) NOT NULL,
+  `author_name` varchar(128) NOT NULL,
+  `description` longtext NOT NULL,
+  `files` longtext,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `academicwork`
+--
+
+INSERT INTO `academicwork` (`id`, `title`, `author_name`, `description`, `files`, `date`) VALUES
+(2, 'Les thèses conservées', 'solomon suli', '<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\">Un exemplaire de chaque th&egrave;se soutenue &agrave; Paris 1 est conserv&eacute; au&nbsp;<a style=\"box-sizing: inherit; background-color: transparent; color: #117bb8; transition: all 0.1s ease-in;\" href=\"https://www.univ-paris1.fr/bibliotheques/nos-services/deposer-une-these/\">SCD de l&rsquo;Universit&eacute;</a>&nbsp;&nbsp; 90 rue de Tolbiac Paris 13 et&nbsp;<span style=\"box-sizing: inherit; font-weight: bold;\">parfois</span>&nbsp;le centre de recherche qui a h&eacute;berg&eacute; le chercheur conserve un second exemplaire.</p>\r\n<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\"><span style=\"box-sizing: inherit; font-weight: bold;\">Th&egrave;se soutenue avant 2013 &agrave; Paris 1</span>&nbsp;: Pour les th&egrave;ses en version papier, la th&egrave;se est consultable sur place par tout lecteur qui en fait la demande.</p>\r\n<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\"><span style=\"box-sizing: inherit; font-weight: bold;\">Depuis 2013 :&nbsp;</span>&nbsp;le d&eacute;p&ocirc;t &agrave; Paris 1 est &eacute;lectronique et le th&eacute;sard a indiqu&eacute; s&rsquo;il souhaitait&nbsp; diffuser sa th&egrave;se sur Internet, ou non. Dans ce cas, elle est librement accessible sur les sites institutionnels suivants :&nbsp;<a class=\"external-link-new-window\" style=\"box-sizing: inherit; background-color: transparent; color: #117bb8; transition: all 0.1s ease-in;\" title=\"Opens external link in new window\" href=\"http://www.theses.fr/\" target=\"_blank\" rel=\"noopener\">Theses.fr</a>&nbsp;et&nbsp;<a class=\"external-link-new-window\" style=\"box-sizing: inherit; background-color: transparent; color: #117bb8; transition: all 0.1s ease-in;\" title=\"Opens external link in new window\" href=\"http://www.theses.fr/\" target=\"_blank\" rel=\"noopener\">Th&egrave;ses en ligne</a>.</p>\r\n<p style=\"box-sizing: inherit; margin-bottom: 1.5em; color: #404040; font-family: Lato, sans-serif; font-size: 19px;\">Dans le cas contraire la th&egrave;se &eacute;lectronique reste consultable au S.C.D. de l&rsquo;Universit&eacute; Paris I.</p>', NULL, '2018-06-01');
 
 -- --------------------------------------------------------
 
@@ -20,14 +52,16 @@ SET time_zone = "+00:00";
 -- Structure de la table `calendar`
 --
 
-CREATE TABLE `calendar` (
-  `id` int(128) NOT NULL,
+DROP TABLE IF EXISTS `calendar`;
+CREATE TABLE IF NOT EXISTS `calendar` (
+  `id` int(128) NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
   `description` longtext NOT NULL,
   `files` longtext,
   `date` date NOT NULL,
-  `link` longtext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `link` longtext,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `calendar`
@@ -40,15 +74,40 @@ INSERT INTO `calendar` (`id`, `title`, `description`, `files`, `date`, `link`) V
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `communication`
+--
+
+DROP TABLE IF EXISTS `communication`;
+CREATE TABLE IF NOT EXISTS `communication` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) NOT NULL,
+  `description` longtext NOT NULL,
+  `files` longtext,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `communication`
+--
+
+INSERT INTO `communication` (`id`, `title`, `description`, `files`, `date`) VALUES
+(2, 'Lorem Ipsum', '<p style=\"text-align: justify;\">Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>\r\n<p style=\"text-align: justify;\">Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato repellenteque a conlimitiis suis ferocissimas gentes, quae mente quadam versabili hostiliter eum saepe incessunt et in nos arma moventem aliquotiens iuvant, Nohodares quidam nomine e numero optimatum, incursare Mesopotamiam quotiens copia dederit ordinatus, explorabat nostra sollicite, si repperisset usquam locum vi subita perrupturus.</p>\r\n<p style=\"text-align: justify;\">Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.</p>', NULL, '2018-06-01');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `contributors_list`
 --
 
-CREATE TABLE `contributors_list` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `contributors_list`;
+CREATE TABLE IF NOT EXISTS `contributors_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL,
   `image` text NOT NULL,
   `role` text NOT NULL,
-  `collaborater_type` varchar(30) NOT NULL
+  `collaborater_type` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -57,23 +116,25 @@ CREATE TABLE `contributors_list` (
 -- Structure de la table `demenagement`
 --
 
-CREATE TABLE `demenagement` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `demenagement`;
+CREATE TABLE IF NOT EXISTS `demenagement` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `adress` varchar(255) NOT NULL,
   `postalcode` int(11) NOT NULL,
-  `city` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `city` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `demenagement`
 --
 
 INSERT INTO `demenagement` (`id`, `name`, `firstname`, `email`, `adress`, `postalcode`, `city`) VALUES
-(1, 'ez', 'ez', 'ez@z.fr', 'ez', 3, 'ez'),
-(2, 'ez', 'ez', 'ez@z', 'ez', 3, 'ez');
+(2, 'ez', 'ez', 'ez@z', 'ez', 3, 'ez'),
+(3, 'Renout', 'Raphael', 'rapha@te.co', '8 rue Amyot', 75005, 'Paris');
 
 -- --------------------------------------------------------
 
@@ -81,13 +142,15 @@ INSERT INTO `demenagement` (`id`, `name`, `firstname`, `email`, `adress`, `posta
 -- Structure de la table `dossier`
 --
 
-CREATE TABLE `dossier` (
-  `id` int(128) NOT NULL,
+DROP TABLE IF EXISTS `dossier`;
+CREATE TABLE IF NOT EXISTS `dossier` (
+  `id` int(128) NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
   `description` longtext NOT NULL,
   `files` longtext,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `dossier`
@@ -103,12 +166,14 @@ INSERT INTO `dossier` (`id`, `title`, `description`, `files`, `date`) VALUES
 -- Structure de la table `faq`
 --
 
-CREATE TABLE `faq` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE IF NOT EXISTS `faq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
   `description` longtext NOT NULL,
-  `position` int(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `position` int(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `faq`
@@ -124,13 +189,15 @@ INSERT INTO `faq` (`id`, `title`, `description`, `position`) VALUES
 -- Structure de la table `information_letter`
 --
 
-CREATE TABLE `information_letter` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `information_letter`;
+CREATE TABLE IF NOT EXISTS `information_letter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
   `description` longtext NOT NULL,
   `files` longtext,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `information_letter`
@@ -146,10 +213,12 @@ INSERT INTO `information_letter` (`id`, `title`, `description`, `files`, `date`)
 -- Structure de la table `migrations`
 --
 
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `migrations`;
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -158,13 +227,15 @@ CREATE TABLE `migrations` (
 -- Structure de la table `news`
 --
 
-CREATE TABLE `news` (
-  `id` int(128) NOT NULL,
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(128) NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
   `description` longtext NOT NULL,
   `files` longtext,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `news`
@@ -182,13 +253,15 @@ INSERT INTO `news` (`id`, `title`, `description`, `files`, `date`) VALUES
 -- Structure de la table `newsletter`
 --
 
-CREATE TABLE `newsletter` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `newsletter`;
+CREATE TABLE IF NOT EXISTS `newsletter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `job` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `job` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `newsletter`
@@ -204,12 +277,14 @@ INSERT INTO `newsletter` (`id`, `firstname`, `lastname`, `email`, `job`) VALUES
 -- Structure de la table `password_resets`
 --
 
-CREATE TABLE `password_resets` (
-  `id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `password_resets`;
+CREATE TABLE IF NOT EXISTS `password_resets` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `created_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `password_resets`
@@ -221,45 +296,27 @@ INSERT INTO `password_resets` (`id`, `email`, `token`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `publications`
+-- Structure de la table `principleresults`
 --
 
-CREATE TABLE `publications` (
-  `id` int(11) NOT NULL,
-  `title` varchar(30) NOT NULL,
-  `text` longtext NOT NULL,
-  `image` varchar(100) NOT NULL,
-  `pdf` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `sensors_list`
---
-
-CREATE TABLE `sensors_list` (
-  `id` int(11) NOT NULL,
-  `name` text NOT NULL,
-  `x_coordinates` int(5) NOT NULL,
-  `y_coordinates` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
+DROP TABLE IF EXISTS `principleresults`;
+CREATE TABLE IF NOT EXISTS `principleresults` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) NOT NULL,
+  `description` longtext NOT NULL,
+  `files` longtext,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Structure de la table `university work`
+-- Déchargement des données de la table `principleresults`
 --
 
-CREATE TABLE `university work` (
-  `id` int(11) NOT NULL,
-  `title` varchar(30) NOT NULL,
-  `author's_name` varchar(30) NOT NULL,
-  `author's_fname` varchar(30) NOT NULL,
-  `text` longtext NOT NULL,
-  `image` varchar(100) NOT NULL,
-  `pdf` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `principleresults` (`id`, `title`, `description`, `files`, `date`) VALUES
+(2, 'test', 'Bonjour, ceci est un exemple d\'travaux universitaire !', 'files/H1nc7NpuoEpdVBC1zc6YM07wVU4i6uXBb8qyL8sn.pdf', '2018-05-31'),
+(3, 'test 2', 'Bonjour, ceci est un exemple d\'travaux universitaire !', 'files/H1nc7NpuoEpdVBC1zc6YM07wVU4i6uXBb8qyL8sn.pdf', '2018-05-29'),
+(4, 'test user', '<p>Bonjour, ceci est un exemple d\'travaux universitaire !</p>\r\n<p>it is a good news</p>', 'files/H1nc7NpuoEpdVBC1zc6YM07wVU4i6uXBb8qyL8sn.pdf', '2018-06-01');
 
 -- --------------------------------------------------------
 
@@ -267,8 +324,9 @@ CREATE TABLE `university work` (
 -- Structure de la table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `role` tinyint(1) NOT NULL DEFAULT '0',
   `verified` tinyint(4) NOT NULL DEFAULT '0',
@@ -276,8 +334,9 @@ CREATE TABLE `users` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `users`
@@ -286,8 +345,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `role`, `verified`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'solomon', 1, 1, 'sulimanabdulgadeir@gmail.com', '$2y$10$4LUXDNlMpfZNv8PcYbRWGuonpQIhejBjgGWkq3pLjDlBVw23I1zeS', 'Jeb8XJs4C9jQqKdq2VrXXr8NR8mxDXX7LdziyZU5559aBREzeVrcAaNodfPZ', '2018-02-28 12:20:45', '2018-03-01 17:05:50'),
 (2, 'solomon', 0, 0, 'solomon@solo.so', '$2y$10$Eu3Zg3G1RP892uSORXolPuTgU.D1pNUOQLSTZswzN8zNlZgdsbsZy', 'HvNNSKiXnnlZ239DW8Gns1FDo0VfIzM04EeAO0VMlRgVf7PhtsgkpFTeOHKk', '2018-02-28 12:34:25', '2018-02-28 12:34:25'),
-(3, 'test', 1, 1, 'test@test.test', '$2y$10$ZEywT2JS9Gz.UsypYDYGgeheBe2hOWcVIAfzbn2ozAprWMOhTwtNG', 'J84gdEpmHzmmIJ1pW9R2Aodx1zYNEISMOOdp6zPhuttwjUEQnf0qbh782VnA', '2018-03-26 13:36:09', '2018-03-26 13:36:09'),
-(14, 'Raphael', 0, 1, 'rapha@admin.fr', '$2y$10$wXNcwhPJ9kKdkpWr78Reae4iY9ntv5OroDHgGCXe6WWHlJi1I2rX.', 'hw16DWBVL2D8KUzhQ0c46XgXgHe9jhuvze79RWVv4L4I6BYnNba7mj5YnG0w', '2018-05-30 13:59:01', '2018-05-30 13:59:01');
+(3, 'test', 1, 1, 'test@test.test', '$2y$10$ZEywT2JS9Gz.UsypYDYGgeheBe2hOWcVIAfzbn2ozAprWMOhTwtNG', 'jN2DvwI8gz739XqAJNVSppGSscwhwGoKyrSbynUk9NoEVXSDYYKlbqXnUYRK', '2018-03-26 13:36:09', '2018-03-26 13:36:09'),
+(14, 'Raphael', 0, 1, 'rapha@admin.fr', '$2y$10$wXNcwhPJ9kKdkpWr78Reae4iY9ntv5OroDHgGCXe6WWHlJi1I2rX.', 'ElM5wxakDFkF2d3FgkM6k7BpPRGoKjb8MQQeO8kkZTAgnEpvAOMR6UQf41ze', '2018-05-30 13:59:01', '2018-05-30 13:59:01');
 
 -- --------------------------------------------------------
 
@@ -295,7 +354,8 @@ INSERT INTO `users` (`id`, `name`, `role`, `verified`, `email`, `password`, `rem
 -- Structure de la table `verify_users`
 --
 
-CREATE TABLE `verify_users` (
+DROP TABLE IF EXISTS `verify_users`;
+CREATE TABLE IF NOT EXISTS `verify_users` (
   `user_id` int(11) NOT NULL,
   `token` varchar(191) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -324,11 +384,13 @@ INSERT INTO `verify_users` (`user_id`, `token`, `created_at`, `updated_at`) VALU
 -- Structure de la table `wave`
 --
 
-CREATE TABLE `wave` (
-  `id` int(128) NOT NULL,
+DROP TABLE IF EXISTS `wave`;
+CREATE TABLE IF NOT EXISTS `wave` (
+  `id` int(128) NOT NULL AUTO_INCREMENT,
   `value` int(4) NOT NULL DEFAULT '0',
-  `date` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `wave`
@@ -336,177 +398,8 @@ CREATE TABLE `wave` (
 
 INSERT INTO `wave` (`id`, `value`, `date`) VALUES
 (1, 0, '2018-05-31 00:00:00');
+COMMIT;
 
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `calendar`
---
-ALTER TABLE `calendar`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `contributors_list`
---
-ALTER TABLE `contributors_list`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `demenagement`
---
-ALTER TABLE `demenagement`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `dossier`
---
-ALTER TABLE `dossier`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `faq`
---
-ALTER TABLE `faq`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `information_letter`
---
-ALTER TABLE `information_letter`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `news`
---
-ALTER TABLE `news`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `newsletter`
---
-ALTER TABLE `newsletter`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `publications`
---
-ALTER TABLE `publications`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `sensors_list`
---
-ALTER TABLE `sensors_list`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `university work`
---
-ALTER TABLE `university work`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `wave`
---
-ALTER TABLE `wave`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `calendar`
---
-ALTER TABLE `calendar`
-  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT pour la table `contributors_list`
---
-ALTER TABLE `contributors_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `demenagement`
---
-ALTER TABLE `demenagement`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT pour la table `dossier`
---
-ALTER TABLE `dossier`
-  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT pour la table `faq`
---
-ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT pour la table `information_letter`
---
-ALTER TABLE `information_letter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT pour la table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `news`
---
-ALTER TABLE `news`
-  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
---
--- AUTO_INCREMENT pour la table `newsletter`
---
-ALTER TABLE `newsletter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
---
--- AUTO_INCREMENT pour la table `password_resets`
---
-ALTER TABLE `password_resets`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT pour la table `publications`
---
-ALTER TABLE `publications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `sensors_list`
---
-ALTER TABLE `sensors_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `university work`
---
-ALTER TABLE `university work`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
---
--- AUTO_INCREMENT pour la table `wave`
---
-ALTER TABLE `wave`
-  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

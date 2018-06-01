@@ -71,11 +71,11 @@
                     </div>
                   </li>
                   <li class="dropdown works">
-                    <a href="#portfolio" class="dropbtn">ESPACE SCIENTIFIQUE</a>
+                    <a href="{{ url('communication') }}" class="dropbtn">ESPACE SCIENTIFIQUE</a>
                     <div class="dropdown-content">
-                      <a href="#">Publications et communications</a>
-                      <a href="#">Travaux universitaires</a>
-                      <a href="#">Principaux résultats</a>
+                      <a href="{{ url('communication') }}">Publications et communications</a>
+                      <a href="{{ url('academicWork') }}">Travaux universitaires</a>
+                      <a href="{{ url('principleResults') }}">Principaux résultats</a>
                     </div>
                   </li>
                   <li class="dropdown contact">
@@ -86,7 +86,7 @@
                 <!-- Login menu -->
                 <ul class="nav navbar-nav navbar-right navbar-right-desktop navbar-hidden">
                   <li>
-                    <a type="button" class="navbar-btn englishflag" href="#eng"><img src="./img/britishflag.png" alt=""></a>
+                    <a type="button" class="navbar-btn englishflag" href="{{ url('eng') }}"><img src="./img/britishflag.png" alt=""></a>
                   </li>
                   <li>
                     <a type="button" class="navbar-btn login" href="{{ url('demenagement') }}">Déménagement ?</a>

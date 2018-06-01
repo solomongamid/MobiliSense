@@ -12,6 +12,14 @@
 
   <div class="container">
 
+    @if (Auth::guest())
+    @else
+    <ul class="pager">
+        <li class="previous"><a href="{{ url('demenagementAdmin') }}">Précédent</a></li>
+    </ul>
+    @endif
+
+
     <!-- Message de validation -->
     @if ($send == 'ok')
       <div class="alert alert-success" role="alert" id="success_message">

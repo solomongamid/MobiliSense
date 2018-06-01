@@ -191,7 +191,7 @@
             </a><br>
           @endif
           @if ($calendar->link != null)
-            <a href="./{{ $calendar->link }}" target="_blank">
+            <a href="{{ $calendar->link }}" target="_blank">
             <i class="fas fa-external-link-alt"></i>
               Retrouvez l'événement complet ici
             </a>

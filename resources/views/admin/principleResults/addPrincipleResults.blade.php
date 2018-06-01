@@ -19,11 +19,11 @@
 
           <div class="form-group">
             <label>Description</label>
-            <textarea name="description" id="mytextarea" rows="10" cols="150">Bonjour, ceci est un exemple d'travaux universitaire !</textarea>
+            <textarea name="description" id="mytextarea" rows="10" cols="150">Bonjour, ceci est un exemple des principaux résultats !</textarea>
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-primary">Ajouter une principle results</button>
+            <button type="submit" class="btn btn-primary">Ajouter un résultat</button>
           </div>
 
         </form>

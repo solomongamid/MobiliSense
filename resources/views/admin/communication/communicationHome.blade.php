@@ -4,7 +4,7 @@
 
 
 	<ul class="pager">
-		<li class="previous"><a href="{{ url('addCommunication') }}">Créer un nouveau communication</a></li>
+		<li class="previous"><a href="{{ url('addCommunication') }}">Créer une nouvelle communication</a></li>
 	</ul>
 	<table class="table">
 	<thead>
@@ -21,7 +21,7 @@
 	    <th>{{ $data->date }}</th>
 	    <th><a href="{{ url('communicationHome/'.$data->id) }}" > {{ str_limit(strip_tags($data->title), 30) }} </a></th>
 	    <th>{{ str_limit(strip_tags($data->description), 35) }}</th>
-			<th>{{ str_limit(strip_tags($data->files), 15) }}</th>
+		<th>{{ str_limit(strip_tags($data->files), 15) }}</th>
 	    <th>
 	        <a href="{{ url('deleteCommunication/'.$data->id) }}" class="btn btn-operation btn-danger">
 	             Effacer

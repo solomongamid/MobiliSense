@@ -24,9 +24,13 @@ Route::get('/dossier', 'NewsController@dossier')->name('actu');
 Route::get('/study', 'StudyController@index')->name('study');
 Route::get('/collaborater', 'StudyController@collaborater')->name('collaborater');
 Route::get('/volunteer', 'VolunteerController@index')->name('volunteer');
+Route::get('/communication', 'ScientistController@communication')->name('communication');
+Route::get('/academicWork', 'ScientistController@academicWork')->name('academicWork');
+Route::get('/principleResults', 'ScientistController@principleResults')->name('principleResults');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/demenagement', 'HomeController@demenagement')->name('demenagement');
 Route::post('/demenagementok', 'HomeController@demenagementok');
+Route::get('/eng', 'HomeController@eng')->name('english');
 
 // Partie bénévole
 Route::get('/benevole', 'Benevole\BenevoleController@index')->name('benevole');
@@ -110,6 +114,10 @@ Route::post('/PrincipleResultsHome/{principleResults}','Admin\AdminPrincipleResu
 // Gestion des abonnés à la NL
 Route::get('/newsletterAdmin', 'Admin\AdminNewsletterController@index')->name('newsletter');
 Route::get('/deleteNewsletter/{newsletter}','Admin\AdminNewsletterController@destroy');
+
+// Gestion des abonnés à la NL
+Route::get('/demenagementAdmin', 'Admin\AdminDemenagementController@index')->name('demenagement');
+Route::get('/deleteDemenagement/{demenagement}','Admin\AdminDemenagementController@destroy');
 
 // Gestion des utilisateurs
 Route::get('/userHome', 'Auth\RegisterController@indexUser');
