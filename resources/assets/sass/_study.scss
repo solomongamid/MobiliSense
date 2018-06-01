@@ -22,7 +22,10 @@
 .study-main-container {
   margin-top: 140px;
   padding: 50px 140px;
-
+  @media screen and (max-width: $mobile ) {
+    margin-top: 40px;
+    padding: 30px 40px;
+  }
   .main-title {
     color: #005596;
     font-size: 52px;

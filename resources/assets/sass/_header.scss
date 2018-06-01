@@ -161,7 +161,7 @@
   }
 
   .main-menu {
-    top: 70px;
+    top: 75px;
     right: 0;
     position: absolute;
     visibility: hidden;
@@ -171,15 +171,14 @@
     list-style: none;
     padding: 0;
     z-index: 1;
-    max-width: 250px;
+    max-width: 70%;
+    box-shadow: -4px 3px 6px 0px #bcbcbc;
   }
 
   .main-menu li {
     background-color: white;
-    border: 1px solid black;
     cursor: pointer;
     padding: 8px 0 8px 5px;
-
     .sub-group-trigger-1,
     .sub-group-trigger-2,
     .sub-group-trigger-3,
@@ -200,23 +199,46 @@
       max-height: 0;
       list-style: none;
       transition: all 0.4s ease-in-out;
+      padding: 0;
+      margin-left: 6px;
       li {
-        background-color: black;
-        margin-bottom: 5px;
-        a {
-          color: white;
+        background-color: white;
+        border-bottom: 1px solid $navbar-btn;
+        &:last-child {
+          border-bottom: 0;
         }
       }
     }
   }
+  .main-menu > li:nth-child(1) {
+    border-bottom: 2px solid $navbar-btn;
+  }
+  .main-menu > li:nth-child(2) {
+    border-bottom: 2px solid #005596;
+  }
+  .main-menu > li:nth-child(3) {
+    border-bottom: 2px solid #C21C75;
+  }
+  .main-menu > li:nth-child(4) {
+    border-bottom: 2px solid #F27B07;
+  }
+  .main-menu > li:nth-child(5) {
+    border-bottom: 2px solid #009FCE;
+  }
+  .main-menu > li:nth-child(6) {
+    border-bottom: 2px solid #E44212;
+  }
 
   .main-menu li > label, .main-menu li > a {
     text-decoration: none;
+    cursor: pointer;
+    width: 100%;
     text-transform: uppercase;
     color: black;
     margin-left: 10px;
     font-size: 15px;
     font-weight: bold;
+    line-height: 30px;
   }
 
   .mobile-menu-overlay {

@@ -150,11 +150,9 @@
                   <input type="checkbox" name ="sub-group-trigger-2" class="sub-group-trigger-2" id="sub-group-trigger-2">
                   <label for="sub-group-trigger-2">ACTUALITÉS</label>
                   <ul class="sub-navbar-mobile">
-                      <li><a href="#">ACCÈS</a></li>
-                      <li><a href="#">HORAIRES</a></li>
-                      <li><a href="#">TARIFS</a></li>
-                      <li><a href="#">RESTAURANT</a></li>
-                      <li><a href="#">BOUTIQUE</a></li>
+                      <li><a href="{{ url('actu') }}">Actualité</a></li>
+                      <li><a href="{{ url('newsletter') }}">Newsletter</a></li>
+                      <li><a href="{{ url('dossier') }}">Dossier de presse</a></li>
                   </ul>
                 </li>
                 <li>
@@ -177,11 +175,12 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="#">ESPACE SCIENTIFIQUE</a>
+                  <input type="checkbox" name ="sub-group-trigger-4" class="sub-group-trigger-4" id="sub-group-trigger-4">
+                  <label for="sub-group-trigger-4">ESPACE SCIENTIFIQUE</label>
                   <ul class="sub-navbar-mobile">
-                      <li><a href="#">Publications et communications</a></li>
-                      <li><a href="#">Travaux universitaires</a></li>
-                      <li><a href="#">Principaux résultats</a></li>
+                      <li><a href="{{ url('communication') }}">Publications et communications</a></li>
+                      <li><a href="{{ url('academicWork') }}">Travaux universitaires</a></li>
+                      <li><a href="{{ url('principleResults') }}">Principaux résultats</a></li>
                   </ul>
                 </li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
