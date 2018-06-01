@@ -11,6 +11,7 @@
 	  <tr>
 	    <th>Date</th>
 	    <th>Titre</th>
+	    <th>Nom/Prénom</th>
 	    <th>Description</th>
 			<th>Fichier</th>
 	  </tr>
@@ -20,8 +21,9 @@
 	  <tr>
 	    <th>{{ $data->date }}</th>
 	    <th><a href="{{ url('academicWorkHome/'.$data->id) }}" > {{ str_limit(strip_tags($data->title), 30) }} </a></th>
+	    <th>{{ $data->author_name }}</th>
 	    <th>{{ str_limit(strip_tags($data->description), 35) }}</th>
-			<th>{{ str_limit(strip_tags($data->files), 15) }}</th>
+		<th>{{ str_limit(strip_tags($data->files), 15) }}</th>
 	    <th>
 	        <a href="{{ url('deleteAcademicWork/'.$data->id) }}" class="btn btn-operation btn-danger">
 	             Effacer

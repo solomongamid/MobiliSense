@@ -23,10 +23,10 @@
       <input type="text" name="author_name" class="form-control" value="{{ $academicWork->author_name }}">
     </div>
 
-    <div class="form-group">
+<!--     <div class="form-group">
         <label>Fichier PDF <br>S'il y en a un déjà enregistré et que vous ne souhaitez pas le modifier, ne touchez à rien ici.</label>
         <input type="file" name="academicWork_file" value="{{ $academicWork->files }}">
-    </div>
+    </div> -->
 
     <div class="form-group">
       <label>Description</label>

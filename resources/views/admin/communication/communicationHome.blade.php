@@ -21,7 +21,7 @@
 	    <th>{{ $data->date }}</th>
 	    <th><a href="{{ url('communicationHome/'.$data->id) }}" > {{ str_limit(strip_tags($data->title), 30) }} </a></th>
 	    <th>{{ str_limit(strip_tags($data->description), 35) }}</th>
-			<th>{{ str_limit(strip_tags($data->files), 15) }}</th>
+		<th>{{ str_limit(strip_tags($data->files), 15) }}</th>
 	    <th>
 	        <a href="{{ url('deleteCommunication/'.$data->id) }}" class="btn btn-operation btn-danger">
 	             Effacer

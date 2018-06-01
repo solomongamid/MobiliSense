@@ -4,7 +4,7 @@
 
 
 	<ul class="pager">
-		<li class="previous"><a href="{{ url('addPrincipleResults') }}">Créer un nouveau principle results</a></li>
+		<li class="previous"><a href="{{ url('addPrincipleResults') }}">Créer un nouveau principaux résultats</a></li>
 	</ul>
 	<table class="table">
 	<thead>

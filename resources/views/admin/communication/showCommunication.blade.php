@@ -17,11 +17,11 @@
       <label>Titre</label>
       <input type="text" name="title" class="form-control" value="{{ $communication->title }}">
     </div>
-
+<!-- 
     <div class="form-group">
         <label>Fichier PDF <br>S'il y en a un déjà enregistré et que vous ne souhaitez pas le modifier, ne touchez à rien ici.</label>
         <input type="file" name="communication_file" value="{{ $communication->files }}">
-    </div>
+    </div> -->
 
     <div class="form-group">
       <label>Description</label>

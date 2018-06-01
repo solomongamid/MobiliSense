@@ -19,7 +19,7 @@
 
           <div class="form-group">
             <label>Description</label>
-            <textarea name="description" id="mytextarea" rows="10" cols="150">Bonjour, ceci est un exemple d'communication !</textarea>
+            <textarea name="description" id="mytextarea" rows="10" cols="150">Bonjour, ceci est un exemple de publications et communications !</textarea>
           </div>
 
           <div class="form-group">
