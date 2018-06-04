@@ -64,8 +64,8 @@
 
   <div class="row remerciements">
       <p>
-        Un grand MERCI ! <strong>Si besoin, appelez 7 jours / 7</strong><br>
-        au <strong>01 44 73 84 56</strong> ou au <strong>06 17 99 21 73</strong>
+        Un grand MERCI ! <br class="showmobile"><strong>Si besoin, appelez 7 jours / 7</strong><br>
+        au <strong>01 44 73 84 56</strong><br class="showmobile"> ou au <strong>06 17 99 21 73</strong>
       </p>
   </div>
 

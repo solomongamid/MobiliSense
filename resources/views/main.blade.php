@@ -184,6 +184,34 @@
                   </ul>
                 </li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
+                <li>
+                  <input type="checkbox" name ="sub-group-trigger-5" class="sub-group-trigger-5" id="sub-group-trigger-5">
+                  <label for="sub-group-trigger-5">MON COMPTE</label>
+                  <ul class="sub-navbar-mobile">
+                    <li>
+                      <a href="{{ url('demenagement') }}">Déménagement ?</a>
+                     </li>
+                    <li>
+                      @if (Auth::guest())
+                        <a href="{{ url('register') }}">S'inscrire</a>
+                      @else
+                       <a href="{{ url('benevole') }}">Mon espace</a>
+                     @endif
+                     </li>
+                     <li>
+                      @if (Auth::guest())
+                          <a href="{{ route('login') }}">Se connecter</a>
+                      @else
+                          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Se déconnecter
+                          </a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              {{ csrf_field() }}
+                          </form>
+                      @endif
+                      </li>
+                  </ul>
+                </li>
             </ul>
             <div class="mobile-menu-overlay">
             </div>

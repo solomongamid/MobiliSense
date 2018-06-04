@@ -24,12 +24,15 @@
   padding: 50px 140px;
   @media screen and (max-width: $mobile ) {
     margin-top: 40px;
-    padding: 30px 40px;
+    padding: 30px 10px;
   }
   .main-title {
     color: #005596;
     font-size: 52px;
     font-weight: bold;
+    @media screen and (max-width: $mobile ) {
+      font-size: 35px;
+    }
   }
 
   .my-hr {
@@ -43,6 +46,9 @@
     }
     h2 {
       font-size: 40px;
+      @media screen and (max-width: $mobile ) {
+        font-size: 30px;
+      }
       span {
         margin-left: 10px;
       }
@@ -51,8 +57,12 @@
     .sub-text {
       text-align: justify;
       padding: 0 48px;
+      @media screen and (max-width: $mobile ) {
+        padding: 0;
+      }
       .title {
         margin: 38px 0 16px 0;
+        text-align: left;
         text-decoration: underline;
       }
     }

@@ -5,6 +5,9 @@
 
   h3 {
   	margin-top: 0px;
+    @media screen and (max-width: $mobile ) {
+      margin-bottom: 10px;
+    }
   }
 
   /* Avant une list pour enlever l'espace */
@@ -68,10 +71,16 @@
   /* img de lune et soleil */
   .moon {
     margin: 10% 0 0 10%;
+    @media screen and (max-width: $mobile ) {
+      margin: 5px 0;
+    }
   }
 
   .day {
     text-align: center;
+    @media screen and (max-width: $mobile ) {
+      text-align: left;
+    }
   }
 
   /* Trace une ligne horizontale verte */
@@ -83,6 +92,9 @@
     height: 2px;
     background-color: #29B224;
     border: none; /*on supprime le style par défaut*/
+    @media screen and (max-width: $mobile ) {
+      width: 65%;
+    }
   }
 
   .night {
@@ -94,9 +106,13 @@
     padding-top: 10px;
     text-align: center;
     margin:10px auto 10px auto;
-    width:500px;
+    max-width:500px;
     background:#29B224;
     border-radius: 30px;
+    @media screen and (max-width: $mobile ) {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
   }
 
   /* On agrandit l'espace entre 2 lignes */
@@ -138,24 +154,36 @@
   	position: absolute;
     left:-50px;
   	margin-top: 0px;
+    @media screen and (max-width: $mobile ) {
+      left:30px;
+    }
   }
 
   .timev1 {
   	position: absolute;
     left:-50px;
   	margin-top: 42px;
+    @media screen and (max-width: $mobile ) {
+      left:30px;
+    }
   }
 
   .timev2 {
   	position: absolute;
     left:-50px;
   	margin-top: 211px;
+    @media screen and (max-width: $mobile ) {
+      left:30px;
+    }
   }
 
   .timev3 {
   	position: absolute;
     left:-50px;
   	margin-top: 379px;
+    @media screen and (max-width: $mobile ) {
+      left:30px;
+    }
   }
 
   .imgrow {
@@ -244,4 +272,22 @@
     .justify {
       text-align: justify;
     }
+
+    // Classe pour faire un br que en mobile
+    .showmobile {
+      display: none;
+      @media screen and (max-width: $mobile ) {
+        display: block;
+      }
+    }
+
+    // Mobile
+    @media screen and (max-width: $mobile ) {
+      margin: 0 10px 0 10px;
+      padding-top: 70px;
+      .fleche {
+        text-align: center;
+      }
+    }
+
 }

@@ -182,7 +182,8 @@
     .sub-group-trigger-1,
     .sub-group-trigger-2,
     .sub-group-trigger-3,
-    .sub-group-trigger-4 {
+    .sub-group-trigger-4,
+    .sub-group-trigger-5 {
       position: absolute;
       opacity: 0;
     }
@@ -190,7 +191,8 @@
     .sub-group-trigger-1:checked ~ .sub-navbar-mobile,
     .sub-group-trigger-2:checked ~ .sub-navbar-mobile,
     .sub-group-trigger-3:checked ~ .sub-navbar-mobile,
-    .sub-group-trigger-4:checked ~ .sub-navbar-mobile {
+    .sub-group-trigger-4:checked ~ .sub-navbar-mobile,
+    .sub-group-trigger-5:checked ~ .sub-navbar-mobile {
       max-height: 300px;
     }
 
@@ -227,6 +229,9 @@
   }
   .main-menu > li:nth-child(6) {
     border-bottom: 2px solid #E44212;
+  }
+  .main-menu > li:nth-child(7) {
+    border-bottom: 2px solid #29B224;;
   }
 
   .main-menu li > label, .main-menu li > a {

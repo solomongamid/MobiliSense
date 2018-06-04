@@ -60,11 +60,49 @@
                   @endif
                   </li>
               </ul>
+
+              <!-- Login menu small -->
+              <div class="navbar-nav navbar-right-small-trigger">
+                <i class="far fa-caret-square-down"></i>
+              </div>
           </div>
           <!-- /.navbar-collapse -->
 
+          <!-- Mobile nav menu -->
+          <section class="navbar-mobile">
+            <input type="checkbox" class="menu-toggler" id="menu-toggler" aria-hidden="true">
+            <label for="menu-toggler" class="menu-toggler__label" aria-hidden="true">
+                <span class="menu-toggler__label__text">Menu</span>
+                <span class="menu-toggler__label__visual">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </label>
+
+            <ul class="main-menu">
+                <li><a href="/">Accueil</a></li>
+                <li>
+                  <a href="{{ url('benevole') }}">
+                    <label for="sub-group-trigger-1">Mon espace</label>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ url('bilan') }}">
+                    <label for="sub-group-trigger-2">Mon bilan</label>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ url('questionnaire') }}">
+                    <label for="sub-group-trigger-3">Questionnaire Géo</label>
+                  </a>
+                </li>
+            </ul>
+            <div class="mobile-menu-overlay">
+            </div>
+          </section>
+
         </div>
-      </div>
       <!-- /.container-fluid -->
     </nav>
 

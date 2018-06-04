@@ -14,6 +14,10 @@
   .main-text {
     margin:0 10% 0 10%;
     text-align: justify;
+    @media screen and (max-width: $mobile ) {
+      margin:0;
+      text-align: left;
+    }
   }
 
   .statspub {
@@ -22,18 +26,24 @@
     margin: 2% 10% 2% 10%;
     text-align: justify;
     color: #000;
-  }
-
-  .statspub img {
-  float:left;
-  margin: 0.5% 1% 0.5% 1%;
-  }
-
-  .statspub p {
-  padding: 1%;
+    img {
+    float:left;
+    margin: 0.5% 1% 0.5% 1%;
+    }
+    p {
+    padding: 1%;
+    }
+    @media screen and (max-width: $mobile ) {
+      margin:0;
+      text-align: left;
+      img {
+        margin: 10px 5px 0 5px;
+      }
+    }
   }
 
 }
+
 
 
 .carousel-container {

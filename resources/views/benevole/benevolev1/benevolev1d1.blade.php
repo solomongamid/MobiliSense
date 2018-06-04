@@ -60,12 +60,12 @@
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Matin :</h3>
             <p class="beflist">Réaliser <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
             <ul>
-              <li><img src="{{ asset('img/rond9.png') }}" />9. Respiratoire-dommicile<sup><a class="sensorpdf" href="./files/Capteur_9.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> + <img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rond9.png') }}" />9. Respiratoire-dommicile<sup><a class="sensorpdf" href="./files/Capteur_9.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <br class="showmobile">+ <img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
             </ul>
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Journée :</h3>
             <p class="beflist"><strong>Portez du lever au coucher :</strong></p>
             <ul>
-              <li><img src="{{ asset('img/rond1.png') }}" />1. GPS<sup><a class="sensorpdf" href="./files/Capteur_1_2.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <span class="grey">led orange</span> +
+              <li><img src="{{ asset('img/rond1.png') }}" />1. GPS<sup><a class="sensorpdf" href="./files/Capteur_1_2.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <span class="grey">led orange</span> <br class="showmobile">+
                 <img src="{{ asset('img/rond2.png') }}" /> 2. Accéléromètre<sup><a class="sensorpdf" href="./files/Capteur_1_2.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <span class="grey">led verte clignotante</span></li>
               <li class="airbandouliere"><img src="{{ asset('img/rond4.png') }}" />4. Air-bandoulière<sup><a class="sensorpdf" href="./files/Capteur_4.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <span class="grey">led verte clignotante</span></li>
               <li class="airtuyau"><img src="{{ asset('img/rond5.png') }}" />5. Air-tuyau<sup><a class="sensorpdf" href="./files/Capteur_5.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <span class="grey">led verte clignotante</span></li>
@@ -76,10 +76,11 @@
             <h3><i class="fas fa-chevron-circle-right" style="font-size:20px;"></i> Soir :</h3>
             <p class="beflist">Réalisez <strong>3 mesures</strong> correctes de votre fonction respiratoire avec les :</p>
             <ul>
-              <li><img src="{{ asset('img/rond9.png') }}" />9. Respiratoire-dommicile<sup><a class="sensorpdf" href="./files/Capteur_9.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> + <img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
+              <li><img src="{{ asset('img/rond9.png') }}" />9. Respiratoire-dommicile<sup><a class="sensorpdf" href="./files/Capteur_9.pdf" target="_blank"><i class="fas fa-external-link-alt"></i></a></sup> <br class="showmobile">
+                + <img src="{{ asset('img/rond10.png') }}" />10. Smartphone</li>
             </ul>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 fleche">
             <img class="timev1" src="{{ asset('img/flecheright.png') }}" />
             <img class="align-right" src="{{ asset('img/fleche2.png') }}" />
           </div>
@@ -118,8 +119,8 @@
         </div>
         <div class="row remerciements">
             <p>
-              Un grand MERCI ! <strong>Si besoin, appelez 7 jours / 7</strong><br>
-              au <strong>01 44 73 84 56</strong> ou au <strong>06 17 99 21 73</strong>
+              Un grand MERCI ! <br class="showmobile"><strong>Si besoin, appelez 7 jours / 7</strong><br>
+              au <strong>01 44 73 84 56</strong><br class="showmobile"> ou au <strong>06 17 99 21 73</strong>
             </p>
         </div>
       </main>
