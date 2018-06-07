@@ -3,7 +3,7 @@
 ### Version
 1.0.0
 
-# How to run : 
+# How to run :
 
 ```sh
 $ composer install
@@ -13,6 +13,15 @@ create .env file in the directory
 ```
 ```sh
 copy content from .env.exemple to .env
+```
+```sh
+$ npm install
+```
+```sh
+$ npm run watch
+```
+```sh
+In a new terminal : 
 ```
 ```sh
 $ php artisan key:generate
